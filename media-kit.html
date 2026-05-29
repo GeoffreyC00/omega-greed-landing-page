@@ -668,6 +668,20 @@
         flex-wrap: wrap;
       }
 
+      .form-success {
+        margin-bottom: 24px;
+        padding: 16px 20px;
+        border-radius: 12px;
+        border: 1px solid rgba(76, 175, 80, 0.35);
+        background: rgba(76, 175, 80, 0.1);
+        color: #b8e6bb;
+        font-size: 0.95rem;
+      }
+
+      .form-success[hidden] {
+        display: none;
+      }
+
       @media (max-width: 1024px) {
         .stats-grid,
         .ugc-grid {
@@ -1164,6 +1178,15 @@
           Brand partnerships, sponsored videos, media access, event coverage,
           UGC content, and collaborations.
         </p>
+        <div
+          id="form-success"
+          class="form-success"
+          hidden
+          role="status"
+        >
+          Thanks — your message was sent. I'll get back to you soon.
+        </div>
+
         <div class="contact-panel">
           <div>
             <p style="color: var(--muted); margin: 0">
@@ -1189,13 +1212,34 @@
               <a href="https://www.omegagreed.com/">omegagreed.com</a>
             </div>
           </div>
-          <form id="contact-form" aria-label="Partnership inquiry">
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+            aria-label="Partnership inquiry"
+          >
+            <input
+              type="hidden"
+              name="_subject"
+              value="OmegaGreed partnership inquiry"
+            />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://join.omegagreed.com/media-kit/?sent=1"
+            />
             <label for="name">Name</label>
             <input id="name" name="name" type="text" autocomplete="name" required />
             <label for="brand">Brand / Company</label>
             <input id="brand" name="brand" type="text" required />
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required />
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+            />
             <label for="message">Campaign Details</label>
             <textarea
               id="message"
@@ -1222,20 +1266,33 @@
     </footer>
 
     <script>
-      document.getElementById("contact-form").addEventListener("submit", (e) => {
-        e.preventDefault();
-        const name = document.getElementById("name").value.trim();
-        const brand = document.getElementById("brand").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const message = document.getElementById("message").value.trim();
-        const subject = encodeURIComponent(
-          `OmegaGreed partnership inquiry — ${brand || "New inquiry"}`
-        );
-        const body = encodeURIComponent(
-          `Name: ${name}\nBrand / Company: ${brand}\nReply-to email: ${email}\n\nCampaign Details:\n${message}`
-        );
-        window.location.href = `mailto:geoffreyrcrawford@gmail.com?subject=${subject}&body=${body}`;
-      });
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("sent") === "1") {
+          const banner = document.getElementById("form-success");
+          if (banner) banner.hidden = false;
+        }
+
+        const form = document.getElementById("contact-form");
+        const formId = "YOUR_FORM_ID";
+
+        if (form && form.action.includes(formId)) {
+          form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const name = document.getElementById("name").value.trim();
+            const brand = document.getElementById("brand").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+            const subject = encodeURIComponent(
+              `OmegaGreed partnership inquiry — ${brand || "New inquiry"}`
+            );
+            const body = encodeURIComponent(
+              `Name: ${name}\nBrand / Company: ${brand}\nReply-to email: ${email}\n\nCampaign Details:\n${message}`
+            );
+            window.location.href = `mailto:geoffreyrcrawford@gmail.com?subject=${subject}&body=${body}`;
+          });
+        }
+      })();
     </script>
   </body>
 </html>
