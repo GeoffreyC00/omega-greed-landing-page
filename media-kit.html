@@ -1214,7 +1214,7 @@
           </div>
           <form
             id="contact-form"
-            action="https://formspree.io/f/YOUR_FORM_ID"
+            action="https://formspree.io/f/xqejjdpv"
             method="POST"
             aria-label="Partnership inquiry"
           >
@@ -1271,26 +1271,6 @@
         if (params.get("sent") === "1") {
           const banner = document.getElementById("form-success");
           if (banner) banner.hidden = false;
-        }
-
-        const form = document.getElementById("contact-form");
-        const formId = "YOUR_FORM_ID";
-
-        if (form && form.action.includes(formId)) {
-          form.addEventListener("submit", (e) => {
-            e.preventDefault();
-            const name = document.getElementById("name").value.trim();
-            const brand = document.getElementById("brand").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const message = document.getElementById("message").value.trim();
-            const subject = encodeURIComponent(
-              `OmegaGreed partnership inquiry — ${brand || "New inquiry"}`
-            );
-            const body = encodeURIComponent(
-              `Name: ${name}\nBrand / Company: ${brand}\nReply-to email: ${email}\n\nCampaign Details:\n${message}`
-            );
-            window.location.href = `mailto:geoffreyrcrawford@gmail.com?subject=${subject}&body=${body}`;
-          });
         }
       })();
     </script>
