@@ -172,6 +172,89 @@
         text-transform: uppercase;
       }
 
+      .stat strong.stat-wide {
+        font-size: 1.35rem;
+        line-height: 1.1;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .creator-chip {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: 22px;
+        padding: 10px 14px 10px 10px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.04);
+        width: fit-content;
+        max-width: 100%;
+      }
+
+      .creator-chip img {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center center;
+        border: 2px solid rgba(196, 30, 30, 0.35);
+      }
+
+      .creator-chip div {
+        font-size: 0.88rem;
+        line-height: 1.35;
+      }
+
+      .creator-chip strong {
+        display: block;
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--red);
+        margin-bottom: 2px;
+      }
+
+      .events-section {
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.02);
+        padding: 40px 0;
+      }
+
+      .events-section .wrap {
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .events-label {
+        margin: 0 0 16px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .events-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .event-pill {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 16px 14px;
+        text-align: center;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--muted);
+        background: rgba(8, 8, 8, 0.6);
+      }
+
       .form-card {
         border: 1px solid var(--line);
         border-radius: 20px;
@@ -417,8 +500,13 @@
         .cards,
         .stats,
         .content-grid,
-        .cta-band-inner {
+        .cta-band-inner,
+        .events-grid {
           grid-template-columns: 1fr;
+        }
+
+        .events-grid {
+          grid-template-columns: repeat(2, 1fr);
         }
 
         .nav {
@@ -432,11 +520,6 @@
     </style>
   </head>
   <body>
-    <div class="preview-banner">
-      <strong>Signup page blueprint</strong> — replace the mock form with your
-      Squarespace form connected to Google Sheets.
-    </div>
-
     <section class="hero">
       <div class="hero-bg" aria-hidden="true"></div>
 
@@ -452,12 +535,30 @@
 
       <div class="hero-inner">
         <div>
-          <p class="eyebrow">Los Angeles · Real-world riding · Cinematic stories</p>
-          <h1>Cinematic rides.<br />Grit. Adventure.</h1>
+          <p class="eyebrow">OmegaGreed · Join the list</p>
+          <h1>
+            Motorcycle adventures.<br />
+            Honest reviews.<br />
+            Real experiences.
+          </h1>
+
+          <div class="creator-chip">
+            <img
+              src="assets/hero-portrait.png"
+              alt="Geoffrey Crawford"
+              width="48"
+              height="48"
+            />
+            <div>
+              <strong>Created by</strong>
+              Geoffrey Crawford · real miles, real stories
+            </div>
+          </div>
+
           <p class="lede">
-            Join the OmegaGreed list for new video drops, road trip updates,
-            gear notes, behind-the-scenes dispatches, and the kind of motorcycle
-            content that goes beyond specs and showroom shots.
+            Join the OmegaGreed community for motorcycle adventures, road trip
+            stories, gear recommendations, behind-the-scenes content, and
+            real-world lessons learned from thousands of miles on the road.
           </p>
 
           <div class="stats">
@@ -470,17 +571,18 @@
               <span>Views / 28 days</span>
             </div>
             <div class="stat">
-              <strong>LA</strong>
-              <span>Based in California</span>
+              <strong class="stat-wide">7 cross-country trips</strong>
+              <span>Real adventure miles</span>
             </div>
           </div>
         </div>
 
         <aside class="form-card" aria-label="Email signup">
-          <h2>Join the list</h2>
+          <h2>Get the next adventure first</h2>
           <p class="form-sub">
-            Get updates when new videos drop, rides go live, and new content
-            hits the channel. No spam — just OmegaGreed.
+            Get new videos, road trip updates, gear recommendations, and
+            behind-the-scenes content before it goes public.<br /><br />
+            No spam. Just real adventures.
           </p>
           <form>
             <label for="email">Email address</label>
@@ -499,6 +601,18 @@
             anytime.
           </div>
         </aside>
+      </div>
+    </section>
+
+    <section class="events-section" aria-label="Featured in and events covered">
+      <div class="wrap">
+        <p class="events-label">Featured in / Events covered</p>
+        <div class="events-grid">
+          <div class="event-pill">Universal Horror Unleashed</div>
+          <div class="event-pill">Midsummer Scream</div>
+          <div class="event-pill">Horror Nights</div>
+          <div class="event-pill">Creep I.E. Con</div>
+        </div>
       </div>
     </section>
 
@@ -549,46 +663,6 @@
     </section>
 
     <section class="section" style="padding-top: 0">
-      <div class="section-head">
-        <h2>Content you'll see</h2>
-        <p>
-          Real-world motorcycle adventure and storytelling — honest reviews,
-          cinematic rides, and the products that genuinely make riding better.
-        </p>
-      </div>
-      <div class="content-grid">
-        <article class="content-item">
-          <h3>Reviews &amp; ownership</h3>
-          <p>
-            Honest long-term ownership experiences, first rides, comparisons,
-            and buying advice.
-          </p>
-        </article>
-        <article class="content-item">
-          <h3>Adventure &amp; travel</h3>
-          <p>
-            Road trips, touring experiences, destination rides, and motorcycle
-            travel stories.
-          </p>
-        </article>
-        <article class="content-item">
-          <h3>Gear &amp; equipment</h3>
-          <p>
-            Motorcycle gear, luggage systems, communication equipment, camera
-            gear, and travel setups.
-          </p>
-        </article>
-        <article class="content-item">
-          <h3>Cinematic riding</h3>
-          <p>
-            POV rides, atmospheric travel films, and storytelling-driven
-            motorcycle content.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" style="padding-top: 0">
       <div class="feature">
         <img
           src="assets/ducati-hypermotard.jpg"
@@ -610,16 +684,17 @@
       <div class="cta-band">
         <div class="cta-band-inner">
           <div>
-            <h2>Stay on the ride</h2>
+            <h2>Get the next adventure first</h2>
             <p>
-              Join the list for OmegaGreed updates, new releases, and dispatches
-              from the road. One email list. One focused page. Built for people
-              who actually ride.
+              New videos, trip updates, and gear picks — straight to your inbox
+              before they hit the feed.
             </p>
           </div>
           <aside class="form-card" aria-label="Email signup repeat">
-            <h2>Sign up</h2>
-            <p class="form-sub">Updates, drops, and notes from the road.</p>
+            <h2>Join the list</h2>
+            <p class="form-sub">
+              No spam. Just real adventures.
+            </p>
             <form>
               <label for="email-bottom">Email address</label>
               <input
@@ -639,7 +714,7 @@
 
     <footer class="site-footer">
       <span>OmegaGreed · Cinematic rides. Grit. Adventure.</span>
-      <span><a href="media-kit.html">Media kit for brand partnerships</a></span>
+      <span><a href="media-kit/">Media kit for brand partnerships</a></span>
     </footer>
   </body>
 </html>
