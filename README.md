@@ -24,8 +24,17 @@ Recommended setup:
 4. Use this repo's prototype and copy as the design reference.
 5. Keep the page focused on the form; avoid competing calls to action above the fold.
 
+## Live preview
+
+Open the blueprint in your browser:
+
+**https://geoffreyc00.github.io/omega-greed-landing-page/**
+
+This is a layout reference only. The email form is visual — your real Squarespace form block will replace it on the live site.
+
 ## Files
 
-- `landing-page.html` - Standalone prototype/reference page.
+- `index.html` - Live preview page (GitHub Pages).
+- `landing-page.html` - Same blueprint source file.
 - `.gitignore` - Local development ignore rules.
 
