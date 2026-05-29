@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Omega Greed Media Kit</title>
+    <title>OmegaGreed Media Kit</title>
     <meta
       name="description"
-      content="Omega Greed media kit — real-world motorcycle adventure, travel, and storytelling by Geoffrey Crawford."
+      content="OmegaGreed media kit — real-world motorcycle adventure, travel, and storytelling by Geoffrey Crawford."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,10 +17,10 @@
     <style>
       :root {
         --bg: #050505;
-        --panel: rgba(12, 12, 12, 0.92);
+        --panel: rgba(8, 8, 8, 0.92);
         --text: #f5f5f5;
-        --muted: #a8a8a8;
-        --line: rgba(255, 255, 255, 0.12);
+        --muted: #b0b0b0;
+        --line: rgba(255, 255, 255, 0.14);
         --red: #c41e1e;
       }
 
@@ -37,6 +37,7 @@
 
       a {
         color: inherit;
+        text-decoration: none;
       }
 
       .preview-banner {
@@ -53,18 +54,23 @@
       }
 
       .site-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 16px;
         width: min(1180px, calc(100% - 40px));
         margin: 0 auto;
-        padding: 20px 0;
+        padding: 22px 0;
       }
 
       .logo img {
         display: block;
-        height: 52px;
+        height: 56px;
         width: auto;
       }
 
@@ -72,14 +78,10 @@
         display: flex;
         gap: 18px;
         color: var(--muted);
-        font-size: 0.88rem;
+        font-size: 0.82rem;
         font-weight: 600;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.06em;
         text-transform: uppercase;
-      }
-
-      .nav a {
-        text-decoration: none;
       }
 
       .nav a:hover {
@@ -89,15 +91,15 @@
       .hero {
         position: relative;
         border-bottom: 1px solid var(--line);
+        overflow: hidden;
       }
 
       .hero-bg {
         position: absolute;
         inset: 0;
         background:
-          linear-gradient(180deg, rgba(5, 5, 5, 0.55), rgba(5, 5, 5, 0.95)),
+          linear-gradient(180deg, rgba(5, 5, 5, 0.65), rgba(5, 5, 5, 0.95)),
           url("assets/hero-bmw-gs.jpg") center / cover no-repeat;
-        opacity: 0.45;
       }
 
       .hero-inner {
@@ -105,15 +107,15 @@
         z-index: 1;
         width: min(1180px, calc(100% - 40px));
         margin: 0 auto;
-        padding: 72px 0 56px;
+        padding: 120px 0 72px;
       }
 
       .eyebrow {
-        margin: 0 0 12px;
+        margin: 0 0 14px;
         color: var(--red);
-        font-size: 0.78rem;
+        font-size: 0.76rem;
         font-weight: 700;
-        letter-spacing: 0.18em;
+        letter-spacing: 0.2em;
         text-transform: uppercase;
       }
 
@@ -121,15 +123,15 @@
         margin: 0;
         max-width: 900px;
         font-family: "Bebas Neue", sans-serif;
-        font-size: clamp(3rem, 8vw, 5.5rem);
-        line-height: 0.92;
+        font-size: clamp(3rem, 8vw, 5.8rem);
+        line-height: 0.9;
         letter-spacing: 0.03em;
         text-transform: uppercase;
       }
 
       .lede {
         max-width: 760px;
-        margin: 18px 0 0;
+        margin: 20px 0 0;
         color: var(--muted);
         font-size: clamp(1rem, 2vw, 1.15rem);
         line-height: 1.65;
@@ -146,7 +148,8 @@
         border: 1px solid var(--line);
         border-radius: 14px;
         padding: 18px;
-        background: rgba(255, 255, 255, 0.03);
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(8px);
       }
 
       .stat strong {
@@ -158,7 +161,7 @@
 
       .stat span {
         color: var(--muted);
-        font-size: 0.78rem;
+        font-size: 0.76rem;
         letter-spacing: 0.06em;
         text-transform: uppercase;
       }
@@ -166,7 +169,7 @@
       .section {
         width: min(1180px, calc(100% - 40px));
         margin: 0 auto;
-        padding: 64px 0;
+        padding: 72px 0;
         border-bottom: 1px solid var(--line);
       }
 
@@ -177,7 +180,7 @@
       .section h2 {
         margin: 0 0 18px;
         font-family: "Bebas Neue", sans-serif;
-        font-size: clamp(2rem, 4vw, 2.8rem);
+        font-size: clamp(2.2rem, 4vw, 3rem);
         letter-spacing: 0.04em;
         text-transform: uppercase;
       }
@@ -191,7 +194,7 @@
       .grid-2 {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px;
+        gap: 16px;
       }
 
       .panel {
@@ -203,7 +206,7 @@
 
       .panel h3 {
         margin: 0 0 10px;
-        font-size: 0.82rem;
+        font-size: 0.8rem;
         letter-spacing: 0.12em;
         text-transform: uppercase;
       }
@@ -240,11 +243,31 @@
         border: 1px solid var(--line);
         border-radius: 20px;
         padding: 28px;
-        background: linear-gradient(135deg, rgba(196, 30, 30, 0.12), rgba(255, 255, 255, 0.02));
+        background:
+          linear-gradient(135deg, rgba(196, 30, 30, 0.14), rgba(255, 255, 255, 0.02)),
+          url("assets/hero-bmw-gs.jpg") center / cover no-repeat;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(5, 5, 5, 0.88);
+      }
+
+      .cta > * {
+        position: relative;
+        z-index: 1;
       }
 
       .cta h2 {
         margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2.2rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
       }
 
       .cta p {
@@ -258,9 +281,8 @@
         background: var(--red);
         color: #fff;
         font-weight: 800;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.1em;
         padding: 14px 20px;
-        text-decoration: none;
         text-transform: uppercase;
       }
 
@@ -313,23 +335,24 @@
       video links before publishing on Squarespace.
     </div>
 
-    <header class="site-header">
-      <a class="logo" href="https://www.omegagreed.com/">
-        <img src="assets/logo.png" alt="Omega Greed" />
-      </a>
-      <nav class="nav">
-        <a href="index.html">Join List</a>
-        <a href="https://www.omegagreed.com/">Main Site</a>
-      </nav>
-    </header>
-
     <section class="hero">
       <div class="hero-bg" aria-hidden="true"></div>
+
+      <header class="site-header">
+        <a class="logo" href="https://www.omegagreed.com/">
+          <img src="assets/logo.png" alt="OmegaGreed" />
+        </a>
+        <nav class="nav">
+          <a href="index.html">Join List</a>
+          <a href="https://www.omegagreed.com/">Main Site</a>
+        </nav>
+      </header>
+
       <div class="hero-inner">
         <p class="eyebrow">Media kit · Brand partnerships</p>
         <h1>Real-world motorcycle adventure, travel &amp; storytelling</h1>
         <p class="lede">
-          Omega Greed helps riders discover motorcycles, gear, and experiences
+          OmegaGreed helps riders discover motorcycles, gear, and experiences
           through honest reviews, cinematic adventures, road trips, and
           real-world ownership stories from the streets of Los Angeles and
           beyond.
@@ -357,9 +380,9 @@
     </section>
 
     <section class="section">
-      <h2>About Omega Greed</h2>
+      <h2>About OmegaGreed</h2>
       <p>
-        Omega Greed is a motorcycle adventure and lifestyle channel focused on
+        OmegaGreed is a motorcycle adventure and lifestyle channel focused on
         real-world riding, long-distance travel, motorcycle ownership, and
         cinematic storytelling. Created by Geoffrey Crawford, the channel takes
         viewers beyond traditional motorcycle reviews by showcasing what it's
@@ -368,9 +391,11 @@
       </p>
       <p>
         From cross-country road trips and urban exploration to motorcycle
-        comparisons, gear setups, and honest ownership experiences, Omega Greed
+        comparisons, gear setups, and honest ownership experiences, OmegaGreed
         helps riders make informed decisions while inspiring them to get out
-        and ride.
+        and ride. Based in Los Angeles, the channel offers a unique perspective
+        through city riding, lane-splitting, touring, weekend adventures, and
+        practical motorcycle ownership.
       </p>
     </section>
 
@@ -486,12 +511,12 @@
     </section>
 
     <section class="section">
-      <h2>Why brands partner with Omega Greed</h2>
+      <h2>Why brands partner with OmegaGreed</h2>
       <p>
-        Unlike channels focused solely on specs and performance numbers, Omega
-        Greed focuses on the real-world rider experience. The audience follows
-        the journey, the adventures, the lessons learned, and the products that
-        genuinely make riding better.
+        Unlike channels focused solely on specs and performance numbers,
+        OmegaGreed focuses on the real-world rider experience. The audience
+        follows the journey, the adventures, the lessons learned, and the
+        products that genuinely make riding better.
       </p>
       <p>
         This creates authentic recommendations and deeper audience trust,
@@ -513,7 +538,7 @@
     <section class="section">
       <div class="cta">
         <div>
-          <h2>Work with Omega Greed</h2>
+          <h2>Work with OmegaGreed</h2>
           <p>
             For partnership inquiries, send an email with your brand, campaign
             goals, and timeline. Featured video links and downloadable press
@@ -527,10 +552,8 @@
     </section>
 
     <footer class="site-footer">
-      <span>Omega Greed · Geoffrey Crawford · Los Angeles, CA</span>
-      <span>
-        <a href="index.html">Newsletter signup page</a>
-      </span>
+      <span>OmegaGreed · Geoffrey Crawford · Los Angeles, CA</span>
+      <span><a href="index.html">Newsletter signup page</a></span>
     </footer>
   </body>
 </html>

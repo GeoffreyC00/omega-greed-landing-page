@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Join Omega Greed</title>
+    <title>Join OmegaGreed</title>
     <meta
       name="description"
-      content="Join the Omega Greed list for cinematic motorcycle adventures, road trips, gear, and real-world riding stories from Los Angeles and beyond."
+      content="Join the OmegaGreed list for cinematic motorcycle adventures, road trips, gear updates, and real-world riding stories from Los Angeles and beyond."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,10 +17,10 @@
     <style>
       :root {
         --bg: #050505;
-        --panel: rgba(10, 10, 10, 0.88);
+        --panel: rgba(8, 8, 8, 0.9);
         --text: #f5f5f5;
-        --muted: #a8a8a8;
-        --line: rgba(255, 255, 255, 0.12);
+        --muted: #b0b0b0;
+        --line: rgba(255, 255, 255, 0.14);
         --red: #c41e1e;
         --red-glow: rgba(196, 30, 30, 0.35);
       }
@@ -55,18 +55,23 @@
       }
 
       .site-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 16px;
         width: min(1180px, calc(100% - 40px));
         margin: 0 auto;
-        padding: 20px 0;
+        padding: 22px 0;
       }
 
       .logo img {
         display: block;
-        height: 52px;
+        height: 56px;
         width: auto;
       }
 
@@ -74,9 +79,9 @@
         display: flex;
         gap: 18px;
         color: var(--muted);
-        font-size: 0.88rem;
+        font-size: 0.82rem;
         font-weight: 600;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.06em;
         text-transform: uppercase;
       }
 
@@ -86,9 +91,9 @@
 
       .hero {
         position: relative;
-        min-height: 72vh;
+        min-height: 92vh;
         display: grid;
-        align-items: end;
+        align-items: center;
         overflow: hidden;
       }
 
@@ -96,8 +101,8 @@
         position: absolute;
         inset: 0;
         background:
-          linear-gradient(180deg, rgba(5, 5, 5, 0.35) 0%, rgba(5, 5, 5, 0.92) 78%),
-          linear-gradient(90deg, rgba(5, 5, 5, 0.92) 0%, rgba(5, 5, 5, 0.35) 55%, rgba(5, 5, 5, 0.75) 100%),
+          linear-gradient(180deg, rgba(5, 5, 5, 0.55) 0%, rgba(5, 5, 5, 0.88) 100%),
+          linear-gradient(90deg, rgba(5, 5, 5, 0.94) 0%, rgba(5, 5, 5, 0.45) 50%, rgba(5, 5, 5, 0.82) 100%),
           url("assets/hero-bmw-gs.jpg") center / cover no-repeat;
       }
 
@@ -106,45 +111,45 @@
         z-index: 1;
         width: min(1180px, calc(100% - 40px));
         margin: 0 auto;
-        padding: 72px 0 56px;
+        padding: 120px 0 72px;
         display: grid;
-        grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.75fr);
-        gap: clamp(28px, 5vw, 64px);
-        align-items: end;
+        grid-template-columns: minmax(0, 1fr) minmax(340px, 420px);
+        gap: clamp(32px, 6vw, 72px);
+        align-items: center;
       }
 
       .eyebrow {
-        margin: 0 0 14px;
+        margin: 0 0 16px;
         color: var(--red);
-        font-size: 0.78rem;
+        font-size: 0.76rem;
         font-weight: 700;
-        letter-spacing: 0.18em;
+        letter-spacing: 0.2em;
         text-transform: uppercase;
       }
 
       h1 {
         margin: 0;
         font-family: "Bebas Neue", sans-serif;
-        font-size: clamp(3.4rem, 9vw, 6.8rem);
+        font-size: clamp(3.6rem, 10vw, 7rem);
         font-weight: 400;
-        line-height: 0.9;
-        letter-spacing: 0.02em;
+        line-height: 0.88;
+        letter-spacing: 0.03em;
         text-transform: uppercase;
       }
 
       .lede {
-        max-width: 620px;
-        margin: 20px 0 0;
+        max-width: 580px;
+        margin: 22px 0 0;
         color: var(--muted);
-        font-size: clamp(1rem, 2vw, 1.2rem);
-        line-height: 1.6;
+        font-size: clamp(1rem, 2vw, 1.18rem);
+        line-height: 1.65;
       }
 
       .stats {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 14px;
-        margin-top: 32px;
+        margin-top: 34px;
       }
 
       .stat {
@@ -162,7 +167,7 @@
 
       .stat span {
         color: var(--muted);
-        font-size: 0.82rem;
+        font-size: 0.78rem;
         letter-spacing: 0.06em;
         text-transform: uppercase;
       }
@@ -171,31 +176,31 @@
         border: 1px solid var(--line);
         border-radius: 20px;
         background: var(--panel);
-        padding: clamp(24px, 4vw, 32px);
-        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
-        backdrop-filter: blur(12px);
+        padding: clamp(26px, 4vw, 34px);
+        box-shadow: 0 28px 90px rgba(0, 0, 0, 0.55);
+        backdrop-filter: blur(14px);
       }
 
       .form-card h2 {
         margin: 0;
         font-family: "Bebas Neue", sans-serif;
-        font-size: 2rem;
-        letter-spacing: 0.04em;
+        font-size: 2.2rem;
+        letter-spacing: 0.05em;
         text-transform: uppercase;
       }
 
-      .form-card p {
+      .form-card .form-sub {
         margin: 10px 0 22px;
         color: var(--muted);
-        line-height: 1.5;
+        line-height: 1.55;
       }
 
       label {
         display: block;
         margin-bottom: 8px;
-        font-size: 0.85rem;
+        font-size: 0.82rem;
         font-weight: 700;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.06em;
         text-transform: uppercase;
       }
 
@@ -225,41 +230,41 @@
         cursor: pointer;
         font: inherit;
         font-weight: 800;
-        letter-spacing: 0.1em;
-        padding: 15px 18px;
+        letter-spacing: 0.12em;
+        padding: 16px 18px;
         text-transform: uppercase;
       }
 
       .fine-print {
         margin-top: 14px;
         color: var(--muted);
-        font-size: 0.8rem;
+        font-size: 0.78rem;
         line-height: 1.45;
       }
 
       .section {
         width: min(1180px, calc(100% - 40px));
         margin: 0 auto;
-        padding: 72px 0;
+        padding: 80px 0;
       }
 
       .section-head {
-        margin-bottom: 28px;
+        margin-bottom: 32px;
+        max-width: 720px;
       }
 
       .section-head h2 {
         margin: 0;
         font-family: "Bebas Neue", sans-serif;
-        font-size: clamp(2.2rem, 5vw, 3.4rem);
+        font-size: clamp(2.4rem, 5vw, 3.6rem);
         letter-spacing: 0.04em;
         text-transform: uppercase;
       }
 
       .section-head p {
-        max-width: 640px;
-        margin: 10px 0 0;
+        margin: 12px 0 0;
         color: var(--muted);
-        line-height: 1.55;
+        line-height: 1.65;
       }
 
       .cards {
@@ -271,13 +276,13 @@
       .card {
         border: 1px solid var(--line);
         border-radius: 16px;
-        padding: 22px;
+        padding: 24px;
         background: rgba(255, 255, 255, 0.02);
       }
 
       .card strong {
         display: block;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
         font-size: 0.78rem;
         letter-spacing: 0.12em;
         text-transform: uppercase;
@@ -286,14 +291,37 @@
       .card p {
         margin: 0;
         color: var(--muted);
-        line-height: 1.5;
+        line-height: 1.55;
+      }
+
+      .content-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .content-item {
+        border-left: 2px solid var(--red);
+        padding: 8px 0 8px 18px;
+      }
+
+      .content-item h3 {
+        margin: 0 0 8px;
+        font-size: 0.82rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .content-item p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.55;
       }
 
       .feature {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(280px, 0.9fr);
-        gap: 24px;
-        align-items: center;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 0.95fr);
+        gap: 0;
         border: 1px solid var(--line);
         border-radius: 20px;
         overflow: hidden;
@@ -304,18 +332,21 @@
         display: block;
         width: 100%;
         height: 100%;
-        min-height: 280px;
+        min-height: 320px;
         object-fit: cover;
       }
 
       .feature-copy {
-        padding: 28px;
+        padding: 36px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
 
       .feature-copy h3 {
-        margin: 0 0 10px;
+        margin: 0 0 12px;
         font-family: "Bebas Neue", sans-serif;
-        font-size: 2rem;
+        font-size: 2.2rem;
         letter-spacing: 0.04em;
         text-transform: uppercase;
       }
@@ -323,7 +354,49 @@
       .feature-copy p {
         margin: 0;
         color: var(--muted);
-        line-height: 1.55;
+        line-height: 1.65;
+      }
+
+      .cta-band {
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: clamp(28px, 5vw, 48px);
+        background:
+          linear-gradient(135deg, rgba(196, 30, 30, 0.14), rgba(255, 255, 255, 0.02)),
+          url("assets/hero-bmw-gs.jpg") center / cover no-repeat;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-band::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(5, 5, 5, 0.88);
+      }
+
+      .cta-band-inner {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(300px, 380px);
+        gap: 32px;
+        align-items: center;
+      }
+
+      .cta-band h2 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.2rem, 5vw, 3.2rem);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .cta-band p {
+        margin: 12px 0 0;
+        max-width: 520px;
+        color: var(--muted);
+        line-height: 1.6;
       }
 
       .site-footer {
@@ -342,7 +415,9 @@
         .hero-inner,
         .feature,
         .cards,
-        .stats {
+        .stats,
+        .content-grid,
+        .cta-band-inner {
           grid-template-columns: 1fr;
         }
 
@@ -362,26 +437,27 @@
       Squarespace form connected to Google Sheets.
     </div>
 
-    <header class="site-header">
-      <a class="logo" href="https://www.omegagreed.com/">
-        <img src="assets/logo.png" alt="Omega Greed" />
-      </a>
-      <nav class="nav">
-        <a href="https://www.omegagreed.com/">Main Site</a>
-        <a href="media-kit.html">Media Kit</a>
-      </nav>
-    </header>
-
     <section class="hero">
       <div class="hero-bg" aria-hidden="true"></div>
+
+      <header class="site-header">
+        <a class="logo" href="https://www.omegagreed.com/">
+          <img src="assets/logo.png" alt="OmegaGreed" />
+        </a>
+        <nav class="nav">
+          <a href="https://www.omegagreed.com/">Main Site</a>
+          <a href="media-kit.html">Media Kit</a>
+        </nav>
+      </header>
+
       <div class="hero-inner">
         <div>
           <p class="eyebrow">Los Angeles · Real-world riding · Cinematic stories</p>
-          <h1>Real-world motorcycle adventure &amp; storytelling.</h1>
+          <h1>Cinematic rides.<br />Grit. Adventure.</h1>
           <p class="lede">
-            Join the list for new video drops, road trip notes, gear updates,
-            behind-the-scenes dispatches, and the kind of riding content that
-            goes beyond specs and showroom shots.
+            Join the OmegaGreed list for new video drops, road trip updates,
+            gear notes, behind-the-scenes dispatches, and the kind of motorcycle
+            content that goes beyond specs and showroom shots.
           </p>
 
           <div class="stats">
@@ -401,10 +477,10 @@
         </div>
 
         <aside class="form-card" aria-label="Email signup">
-          <h2>Get the dispatch</h2>
-          <p>
-            No spam. Just Omega Greed updates, new releases, and notes from the
-            road.
+          <h2>Join the list</h2>
+          <p class="form-sub">
+            Get updates when new videos drop, rides go live, and new content
+            hits the channel. No spam — just OmegaGreed.
           </p>
           <form>
             <label for="email">Email address</label>
@@ -416,10 +492,10 @@
               placeholder="you@example.com"
               required
             />
-            <button class="submit" type="submit">Join the List</button>
+            <button class="submit" type="submit">Sign Up</button>
           </form>
           <div class="fine-print">
-            By joining, you agree to receive Omega Greed updates. Unsubscribe
+            By joining, you agree to receive OmegaGreed updates. Unsubscribe
             anytime.
           </div>
         </aside>
@@ -428,7 +504,21 @@
 
     <section class="section">
       <div class="section-head">
-        <h2>What you get</h2>
+        <h2>What is OmegaGreed</h2>
+        <p>
+          OmegaGreed is a motorcycle adventure and lifestyle channel focused on
+          real-world riding, long-distance travel, motorcycle ownership, and
+          cinematic storytelling. Created by Geoffrey Crawford, the channel
+          shows what it's actually like to live with, travel on, and explore
+          the world by motorcycle — from the streets of Los Angeles to the open
+          road.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0">
+      <div class="section-head">
+        <h2>What you'll get</h2>
         <p>
           Built for riders who care about the journey, the ownership experience,
           and the atmosphere behind the ride.
@@ -436,51 +526,120 @@
       </div>
       <div class="cards">
         <article class="card">
-          <strong>Adventures</strong>
+          <strong>Video drops</strong>
           <p>
-            Road trips, touring stories, destination rides, and real-world
-            motorcycle travel from LA and beyond.
+            New releases, edits, and updates before they disappear into the feed.
           </p>
         </article>
         <article class="card">
-          <strong>Ownership</strong>
+          <strong>Road notes</strong>
           <p>
-            Honest long-term reviews, comparisons, buying advice, and what it
-            actually feels like to live with a bike.
+            Trip stories, touring updates, destination rides, and real-world
+            adventure from LA and beyond.
           </p>
         </article>
         <article class="card">
-          <strong>Culture</strong>
+          <strong>Behind the ride</strong>
           <p>
-            Gear, builds, cinematic POV rides, camera setups, and the mood
+            Gear, builds, cinematic POV content, camera setups, and the mood
             behind the channel.
           </p>
         </article>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" style="padding-top: 0">
+      <div class="section-head">
+        <h2>Content you'll see</h2>
+        <p>
+          Real-world motorcycle adventure and storytelling — honest reviews,
+          cinematic rides, and the products that genuinely make riding better.
+        </p>
+      </div>
+      <div class="content-grid">
+        <article class="content-item">
+          <h3>Reviews &amp; ownership</h3>
+          <p>
+            Honest long-term ownership experiences, first rides, comparisons,
+            and buying advice.
+          </p>
+        </article>
+        <article class="content-item">
+          <h3>Adventure &amp; travel</h3>
+          <p>
+            Road trips, touring experiences, destination rides, and motorcycle
+            travel stories.
+          </p>
+        </article>
+        <article class="content-item">
+          <h3>Gear &amp; equipment</h3>
+          <p>
+            Motorcycle gear, luggage systems, communication equipment, camera
+            gear, and travel setups.
+          </p>
+        </article>
+        <article class="content-item">
+          <h3>Cinematic riding</h3>
+          <p>
+            POV rides, atmospheric travel films, and storytelling-driven
+            motorcycle content.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0">
       <div class="feature">
         <img
           src="assets/ducati-hypermotard.jpg"
-          alt="Red Ducati Hypermotard parked roadside"
+          alt="Ducati Hypermotard on the road"
         />
         <div class="feature-copy">
           <h3>Beyond the spec sheet</h3>
           <p>
-            Omega Greed is for riders who want the real experience — lane
-            splitting through the city, long-distance touring, weekend
-            adventures, and the products that genuinely make riding better.
+            Unlike channels focused solely on numbers, OmegaGreed focuses on the
+            real-world rider experience — lane splitting through the city,
+            cross-country touring, weekend adventures, urban exploration, and
+            the lessons learned along the way.
           </p>
         </div>
       </div>
     </section>
 
+    <section class="section">
+      <div class="cta-band">
+        <div class="cta-band-inner">
+          <div>
+            <h2>Stay on the ride</h2>
+            <p>
+              Join the list for OmegaGreed updates, new releases, and dispatches
+              from the road. One email list. One focused page. Built for people
+              who actually ride.
+            </p>
+          </div>
+          <aside class="form-card" aria-label="Email signup repeat">
+            <h2>Sign up</h2>
+            <p class="form-sub">Updates, drops, and notes from the road.</p>
+            <form>
+              <label for="email-bottom">Email address</label>
+              <input
+                id="email-bottom"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="you@example.com"
+                required
+              />
+              <button class="submit" type="submit">Join the List</button>
+            </form>
+          </aside>
+        </div>
+      </div>
+    </section>
+
     <footer class="site-footer">
-      <span>Omega Greed · Cinematic rides. Grit. Adventure.</span>
-      <span>
-        <a href="media-kit.html">Media kit for brand partnerships</a>
-      </span>
+      <span>OmegaGreed · Cinematic rides. Grit. Adventure.</span>
+      <span><a href="media-kit.html">Media kit for brand partnerships</a></span>
     </footer>
   </body>
 </html>
