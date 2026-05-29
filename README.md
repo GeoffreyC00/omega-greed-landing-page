@@ -24,17 +24,31 @@ Recommended setup:
 4. Use this repo's prototype and copy as the design reference.
 5. Keep the page focused on the form; avoid competing calls to action above the fold.
 
-## Live preview
+## Live previews
 
-Open the blueprint in your browser:
+**Signup landing page:** https://geoffreyc00.github.io/omega-greed-landing-page/
 
-**https://geoffreyc00.github.io/omega-greed-landing-page/**
+**Media kit page:** https://geoffreyc00.github.io/omega-greed-landing-page/media-kit.html
 
-This is a layout reference only. The email form is visual — your real Squarespace form block will replace it on the live site.
+These are layout blueprints. Replace mock forms and placeholder contact info before publishing on Squarespace.
+
+## Pages
+
+| Page | File | Squarespace URL idea |
+|------|------|----------------------|
+| Email signup | `index.html` | `/join` |
+| Media kit | `media-kit.html` | `/media` or `/press` |
+
+## Assets
+
+- `assets/logo.png`
+- `assets/hero-bmw-gs.jpg`
+- `assets/ducati-hypermotard.jpg`
 
 ## Files
 
-- `index.html` - Live preview page (GitHub Pages).
-- `landing-page.html` - Same blueprint source file.
-- `.gitignore` - Local development ignore rules.
+- `index.html` - Signup landing page blueprint
+- `media-kit.html` - Media kit blueprint
+- `landing-page.html` - Earlier signup prototype (legacy)
+- `.gitignore`
 

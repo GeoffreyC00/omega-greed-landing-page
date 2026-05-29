@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Omega Greed Media Kit</title>
+    <meta
+      name="description"
+      content="Omega Greed media kit — real-world motorcycle adventure, travel, and storytelling by Geoffrey Crawford."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #050505;
+        --panel: rgba(12, 12, 12, 0.92);
+        --text: #f5f5f5;
+        --muted: #a8a8a8;
+        --line: rgba(255, 255, 255, 0.12);
+        --red: #c41e1e;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .preview-banner {
+        background: rgba(196, 30, 30, 0.1);
+        border-bottom: 1px solid rgba(196, 30, 30, 0.25);
+        color: var(--muted);
+        font-size: 0.82rem;
+        padding: 10px 16px;
+        text-align: center;
+      }
+
+      .preview-banner strong {
+        color: var(--red);
+      }
+
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 20px 0;
+      }
+
+      .logo img {
+        display: block;
+        height: 52px;
+        width: auto;
+      }
+
+      .nav {
+        display: flex;
+        gap: 18px;
+        color: var(--muted);
+        font-size: 0.88rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .nav a {
+        text-decoration: none;
+      }
+
+      .nav a:hover {
+        color: var(--text);
+      }
+
+      .hero {
+        position: relative;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(5, 5, 5, 0.55), rgba(5, 5, 5, 0.95)),
+          url("assets/hero-bmw-gs.jpg") center / cover no-repeat;
+        opacity: 0.45;
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 1;
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 72px 0 56px;
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        color: var(--red);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        max-width: 900px;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(3rem, 8vw, 5.5rem);
+        line-height: 0.92;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      .lede {
+        max-width: 760px;
+        margin: 18px 0 0;
+        color: var(--muted);
+        font-size: clamp(1rem, 2vw, 1.15rem);
+        line-height: 1.65;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 36px;
+      }
+
+      .stat {
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 18px;
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .stat strong {
+        display: block;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        letter-spacing: 0.04em;
+      }
+
+      .stat span {
+        color: var(--muted);
+        font-size: 0.78rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .section {
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 64px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .section:last-of-type {
+        border-bottom: 0;
+      }
+
+      .section h2 {
+        margin: 0 0 18px;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .section p,
+      .section li {
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 22px;
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .panel h3 {
+        margin: 0 0 10px;
+        font-size: 0.82rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .panel p {
+        margin: 0;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .tag {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 8px 14px;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      .cta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 28px;
+        background: linear-gradient(135deg, rgba(196, 30, 30, 0.12), rgba(255, 255, 255, 0.02));
+      }
+
+      .cta h2 {
+        margin: 0;
+      }
+
+      .cta p {
+        margin: 8px 0 0;
+        max-width: 560px;
+      }
+
+      .btn {
+        display: inline-block;
+        border-radius: 12px;
+        background: var(--red);
+        color: #fff;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        padding: 14px 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .press-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .press-grid img {
+        display: block;
+        width: 100%;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+      }
+
+      .site-footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 28px 0 40px;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
+      @media (max-width: 900px) {
+        .stats,
+        .grid-2,
+        .press-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .nav {
+          display: none;
+        }
+
+        .site-footer {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preview-banner">
+      <strong>Media kit blueprint</strong> — update contact email and featured
+      video links before publishing on Squarespace.
+    </div>
+
+    <header class="site-header">
+      <a class="logo" href="https://www.omegagreed.com/">
+        <img src="assets/logo.png" alt="Omega Greed" />
+      </a>
+      <nav class="nav">
+        <a href="index.html">Join List</a>
+        <a href="https://www.omegagreed.com/">Main Site</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="eyebrow">Media kit · Brand partnerships</p>
+        <h1>Real-world motorcycle adventure, travel &amp; storytelling</h1>
+        <p class="lede">
+          Omega Greed helps riders discover motorcycles, gear, and experiences
+          through honest reviews, cinematic adventures, road trips, and
+          real-world ownership stories from the streets of Los Angeles and
+          beyond.
+        </p>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>15.4K</strong>
+            <span>YouTube subscribers</span>
+          </div>
+          <div class="stat">
+            <strong>40K</strong>
+            <span>Views / 28 days</span>
+          </div>
+          <div class="stat">
+            <strong>1.9K</strong>
+            <span>Watch hours / 28 days</span>
+          </div>
+          <div class="stat">
+            <strong>2K</strong>
+            <span>Instagram followers</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>About Omega Greed</h2>
+      <p>
+        Omega Greed is a motorcycle adventure and lifestyle channel focused on
+        real-world riding, long-distance travel, motorcycle ownership, and
+        cinematic storytelling. Created by Geoffrey Crawford, the channel takes
+        viewers beyond traditional motorcycle reviews by showcasing what it's
+        actually like to live with, travel on, and explore the world by
+        motorcycle.
+      </p>
+      <p>
+        From cross-country road trips and urban exploration to motorcycle
+        comparisons, gear setups, and honest ownership experiences, Omega Greed
+        helps riders make informed decisions while inspiring them to get out
+        and ride.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Audience</h2>
+      <div class="tags">
+        <span class="tag">Motorcycle enthusiasts</span>
+        <span class="tag">Adventure riders</span>
+        <span class="tag">Touring riders</span>
+        <span class="tag">Beginner &amp; intermediate riders</span>
+        <span class="tag">Gear buyers</span>
+        <span class="tag">Road trip travelers</span>
+        <span class="tag">Motorsports fans</span>
+        <span class="tag">Creator &amp; camera gear audience</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Content categories</h2>
+      <div class="grid-2">
+        <article class="panel">
+          <h3>Motorcycle reviews &amp; ownership</h3>
+          <p>
+            Honest long-term ownership experiences, first rides, comparisons,
+            and buying advice.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>Adventure &amp; travel</h3>
+          <p>
+            Road trips, touring experiences, destination rides, and motorcycle
+            travel stories.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>Gear &amp; equipment</h3>
+          <p>
+            Motorcycle gear, luggage systems, communication equipment, camera
+            gear, and travel setups.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>Cinematic riding content</h3>
+          <p>
+            POV rides, atmospheric travel films, and storytelling-driven
+            motorcycle content.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>Creator &amp; filming content</h3>
+          <p>
+            Behind-the-scenes looks at how motorcycle content is filmed, edited,
+            and produced.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>Brand positioning</h3>
+          <p>
+            Broad enough to cover BMW, Ducati, CFMOTO, supermotos, gear, camera
+            equipment, road trips, events, and future rental content without
+            reinventing the brand every time the bike changes.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Brand values</h2>
+      <ul>
+        <li>Honest reviews</li>
+        <li>Real-world experience</li>
+        <li>Adventure and exploration</li>
+        <li>Community</li>
+        <li>Education</li>
+        <li>Authentic storytelling</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Partnership opportunities</h2>
+      <div class="grid-2">
+        <article class="panel">
+          <h3>Dedicated video reviews</h3>
+          <p>In-depth product testing and real-world usage videos.</p>
+        </article>
+        <article class="panel">
+          <h3>Sponsored integrations</h3>
+          <p>Natural product placement integrated into existing content.</p>
+        </article>
+        <article class="panel">
+          <h3>Brand ambassadorships</h3>
+          <p>Ongoing partnerships showcasing products over time.</p>
+        </article>
+        <article class="panel">
+          <h3>Social media campaigns</h3>
+          <p>Instagram Reels, Stories, posts, and short-form video content.</p>
+        </article>
+        <article class="panel">
+          <h3>Product photography</h3>
+          <p>
+            Lifestyle and action photography featuring products in authentic
+            riding environments.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>Event coverage</h3>
+          <p>
+            Motorcycle events, rallies, expos, product launches, and press
+            events.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Why brands partner with Omega Greed</h2>
+      <p>
+        Unlike channels focused solely on specs and performance numbers, Omega
+        Greed focuses on the real-world rider experience. The audience follows
+        the journey, the adventures, the lessons learned, and the products that
+        genuinely make riding better.
+      </p>
+      <p>
+        This creates authentic recommendations and deeper audience trust,
+        resulting in higher engagement and stronger brand alignment.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Press imagery</h2>
+      <div class="press-grid">
+        <img src="assets/hero-bmw-gs.jpg" alt="BMW GS adventure motorcycle" />
+        <img
+          src="assets/ducati-hypermotard.jpg"
+          alt="Ducati Hypermotard roadside"
+        />
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="cta">
+        <div>
+          <h2>Work with Omega Greed</h2>
+          <p>
+            For partnership inquiries, send an email with your brand, campaign
+            goals, and timeline. Featured video links and downloadable press
+            assets can be added here before launch.
+          </p>
+        </div>
+        <a class="btn" href="mailto:partnerships@omegagreed.com"
+          >Contact for partnerships</a
+        >
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>Omega Greed · Geoffrey Crawford · Los Angeles, CA</span>
+      <span>
+        <a href="index.html">Newsletter signup page</a>
+      </span>
+    </footer>
+  </body>
+</html>
