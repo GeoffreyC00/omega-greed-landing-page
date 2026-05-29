@@ -1,6 +1,10 @@
-# Formspree setup (5 minutes)
+# Formspree setup
 
-Formspree receives form submissions and emails you — no Squarespace or server required.
+**Status:** Connected — `https://formspree.io/f/xqejjdpv` on the media kit contact form.
+
+Integration type: **Basic HTML POST** (correct for static GitHub Pages at join.omegagreed.com).
+
+---
 
 ## Step 1 — Create account
 
