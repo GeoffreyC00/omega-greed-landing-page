@@ -1,0 +1,45 @@
+---
+description: OmegaGreed join site — repo context, URLs, forms, and brand conventions
+alwaysApply: true
+---
+
+# OmegaGreed landing page project
+
+When working in this repository (`omega-greed-landing-page`):
+
+## Project
+
+- **Purpose:** Static pages on `join.omegagreed.com` — newsletter signup, media kit, CFMOTO build list
+- **GitHub:** GeoffreyC00/omega-greed-landing-page — push `main` to deploy GitHub Pages
+- **Main site** omegagreed.com is Squarespace; do not rebuild join pages there unless asked
+
+## Live URLs
+
+- https://join.omegagreed.com/ — `index.html` (newsletter)
+- https://join.omegagreed.com/media-kit/ — `media-kit.html`
+- https://join.omegagreed.com/cfmoto-build-list.html
+
+## Formspree
+
+- Newsletter: `https://formspree.io/f/mjgzzjgz` on `index.html`
+- Partnerships: `https://formspree.io/f/xqejjdpv` on media kit — keep separate from newsletter
+
+## Brand
+
+- **OmegaGreed** (one word), dark premium UI, red `#c41e1e`, Bebas Neue + Inter
+- **YouTube:** @OmegaGreedAK47 (not @OmegaGreed)
+- **Instagram:** @omegagreed
+- **Contact:** geoffreyrcrawford@gmail.com
+- Creator line: Geoffrey Crawford; horror sub-brand Villains of Horror (purple accent on media kit)
+
+## Hosting
+
+- GitHub Pages + `CNAME` → `join.omegagreed.com`
+- DNS at DreamHost
+
+## Conventions
+
+- Match existing page patterns before adding new styles
+- Affiliate links: `rel="noopener noreferrer sponsored"` on external shop links
+- `media-kit/index.html` mirrors `media-kit.html` with `../assets/` paths
+- Read `README.md` and `FORMSPREE_SETUP.md` for full backup details
