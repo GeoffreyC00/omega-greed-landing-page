@@ -325,6 +325,21 @@
         line-height: 1.45;
       }
 
+      .form-success {
+        margin-bottom: 18px;
+        padding: 14px 16px;
+        border: 1px solid rgba(196, 30, 30, 0.35);
+        border-radius: 12px;
+        background: rgba(196, 30, 30, 0.1);
+        color: var(--text);
+        font-size: 0.92rem;
+        line-height: 1.5;
+      }
+
+      .form-success[hidden] {
+        display: none;
+      }
+
       .section {
         width: min(1180px, calc(100% - 40px));
         margin: 0 auto;
@@ -578,13 +593,44 @@
         </div>
 
         <aside class="form-card" aria-label="Email signup">
+          <div
+            id="form-success"
+            class="form-success"
+            hidden
+            role="status"
+          >
+            You're on the list — thanks for joining. Check your inbox for
+            OmegaGreed updates.
+          </div>
           <h2>Get the next adventure first</h2>
           <p class="form-sub">
             Get new videos, road trip updates, gear recommendations, and
             behind-the-scenes content before it goes public.<br /><br />
             No spam. Just real adventures.
           </p>
-          <form>
+          <form
+            id="hero-form"
+            action="https://formspree.io/f/mjgzzjgz"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="_subject"
+              value="OmegaGreed newsletter signup"
+            />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://join.omegagreed.com/?sent=1"
+            />
+            <input
+              type="text"
+              name="_gotcha"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true"
+              style="position: absolute; left: -9999px"
+            />
             <label for="email">Email address</label>
             <input
               id="email"
@@ -695,7 +741,29 @@
             <p class="form-sub">
               No spam. Just real adventures.
             </p>
-            <form>
+            <form
+              id="bottom-form"
+              action="https://formspree.io/f/mjgzzjgz"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="OmegaGreed newsletter signup"
+              />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://join.omegagreed.com/?sent=1"
+              />
+              <input
+                type="text"
+                name="_gotcha"
+                tabindex="-1"
+                autocomplete="off"
+                aria-hidden="true"
+                style="position: absolute; left: -9999px"
+              />
               <label for="email-bottom">Email address</label>
               <input
                 id="email-bottom"
@@ -716,5 +784,15 @@
       <span>OmegaGreed · Cinematic rides. Grit. Adventure.</span>
       <span><a href="media-kit/">Media kit for brand partnerships</a></span>
     </footer>
+
+    <script>
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("sent") === "1") {
+          const banner = document.getElementById("form-success");
+          if (banner) banner.hidden = false;
+        }
+      })();
+    </script>
   </body>
 </html>

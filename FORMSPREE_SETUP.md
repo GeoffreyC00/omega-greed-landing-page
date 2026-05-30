@@ -1,41 +1,40 @@
 # Formspree setup
 
+## Media kit (partnership inquiries)
+
 **Status:** Connected — `https://formspree.io/f/xqejjdpv` on the media kit contact form.
 
-Integration type: **Basic HTML POST** (correct for static GitHub Pages at join.omegagreed.com).
+## Newsletter signup
+
+**Status:** Connected — `https://formspree.io/f/mjgzzjgz` on the join page (`index.html`).
+
+Both forms use **Basic HTML POST** (correct for static GitHub Pages at join.omegagreed.com).
 
 ---
 
-## Step 1 — Create account
+## Forms at a glance
 
-1. Go to **https://formspree.io**
-2. Sign up with **geoffreyrcrawford@gmail.com** (or any email you check)
-3. Verify your email if prompted
+| Page | Formspree ID | Purpose |
+|------|--------------|---------|
+| `/media-kit/` | `xqejjdpv` | Brand partnerships |
+| `/` (join) | `mjgzzjgz` | Newsletter email signups |
 
-## Step 2 — Create a form
-
-1. Click **+ New Form**
-2. Name it: `OmegaGreed Media Kit`
-3. Set **Send submissions to**: `geoffreyrcrawford@gmail.com`
-4. Copy your form URL — it looks like:
-   ```
-   https://formspree.io/f/xxxxxxxx
-   ```
-   You only need the **`xxxxxxxx`** part (the form ID).
-
-## Step 3 — Send the ID to update the site
-
-Reply with your form ID (e.g. `mqabcdef`) and it will be added to the media kit page and pushed to GitHub.
-
-The live page is: **https://join.omegagreed.com/media-kit/**
-
-## After it’s live
-
-- Submissions appear in your Formspree dashboard
-- You get an email for each inquiry
-- Free plan: **50 submissions / month** (enough to start)
+---
 
 ## Optional (recommended in Formspree settings)
 
-- Enable **reCAPTCHA** or spam filtering if you get junk mail
-- Customize the auto-reply (optional)
+For **newsletter** form (`mjgzzjgz`):
+
+- Turn **off** email notifications if you don't want an alert per signup
+- Export CSV from the Formspree dashboard when you need the list
+- Enable spam filtering / reCAPTCHA if you get junk
+
+For **media kit** form (`xqejjdpv`):
+
+- Keep email notifications on (fewer, higher-value inquiries)
+
+---
+
+## Free plan limits
+
+- **50 submissions / month** per account (shared across forms on free tier — enough to start)
