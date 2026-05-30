@@ -346,7 +346,8 @@
         border: 1px solid var(--line);
         border-radius: 20px;
         padding: 28px;
-        background: var(--surface-2);
+        background: linear-gradient(160deg, var(--red-soft), var(--surface-2));
+        border-color: rgba(196, 30, 30, 0.2);
       }
 
       .brand-card.horror {
@@ -392,18 +393,34 @@
         background: var(--horror);
       }
 
-      .horror-strip {
+      .brand-strip {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 10px;
         margin-top: 20px;
       }
 
-      .horror-strip img {
+      .brand-strip img {
+        width: 100%;
         border-radius: 12px;
         aspect-ratio: 4 / 3;
         object-fit: cover;
         border: 1px solid var(--line);
+        transition:
+          transform 0.4s var(--ease),
+          border-color 0.25s var(--ease);
+      }
+
+      .brand-strip img:hover {
+        transform: scale(1.02);
+      }
+
+      .brand-card:not(.horror) .brand-strip img:hover {
+        border-color: rgba(196, 30, 30, 0.45);
+      }
+
+      .brand-card.horror .brand-strip img:hover {
+        border-color: rgba(139, 47, 201, 0.55);
       }
 
       .events-grid {
@@ -708,7 +725,7 @@
           grid-template-columns: repeat(2, 1fr);
         }
 
-        .horror-strip {
+        .brand-strip {
           grid-template-columns: 1fr;
         }
 
@@ -904,6 +921,23 @@
               <li>Gear reviews &amp; ownership</li>
               <li>Vehicle lifestyle content</li>
             </ul>
+            <div class="brand-strip">
+              <img
+                src="assets/hero-bmw-gs.jpg"
+                alt="BMW GS Adventure touring motorcycle"
+                loading="lazy"
+              />
+              <img
+                src="assets/adventure-helmet.png"
+                alt="Desert riding with adventure helmet"
+                loading="lazy"
+              />
+              <img
+                src="assets/ducati-hypermotard.jpg"
+                alt="Ducati Hypermotard on the road"
+                loading="lazy"
+              />
+            </div>
           </article>
           <article class="brand-card horror">
             <h3>Villains of Horror</h3>
@@ -913,7 +947,7 @@
               <li>Horror movies &amp; culture</li>
               <li>Convention coverage</li>
             </ul>
-            <div class="horror-strip">
+            <div class="brand-strip">
               <img
                 src="assets/horror-giant-skeleton.png"
                 alt="Horror event — giant skeleton installation"
