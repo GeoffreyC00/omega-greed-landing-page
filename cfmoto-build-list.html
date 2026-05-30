@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CFMOTO 675SS Build List — OmegaGreed</title>
+    <meta
+      name="description"
+      content="The parts, mods, and accessories Geoffrey Crawford used on his CFMOTO 675SS build — curated from real-world riding and installs on OmegaGreed."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #070707;
+        --surface: #0f0f0f;
+        --surface-2: #141414;
+        --text: #f7f7f5;
+        --muted: #a3a3a3;
+        --line: rgba(255, 255, 255, 0.1);
+        --red: #c41e1e;
+        --red-soft: rgba(196, 30, 30, 0.12);
+        --max: 1180px;
+        --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .wrap {
+        width: min(var(--max), calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        color: var(--red);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        line-height: 0.95;
+      }
+
+      h2 {
+        font-size: clamp(2.2rem, 5vw, 3.2rem);
+        margin: 0 0 16px;
+      }
+
+      .section-lead {
+        max-width: 720px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        border-bottom: 1px solid var(--line);
+        background: rgba(7, 7, 7, 0.92);
+        backdrop-filter: blur(14px);
+      }
+
+      .site-header .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0;
+        gap: 16px;
+      }
+
+      .logo img {
+        height: 48px;
+        width: auto;
+      }
+
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 14px;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .nav a:hover {
+        color: var(--text);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 14px 24px;
+        transition: transform 0.2s var(--ease), background 0.2s var(--ease);
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn-primary {
+        background: var(--red);
+        color: #fff;
+        border: 1px solid var(--red);
+      }
+
+      .btn-ghost {
+        background: transparent;
+        color: var(--text);
+        border: 1px solid var(--line);
+      }
+
+      .btn-card {
+        width: 100%;
+        margin-top: auto;
+        padding: 12px 18px;
+        font-size: 0.78rem;
+      }
+
+      .hero {
+        padding: clamp(40px, 6vw, 64px) 0 0;
+        background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+      }
+
+      .hero-feature {
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: clamp(28px, 5vw, 40px);
+        background: var(--surface-2);
+      }
+
+      .hero-feature img {
+        width: 100%;
+        max-height: min(52vh, 520px);
+        object-fit: cover;
+        object-position: center 35%;
+      }
+
+      .hero-body {
+        padding: clamp(28px, 5vw, 48px) 0 clamp(48px, 8vw, 72px);
+      }
+
+      .hero h1 {
+        font-size: clamp(2.8rem, 8vw, 4.8rem);
+        margin: 0 0 16px;
+        max-width: 14ch;
+      }
+
+      .hero-sub {
+        max-width: 640px;
+        margin: 0 0 28px;
+        color: var(--muted);
+        font-size: clamp(1rem, 2vw, 1.15rem);
+        line-height: 1.65;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .disclosure {
+        border: 1px solid var(--line);
+        border-left: 3px solid var(--red);
+        border-radius: 12px;
+        padding: 16px 18px;
+        background: var(--red-soft);
+        color: var(--muted);
+        font-size: 0.88rem;
+        line-height: 1.6;
+      }
+
+      .disclosure strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .section {
+        padding: clamp(56px, 8vw, 80px) 0;
+      }
+
+      .section-tight-top {
+        padding-top: 0;
+      }
+
+      .intro-block {
+        max-width: 720px;
+        margin-bottom: 40px;
+      }
+
+      .intro-block p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 16px;
+      }
+
+      .product-card {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 22px;
+        background: var(--surface);
+        transition: border-color 0.25s var(--ease), transform 0.25s var(--ease);
+      }
+
+      .product-card:hover {
+        border-color: rgba(196, 30, 30, 0.35);
+        transform: translateY(-2px);
+      }
+
+      .card-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+
+      .category {
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--red);
+      }
+
+      .badge {
+        font-size: 0.65rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 4px 10px;
+      }
+
+      .product-card h3 {
+        margin: 0 0 10px;
+        font-size: 1.65rem;
+        line-height: 1;
+      }
+
+      .product-card p {
+        margin: 0 0 18px;
+        flex: 1;
+        color: var(--muted);
+        font-size: 0.92rem;
+        line-height: 1.55;
+      }
+
+      .why-panel {
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: clamp(28px, 5vw, 48px);
+        background:
+          linear-gradient(135deg, var(--red-soft), transparent 55%),
+          var(--surface);
+      }
+
+      .why-panel p {
+        margin: 0;
+        max-width: 680px;
+        color: var(--muted);
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      .video-intro {
+        max-width: 720px;
+        margin-top: 8px;
+      }
+
+      .video-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 28px;
+      }
+
+      .video-card {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        overflow: hidden;
+        background: var(--surface);
+        transition:
+          border-color 0.25s var(--ease),
+          transform 0.25s var(--ease),
+          box-shadow 0.25s var(--ease);
+      }
+
+      .video-card:hover {
+        border-color: rgba(196, 30, 30, 0.55);
+        transform: translateY(-3px);
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+      }
+
+      .video-thumb {
+        position: relative;
+        aspect-ratio: 16 / 9;
+        background: var(--surface-2);
+        overflow: hidden;
+      }
+
+      .video-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s var(--ease);
+      }
+
+      .video-card:hover .video-thumb img {
+        transform: scale(1.04);
+      }
+
+      .video-thumb::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          transparent 40%,
+          rgba(5, 5, 5, 0.75) 100%
+        );
+        pointer-events: none;
+      }
+
+      .play-overlay {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: rgba(196, 30, 30, 0.92);
+        border: 2px solid rgba(255, 255, 255, 0.25);
+        transform: translate(-50%, -50%);
+        transition: transform 0.25s var(--ease), background 0.25s var(--ease);
+        pointer-events: none;
+      }
+
+      .video-card:hover .play-overlay {
+        transform: translate(-50%, -50%) scale(1.08);
+        background: var(--red);
+      }
+
+      .play-overlay svg {
+        width: 22px;
+        height: 22px;
+        margin-left: 3px;
+        fill: #fff;
+      }
+
+      .video-body {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 18px 20px 20px;
+      }
+
+      .video-body h3 {
+        margin: 0 0 8px;
+        font-size: 1.45rem;
+        line-height: 1.05;
+      }
+
+      .video-body p {
+        margin: 0 0 16px;
+        flex: 1;
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.55;
+      }
+
+      .btn-watch {
+        align-self: flex-start;
+        padding: 11px 20px;
+        font-size: 0.75rem;
+        pointer-events: none;
+      }
+
+      @media (max-width: 720px) {
+        .video-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .cta-final {
+        text-align: center;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: clamp(36px, 6vw, 56px) 28px;
+        background:
+          linear-gradient(180deg, var(--red-soft), transparent),
+          var(--surface);
+      }
+
+      .cta-final h2 {
+        margin-bottom: 12px;
+      }
+
+      .cta-final p {
+        max-width: 520px;
+        margin: 0 auto 24px;
+        color: var(--muted);
+      }
+
+      .disclosure-bottom {
+        margin-top: 32px;
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        padding: 28px 0 40px;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
+      .site-footer .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .footer-links a:hover {
+        color: var(--text);
+      }
+
+      @media (max-width: 720px) {
+        .nav {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="logo" href="https://www.omegagreed.com/">
+          <img src="assets/logo.png" alt="OmegaGreed" />
+        </a>
+        <nav class="nav" aria-label="Site">
+          <a href="https://www.omegagreed.com/">Main Site</a>
+          <a href="index.html">Join List</a>
+          <a href="media-kit/">Media Kit</a>
+          <a
+            href="https://www.youtube.com/@OmegaGreed"
+            target="_blank"
+            rel="noopener noreferrer"
+            >YouTube</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="wrap">
+        <figure class="hero-feature">
+          <img
+            src="assets/cfmoto-675ss-hero.png"
+            alt="CFMOTO 675SS motorcycle build"
+            width="1200"
+            height="675"
+          />
+        </figure>
+        <div class="hero-body">
+          <p class="eyebrow">OmegaGreed · Build resource</p>
+          <h1>CFMOTO 675SS Build List</h1>
+          <p class="hero-sub">
+            The parts, mods, and accessories I used on my CFMOTO 675SS —
+            curated from real-world riding, installs, and ownership experience.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#build-list">Shop the Build</a>
+            <a
+              class="btn btn-ghost"
+              href="https://www.youtube.com/@OmegaGreed/search?query=cfmoto"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Watch CFMOTO Videos</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight-top">
+      <div class="wrap">
+        <div class="disclosure" role="note">
+          <strong>Disclosure:</strong> Some links on this page are affiliate
+          links. As an eBay Partner Network affiliate, I may earn a small
+          commission from qualifying purchases at no extra cost to you. Buying
+          through these links helps support the OmegaGreed channel.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="build-list">
+      <div class="wrap">
+        <p class="eyebrow">The build</p>
+        <h2>Parts &amp; accessories</h2>
+        <div class="intro-block">
+          <p>
+            I put this page together so viewers can quickly find the parts and
+            accessories I used or recommend for the CFMOTO 675SS. These are
+            products I personally tested, installed, or found useful while
+            building and riding the bike. I'll keep this page updated as I add,
+            remove, or change parts.
+          </p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="card-meta">
+              <span class="category">Exhaust</span>
+              <span class="badge">Used on my build</span>
+            </div>
+            <h3>KO Lightning Exhaust</h3>
+            <p>
+              Slip-on exhaust setup used on my CFMOTO 675SS build.
+            </p>
+            <a
+              class="btn btn-primary btn-card"
+              href="https://www.ebay.com/itm/365690007657?mkcid=1&mkevt=1&mkrid=711-53200-19255-0&ssspo=bluvogqsspq&sssrc=4429486&ssuid=kpACZYmORjm&stype=1&var=&widget_ver=artemis&media=COPY&siteid=0&campid=5339144420&customid=KO&toolid=20012"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              >Buy on eBay</a
+            >
+          </article>
+
+          <article class="product-card">
+            <div class="card-meta">
+              <span class="category">Garage / Maintenance</span>
+              <span class="badge">Recommended</span>
+            </div>
+            <h3>Rear Tire Stand Bobbins</h3>
+            <p>
+              Helpful for using a rear stand during maintenance, cleaning, and
+              installs.
+            </p>
+            <a
+              class="btn btn-primary btn-card"
+              href="https://www.ebay.com/itm/376198308754?mkcid=1&mkevt=1&mkrid=711-53200-19255-0&ssspo=rnqhp17gq-s&sssrc=4429486&ssuid=kpACZYmORjm&stype=1&var=&widget_ver=artemis&media=COPY&siteid=0&campid=5339144420&customid=Rear&toolid=10001"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              >Buy on eBay</a
+            >
+          </article>
+
+          <article class="product-card">
+            <div class="card-meta">
+              <span class="category">Appearance / Fender Eliminator</span>
+              <span class="badge">Used on my build</span>
+            </div>
+            <h3>CFMOTO Tail Tidy</h3>
+            <p>
+              Cleans up the rear end of the bike for a sharper look.
+            </p>
+            <a
+              class="btn btn-primary btn-card"
+              href="https://www.ebay.com/itm/157575977725?mkcid=1&mkevt=1&mkrid=711-53200-19255-0&ssspo=brnxfcmhtoo&sssrc=4429486&ssuid=kpACZYmORjm&stype=1&var=&widget_ver=artemis&media=COPY&siteid=0&campid=5339144420&customid=Tail&toolid=20012"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              >Buy on eBay</a
+            >
+          </article>
+
+          <article class="product-card">
+            <div class="card-meta">
+              <span class="category">Windscreen</span>
+              <span class="badge">Used on my build</span>
+            </div>
+            <h3>Carbon Fiber Windscreen</h3>
+            <p>
+              Sportier windscreen option for the CFMOTO 675SS.
+            </p>
+            <a
+              class="btn btn-primary btn-card"
+              href="https://www.aliexpress.us/item/3256808978190271.html?aff_fsk=_c4DJzGYJ&aff_platform=portals-tool&sk=_c4DJzGYJ&terminal_id=8037e2c22aab4be2ba46c69a76e6f646"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              >Shop on AliExpress</a
+            >
+          </article>
+
+          <article class="product-card">
+            <div class="card-meta">
+              <span class="category">Windscreen</span>
+              <span class="badge">Recommended</span>
+            </div>
+            <h3>Windscreen</h3>
+            <p>
+              Replacement or alternate windscreen option for the CFMOTO 675SS.
+            </p>
+            <a
+              class="btn btn-primary btn-card"
+              href="https://www.amazon.com/dp/B0FMK4K8WC?tag=eeksithars-20"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              >Buy on Amazon</a
+            >
+          </article>
+
+          <article class="product-card">
+            <div class="card-meta">
+              <span class="category">Protection</span>
+              <span class="badge">Used on my build</span>
+            </div>
+            <h3>CFMOTO Crash Bars</h3>
+            <p>
+              Added protection for the bike during real-world riding.
+            </p>
+            <a
+              class="btn btn-primary btn-card"
+              href="https://www.amazon.com/dp/B0F4CCYFSH?tag=eeksithars-20"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              >Buy on Amazon</a
+            >
+          </article>
+
+          <article class="product-card">
+            <div class="card-meta">
+              <span class="category">Appearance / Aero</span>
+              <span class="badge">Recommended</span>
+            </div>
+            <h3>Front Fairing Winglet</h3>
+            <p>
+              Front fairing winglet accessory for a more aggressive look.
+            </p>
+            <a
+              class="btn btn-primary btn-card"
+              href="https://www.amazon.com/dp/B0F8VMQV78?tag=eeksithars-20"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              >Buy on Amazon</a
+            >
+          </article>
+
+          <article class="product-card">
+            <div class="card-meta">
+              <span class="category">Garage / Maintenance</span>
+              <span class="badge">Recommended</span>
+            </div>
+            <h3>Motorcycle Stand</h3>
+            <p>
+              Useful for maintenance, cleaning, chain work, and installs.
+            </p>
+            <a
+              class="btn btn-primary btn-card"
+              href="https://www.amazon.com/dp/B09BYYDKZ2?tag=eeksithars-20"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              >Buy on Amazon</a
+            >
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0">
+      <div class="wrap">
+        <p class="eyebrow">Why this exists</p>
+        <h2>Why I made this list</h2>
+        <div class="why-panel">
+          <p>
+            After building and riding the CFMOTO 675SS, I kept getting the same
+            questions: what exhaust did you run, what did you change on the
+            tail, what stand do you use? This page is the single place I point
+            people to — real parts from my build, not a random gear dump. If
+            something helped on the bike or in the garage, it's here. If I swap
+            parts later, I'll update the list so it stays accurate.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0">
+      <div class="wrap">
+        <p class="eyebrow">On the channel</p>
+        <h2>Related CFMOTO videos</h2>
+        <p class="section-lead video-intro">
+          Watch the videos behind the build — installs, ownership lessons, and
+          real-world CFMOTO 675SS experience.
+        </p>
+        <div class="video-grid">
+          <a
+            class="video-card"
+            href="https://www.youtube.com/watch?v=di4aVNJ4elY"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Watch: Installing KO Lightning Exhaust on My CFMoto 675SS"
+          >
+            <div class="video-thumb">
+              <img
+                src="https://img.youtube.com/vi/di4aVNJ4elY/maxresdefault.jpg"
+                alt=""
+                width="1280"
+                height="720"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://img.youtube.com/vi/di4aVNJ4elY/hqdefault.jpg'"
+              />
+              <span class="play-overlay" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+            </div>
+            <div class="video-body">
+              <h3>
+                Installing KO Lightning Exhaust on My CFMoto 675SS (Sound Test!)
+              </h3>
+              <p>
+                Full install walkthrough and sound test of the KO Lightning
+                exhaust on my 675SS build.
+              </p>
+              <span class="btn btn-primary btn-watch">Watch Video</span>
+            </div>
+          </a>
+
+          <a
+            class="video-card"
+            href="https://www.youtube.com/watch?v=HVMVI8kYNjA"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Watch: I Rode My CFMoto 675SS from LA to Vegas"
+          >
+            <div class="video-thumb">
+              <img
+                src="https://img.youtube.com/vi/HVMVI8kYNjA/maxresdefault.jpg"
+                alt=""
+                width="1280"
+                height="720"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://img.youtube.com/vi/HVMVI8kYNjA/hqdefault.jpg'"
+              />
+              <span class="play-overlay" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+            </div>
+            <div class="video-body">
+              <h3>I Rode My CFMoto 675SS from LA to Vegas — Here's What Happened</h3>
+              <p>
+                Real cross-country miles, what broke, what surprised me, and how
+                the bike handled the trip.
+              </p>
+              <span class="btn btn-primary btn-watch">Watch Video</span>
+            </div>
+          </a>
+
+          <a
+            class="video-card"
+            href="https://www.youtube.com/watch?v=6dIHQFSKVQg"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Watch: I Finally Tuned My CFMoto 675SS"
+          >
+            <div class="video-thumb">
+              <img
+                src="https://img.youtube.com/vi/6dIHQFSKVQg/maxresdefault.jpg"
+                alt=""
+                width="1280"
+                height="720"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://img.youtube.com/vi/6dIHQFSKVQg/hqdefault.jpg'"
+              />
+              <span class="play-overlay" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+            </div>
+            <div class="video-body">
+              <h3>I Finally Tuned My CFMoto 675SS — Here's How It Really Feels Now</h3>
+              <p>
+                After the tune, here's how throttle response, power delivery,
+                and daily riding actually changed.
+              </p>
+              <span class="btn btn-primary btn-watch">Watch Video</span>
+            </div>
+          </a>
+
+          <a
+            class="video-card"
+            href="https://www.youtube.com/watch?v=xdgo_o41aQM"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Watch: How a Race Windscreen Transformed My CFMoto 675SS"
+          >
+            <div class="video-thumb">
+              <img
+                src="https://img.youtube.com/vi/xdgo_o41aQM/maxresdefault.jpg"
+                alt=""
+                width="1280"
+                height="720"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://img.youtube.com/vi/xdgo_o41aQM/hqdefault.jpg'"
+              />
+              <span class="play-overlay" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+            </div>
+            <div class="video-body">
+              <h3>How a Race Windscreen Transformed My CFMoto 675SS</h3>
+              <p>
+                Before-and-after look at the race windscreen mod and how it
+                changed the bike's profile and ride.
+              </p>
+              <span class="btn btn-primary btn-watch">Watch Video</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-final">
+          <h2>More builds &amp; road stories</h2>
+          <p>
+            Want more real-world motorcycle reviews, builds, and road trip
+            content?
+          </p>
+          <a
+            class="btn btn-primary"
+            href="https://www.youtube.com/@OmegaGreed?sub_confirmation=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Subscribe on YouTube</a
+          >
+        </div>
+        <div class="disclosure disclosure-bottom" role="note">
+          <strong>Disclosure:</strong> Some links on this page are affiliate
+          links. As an eBay Partner Network affiliate, I may earn a small
+          commission from qualifying purchases at no extra cost to you. Buying
+          through these links helps support the OmegaGreed channel.
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>© OmegaGreed · Created by Geoffrey Crawford</span>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="https://www.omegagreed.com/">Main Site</a>
+          <a href="media-kit/">Media Kit</a>
+          <a href="index.html">Join List</a>
+          <a
+            href="https://www.youtube.com/@OmegaGreed"
+            target="_blank"
+            rel="noopener noreferrer"
+            >YouTube</a
+          >
+          <a
+            href="https://www.instagram.com/omegagreed"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram</a
+          >
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
