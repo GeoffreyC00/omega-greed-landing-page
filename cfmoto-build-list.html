@@ -170,19 +170,46 @@
         background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
       }
 
-      .hero-feature {
-        border: 1px solid var(--line);
-        border-radius: 20px;
-        overflow: hidden;
+      .hero-gallery {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 12px;
         margin-bottom: clamp(28px, 5vw, 40px);
+      }
+
+      .hero-shot {
+        margin: 0;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        overflow: hidden;
         background: var(--surface-2);
       }
 
-      .hero-feature img {
+      .hero-shot img {
         width: 100%;
+        height: 100%;
+        min-height: min(42vh, 380px);
         max-height: min(52vh, 520px);
         object-fit: cover;
-        object-position: center 35%;
+      }
+
+      .hero-shot-main img {
+        object-position: center 42%;
+      }
+
+      .hero-shot-build img {
+        object-position: center 55%;
+      }
+
+      @media (max-width: 720px) {
+        .hero-gallery {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-shot img {
+          min-height: 220px;
+          max-height: 320px;
+        }
       }
 
       .hero-body {
@@ -529,14 +556,24 @@
 
     <section class="hero">
       <div class="wrap">
-        <figure class="hero-feature">
-          <img
-            src="assets/cfmoto-675ss-hero.png"
-            alt="CFMOTO 675SS motorcycle build"
-            width="1200"
-            height="675"
-          />
-        </figure>
+        <div class="hero-gallery">
+          <figure class="hero-shot hero-shot-main">
+            <img
+              src="assets/cfmoto-675ss-ride.png"
+              alt="Riding the CFMOTO 675SS on the highway"
+              width="1600"
+              height="900"
+            />
+          </figure>
+          <figure class="hero-shot hero-shot-build">
+            <img
+              src="assets/cfmoto-675ss-build.png"
+              alt="CFMOTO 675SS build with exhaust, crash bars, and tail tidy"
+              width="1600"
+              height="900"
+            />
+          </figure>
+        </div>
         <div class="hero-body">
           <p class="eyebrow">OmegaGreed · Build resource</p>
           <h1>CFMOTO 675SS Build List</h1>
