@@ -10,6 +10,7 @@ Static landing pages for **OmegaGreed** (creator brand by Geoffrey Crawford). Ho
 | Media kit | https://join.omegagreed.com/media-kit/ |
 | CFMOTO 675SS build list | https://join.omegagreed.com/cfmoto-build-list.html |
 | Filming gear (affiliate) | https://join.omegagreed.com/filming-gear.html |
+| Motorcycle Content Starter Kit ($27) | https://join.omegagreed.com/motorcycle-content-starter-kit/ |
 
 GitHub Pages default (backup): https://geoffreyc00.github.io/omega-greed-landing-page/
 
@@ -35,6 +36,8 @@ GitHub Pages default (backup): https://geoffreyc00.github.io/omega-greed-landing
 | `media-kit/index.html` | Clean URL duplicate of media kit |
 | `cfmoto-build-list.html` | CFMOTO 675SS affiliate build list |
 | `filming-gear.html` | Motorcycle filming gear (Amazon affiliate) |
+| `motorcycle-content-starter-kit/index.html` | Digital product sales page ($27 starter kit) |
+| `products/motorcycle-content-starter-kit/` | Canva PDF copy + launch checklist |
 | `landing-page.html` | Legacy prototype (ignore) |
 | `FORMSPREE_SETUP.md` | Form endpoints & notes |
 | `assets/` | Images (logo, hero photos, horror, CFMOTO, etc.) |
