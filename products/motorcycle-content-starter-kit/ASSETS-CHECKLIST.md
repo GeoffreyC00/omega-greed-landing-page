@@ -24,7 +24,9 @@ Use this list before you go live with sales and delivery.
 
 ## Canva PDFs (copy ready in repo)
 
-Copy is in `products/motorcycle-content-starter-kit/canva/`:
+**Fastest path:** Open `products/motorcycle-content-starter-kit/print/*.html` in Chrome → Print → Save as PDF (see **BUILD-GUIDE.md**).
+
+**Canva path:** Copy from `products/motorcycle-content-starter-kit/canva/`:
 
 | File | Deliverable |
 |------|-------------|
