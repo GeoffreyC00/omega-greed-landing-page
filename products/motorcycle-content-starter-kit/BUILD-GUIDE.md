@@ -75,7 +75,7 @@ Use if you want to add photos, change layouts, or match a specific Canva templat
 
 | PDF | Pages (HTML reference) |
 |-----|------------------------|
-| Main starter kit | 14 |
+| Main starter kit | **30** (5-part philosophy + method + lessons + case studies) |
 | Shot list | 5 |
 | Road trip | 4 |
 | 50 ideas | 5 |

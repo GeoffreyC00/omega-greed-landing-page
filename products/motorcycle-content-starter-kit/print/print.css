@@ -136,6 +136,73 @@ li {
   line-height: 1.5;
 }
 
+.part-header {
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--red);
+}
+
+.part-header .part-num {
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin: 0 0 6px;
+}
+
+.part-header h2 {
+  margin: 0;
+}
+
+.lesson-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 18pt;
+  color: var(--text);
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.case-label {
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin: 0 0 8px;
+}
+
+.photo-note {
+  border: 1px dashed rgba(196, 30, 30, 0.45);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin: 14px 0;
+  font-size: 9pt;
+  color: var(--muted);
+  background: rgba(196, 30, 30, 0.06);
+  line-height: 1.45;
+}
+
+.photo-note strong {
+  display: block;
+  color: var(--red);
+  font-size: 7.5pt;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.story-callout {
+  border-left: 3px solid var(--red);
+  padding: 10px 14px;
+  margin: 12px 0;
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 10pt;
+  color: var(--text);
+  font-style: italic;
+}
+
 .cover .byline {
   font-size: 10pt;
   color: var(--muted);
@@ -245,6 +312,102 @@ td {
 
 .idea-group h3 {
   margin-top: 0;
+}
+
+.part-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 28pt;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+  color: var(--text);
+}
+
+.part-title span {
+  color: var(--red);
+}
+
+.lesson-box {
+  border: 1px solid rgba(196, 30, 30, 0.3);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 14px 0;
+  background: rgba(196, 30, 30, 0.06);
+}
+
+.lesson-box h3 {
+  margin-top: 0;
+  font-size: 11pt;
+}
+
+.case-study {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 14px 0;
+  background: var(--surface);
+}
+
+.case-study h3 {
+  margin-top: 0;
+}
+
+.photo-slot {
+  border: 1px dashed rgba(196, 30, 30, 0.45);
+  border-radius: 10px;
+  padding: 20px 16px;
+  margin: 14px 0;
+  text-align: center;
+  font-size: 8.5pt;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(196, 30, 30, 0.85);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.step {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.step-num {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--red);
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 16pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.step-body h3 {
+  margin-top: 0;
+}
+
+.toc {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+  font-size: 10.5pt;
+}
+
+.toc li span:last-child {
+  color: var(--muted);
 }
 
 @media print {
