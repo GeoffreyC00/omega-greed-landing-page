@@ -60,7 +60,7 @@ GitHub Pages default (backup): https://geoffreyc00.github.io/omega-greed-landing
 - **YouTube:** https://www.youtube.com/@OmegaGreedAK47
 - **Instagram:** https://www.instagram.com/omegagreed
 - **Contact:** geoffreyrcrawford@gmail.com
-- **Gumroad — Starter Kit ($27):** https://omegagreed.gumroad.com/l/rdfrl
+- **Gumroad — Starter Kit ($27):** https://omegagreed.gumroad.com/l/rdfrl?wanted=true
 - **Gumroad — Email list:** https://omegagreed.gumroad.com/subscribe
 
 ## Design

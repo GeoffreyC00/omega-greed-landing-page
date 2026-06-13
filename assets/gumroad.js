@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var CHECKOUT = "https://omegagreed.gumroad.com/l/rdfrl";
+  var CHECKOUT = "https://omegagreed.gumroad.com/l/rdfrl?wanted=true";
   var SUBSCRIBE = "https://omegagreed.gumroad.com/subscribe";
 
   window.OMEGAGREED_GUMROAD = {
