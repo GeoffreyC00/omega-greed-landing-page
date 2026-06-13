@@ -1,7 +1,7 @@
 # PDF 1 — OmegaGreed Motorcycle Content Starter Kit (v2)
 ## Personal system · Geoffrey Crawford · Canva source
 
-**Primary export:** Use `print/01-starter-kit.html` → Chrome → Save as PDF (23 pages, fully written).
+**Primary export:** Use `print/01-starter-kit.html` → Chrome → Save as PDF (24 pages, fully written).
 
 This file is the section outline for Canva edits or reference.
 
@@ -12,6 +12,18 @@ This file is the section outline for Canva edits or reference.
 **OMEGAGREED — MOTORCYCLE CONTENT STARTER KIT**
 
 Geoffrey Crawford's system for filming motorcycle stories — cross-country miles, YouTube years, lessons from the desert, Vegas, and the edit.
+
+---
+
+## START HERE
+
+**Read this before you film your next ride.**
+
+Six-step quick start: read the kit once, pick one idea, write one-sentence mission, use shot list, ride and capture, organize with folder template.
+
+Pull quote: *"Don't focus on becoming a creator. Focus on telling one story worth remembering."*
+
+— Geoffrey Crawford · OmegaGreed
 
 ---
 
