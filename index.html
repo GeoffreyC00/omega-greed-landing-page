@@ -318,6 +318,13 @@
         text-transform: uppercase;
       }
 
+      a.submit {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        box-sizing: border-box;
+      }
+
       .fine-print {
         margin-top: 14px;
         color: var(--muted);
@@ -601,6 +608,7 @@
             class="form-success"
             hidden
             role="status"
+            aria-hidden="true"
           >
             You're on the list — thanks for joining. Check your inbox for
             OmegaGreed updates.
@@ -611,40 +619,12 @@
             behind-the-scenes content before it goes public.<br /><br />
             No spam. Just real adventures.
           </p>
-          <form
-            id="hero-form"
-            action="https://formspree.io/f/mjgzzjgz"
-            method="POST"
+          <a
+            class="submit"
+            href="https://omegagreed.gumroad.com/subscribe"
+            data-gumroad="subscribe"
+            >Sign Up</a
           >
-            <input
-              type="hidden"
-              name="_subject"
-              value="OmegaGreed newsletter signup"
-            />
-            <input
-              type="hidden"
-              name="_next"
-              value="https://join.omegagreed.com/?sent=1"
-            />
-            <input
-              type="text"
-              name="_gotcha"
-              tabindex="-1"
-              autocomplete="off"
-              aria-hidden="true"
-              style="position: absolute; left: -9999px"
-            />
-            <label for="email">Email address</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              autocomplete="email"
-              placeholder="you@example.com"
-              required
-            />
-            <button class="submit" type="submit">Sign Up</button>
-          </form>
           <div class="fine-print">
             By joining, you agree to receive OmegaGreed updates. Unsubscribe
             anytime.
@@ -744,40 +724,12 @@
             <p class="form-sub">
               No spam. Just real adventures.
             </p>
-            <form
-              id="bottom-form"
-              action="https://formspree.io/f/mjgzzjgz"
-              method="POST"
+            <a
+              class="submit"
+              href="https://omegagreed.gumroad.com/subscribe"
+              data-gumroad="subscribe"
+              >Join the List</a
             >
-              <input
-                type="hidden"
-                name="_subject"
-                value="OmegaGreed newsletter signup"
-              />
-              <input
-                type="hidden"
-                name="_next"
-                value="https://join.omegagreed.com/?sent=1"
-              />
-              <input
-                type="text"
-                name="_gotcha"
-                tabindex="-1"
-                autocomplete="off"
-                aria-hidden="true"
-                style="position: absolute; left: -9999px"
-              />
-              <label for="email-bottom">Email address</label>
-              <input
-                id="email-bottom"
-                name="email"
-                type="email"
-                autocomplete="email"
-                placeholder="you@example.com"
-                required
-              />
-              <button class="submit" type="submit">Join the List</button>
-            </form>
           </aside>
         </div>
       </div>
@@ -788,14 +740,6 @@
       <span><a href="media-kit/">Media kit for brand partnerships</a></span>
     </footer>
 
-    <script>
-      (function () {
-        const params = new URLSearchParams(window.location.search);
-        if (params.get("sent") === "1") {
-          const banner = document.getElementById("form-success");
-          if (banner) banner.hidden = false;
-        }
-      })();
-    </script>
+    <script src="assets/gumroad.js"></script>
   </body>
 </html>

@@ -7,7 +7,8 @@ Use this list before you go live with sales and delivery.
 ## Landing page (done in repo)
 
 - [x] Sales page at `join.omegagreed.com/motorcycle-content-starter-kit/`
-- [ ] **Checkout URL** — add Gumroad / Stripe / Lemon Squeezy link in `motorcycle-content-starter-kit/index.html` (`CHECKOUT_URL` in script + all `#checkout` buttons)
+- [x] **Checkout URL** — Gumroad `https://omegagreed.gumroad.com/l/rdfrl` (wired in `motorcycle-content-starter-kit/index.html`)
+- [x] **Newsletter** — Gumroad `https://omegagreed.gumroad.com/subscribe` (join list CTAs site-wide)
 - [ ] Test purchase flow end-to-end
 - [ ] Link from omegagreed.com (Squarespace nav or button)
 

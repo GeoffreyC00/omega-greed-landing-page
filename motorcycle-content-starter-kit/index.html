@@ -460,6 +460,13 @@
         text-transform: uppercase;
       }
 
+      a.submit {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        box-sizing: border-box;
+      }
+
       .fine-print {
         margin-top: 12px;
         font-size: 0.76rem;
@@ -553,7 +560,7 @@
     </style>
   </head>
   <body>
-    <!-- CHECKOUT: Replace href="#checkout" with your Gumroad/Stripe/Lemon Squeezy link -->
+    <!-- Checkout: https://omegagreed.gumroad.com/l/rdfrl -->
     <header class="site-header">
       <div class="wrap">
         <a class="logo" href="https://www.omegagreed.com/">
@@ -578,7 +585,11 @@
             system from cross-country miles, desert rides, Vegas hauls, and years
             of filming. Philosophy, judgment, and lessons learned the hard way.
           </p>
-          <a class="btn btn-primary btn-lg" href="#checkout" id="checkout-hero"
+          <a
+            class="btn btn-primary btn-lg"
+            href="https://omegagreed.gumroad.com/l/rdfrl"
+            data-gumroad="checkout"
+            id="checkout-hero"
             >Download the Starter Kit</a
           >
           <span class="price-tag">$27</span>
@@ -692,7 +703,10 @@
           </article>
         </div>
         <p style="text-align: center; margin-top: 32px">
-          <a class="btn btn-primary btn-lg" href="#checkout"
+          <a
+            class="btn btn-primary btn-lg"
+            href="https://omegagreed.gumroad.com/l/rdfrl"
+            data-gumroad="checkout"
             >Download the Motorcycle Content Starter Kit — $27</a
           >
         </p>
@@ -813,8 +827,9 @@
           <article class="faq-item">
             <h3>How do I get the product?</h3>
             <p>
-              After purchase, you'll receive access to the digital download.
-              <!-- DELIVERY: Add Gumroad/Stripe delivery URL or email automation note -->
+              After purchase, Gumroad emails you instantly with a download link
+              for all six PDFs. You can also access your files anytime from your
+              Gumroad library.
             </p>
           </article>
           <article class="faq-item">
@@ -838,21 +853,17 @@
           resources.
         </p>
         <aside class="form-card">
-          <div id="form-success" class="form-success" hidden role="status">
-            You're on the list — thanks for joining.
-          </div>
-          <form action="https://formspree.io/f/mjgzzjgz" method="POST">
-            <input type="hidden" name="_subject" value="OmegaGreed newsletter signup" />
-            <input
-              type="hidden"
-              name="_next"
-              value="https://join.omegagreed.com/motorcycle-content-starter-kit/?sent=1"
-            />
-            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px" />
-            <label for="email">Email address</label>
-            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
-            <button class="submit" type="submit">Join the List</button>
-          </form>
+          <h2>Join the list</h2>
+          <p class="form-sub" style="margin-bottom: 20px">
+            Motorcycle filming gear updates, road trip notes, behind-the-scenes
+            creator lessons, and future digital resources.
+          </p>
+          <a
+            class="submit"
+            href="https://omegagreed.gumroad.com/subscribe"
+            data-gumroad="subscribe"
+            >Join the List</a
+          >
           <p class="fine-print">Unsubscribe anytime. No spam.</p>
         </aside>
       </div>
@@ -866,13 +877,16 @@
             Use a simple system to capture better footage, stronger story
             moments, and content you can actually use.
           </p>
-          <!-- CHECKOUT: Replace # below with your payment link (Gumroad, Stripe, Lemon Squeezy, etc.) -->
-          <a class="btn btn-primary btn-lg" href="#" id="checkout-main"
+          <a
+            class="btn btn-primary btn-lg"
+            href="https://omegagreed.gumroad.com/l/rdfrl"
+            data-gumroad="checkout"
+            id="checkout-main"
             >Download the Motorcycle Content Starter Kit — $27</a
           >
           <p class="checkout-note">
-            Instant digital download · PDFs + checklists · By Geoffrey Crawford /
-            OmegaGreed
+            Instant digital download via Gumroad · PDFs + checklists · By
+            Geoffrey Crawford / OmegaGreed
           </p>
         </div>
       </div>
@@ -895,20 +909,6 @@
       </div>
     </footer>
 
-    <script>
-      (function () {
-        if (new URLSearchParams(window.location.search).get("sent") === "1") {
-          var el = document.getElementById("form-success");
-          if (el) el.hidden = false;
-        }
-        // CHECKOUT: Set your payment URL once — updates all buy buttons
-        var CHECKOUT_URL = "#"; // e.g. "https://yourstore.gumroad.com/l/starter-kit"
-        if (CHECKOUT_URL && CHECKOUT_URL !== "#") {
-          document.querySelectorAll("#checkout-hero, #checkout-main, a[href='#checkout']").forEach(function (a) {
-            a.href = CHECKOUT_URL;
-          });
-        }
-      })();
-    </script>
+    <script src="../assets/gumroad.js"></script>
   </body>
 </html>
