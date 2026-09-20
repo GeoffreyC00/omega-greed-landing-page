@@ -440,6 +440,120 @@
         line-height: 1.7;
       }
 
+      .video-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+        max-width: 640px;
+      }
+
+      .video-card {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        overflow: hidden;
+        background: var(--surface);
+        transition:
+          border-color 0.25s var(--ease),
+          transform 0.25s var(--ease),
+          box-shadow 0.25s var(--ease);
+      }
+
+      .video-card:hover {
+        border-color: rgba(196, 30, 30, 0.55);
+        transform: translateY(-3px);
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+      }
+
+      .video-thumb {
+        position: relative;
+        aspect-ratio: 16 / 9;
+        background: var(--surface-2);
+        overflow: hidden;
+      }
+
+      .video-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s var(--ease);
+      }
+
+      .video-card:hover .video-thumb img {
+        transform: scale(1.04);
+      }
+
+      .video-thumb::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          transparent 40%,
+          rgba(5, 5, 5, 0.75) 100%
+        );
+        pointer-events: none;
+      }
+
+      .play-overlay {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: rgba(196, 30, 30, 0.92);
+        border: 2px solid rgba(255, 255, 255, 0.25);
+        transform: translate(-50%, -50%);
+        transition: transform 0.25s var(--ease), background 0.25s var(--ease);
+        pointer-events: none;
+      }
+
+      .video-card:hover .play-overlay {
+        transform: translate(-50%, -50%) scale(1.08);
+        background: var(--red);
+      }
+
+      .play-overlay svg {
+        width: 22px;
+        height: 22px;
+        margin-left: 3px;
+        fill: #fff;
+      }
+
+      .video-body {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 18px 20px 20px;
+      }
+
+      .video-body h3 {
+        margin: 0 0 8px;
+        font-size: 1.45rem;
+        line-height: 1.05;
+      }
+
+      .video-body p {
+        margin: 0 0 16px;
+        flex: 1;
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.55;
+      }
+
+      .btn-watch {
+        align-self: flex-start;
+        padding: 11px 20px;
+        font-size: 0.75rem;
+        pointer-events: none;
+      }
+
       .cta-final {
         text-align: center;
         padding: clamp(40px, 6vw, 56px) 24px;
@@ -541,7 +655,13 @@
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#build-list">Shop the Build</a>
-            <a class="btn btn-ghost" href="#bike-map">Explore the Bike</a>
+            <a
+              class="btn btn-ghost"
+              href="https://youtu.be/LHvUDfTcP00"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Watch Exhaust Video</a
+            >
           </div>
         </div>
       </div>
@@ -725,6 +845,50 @@
       </div>
     </section>
 
+    <section class="section" style="padding-top: 0">
+      <div class="wrap">
+        <p class="eyebrow">On the channel</p>
+        <h2>Related CBR650R video</h2>
+        <p class="section-lead" style="margin-bottom: 28px">
+          Watch the exhaust install and sound on my Honda CBR650R — then shop the
+          parts above.
+        </p>
+        <div class="video-grid">
+          <a
+            class="video-card"
+            href="https://youtu.be/LHvUDfTcP00"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Watch: Honda CBR650R exhaust video"
+          >
+            <div class="video-thumb">
+              <img
+                src="https://img.youtube.com/vi/LHvUDfTcP00/maxresdefault.jpg"
+                alt=""
+                width="1280"
+                height="720"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://img.youtube.com/vi/LHvUDfTcP00/hqdefault.jpg'"
+              />
+              <span class="play-overlay" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+            </div>
+            <div class="video-body">
+              <h3>Honda CBR650R Exhaust Install &amp; Sound</h3>
+              <p>
+                Full exhaust install and sound on my CBR650R — the parts from
+                this build list are linked below the video.
+              </p>
+              <span class="btn btn-primary btn-watch">Watch Video</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="wrap">
         <div class="cta-final">
@@ -736,10 +900,10 @@
           <div class="hero-actions" style="justify-content: center">
             <a
               class="btn btn-primary"
-              href="https://www.youtube.com/@OmegaGreedAK47?sub_confirmation=1"
+              href="https://youtu.be/LHvUDfTcP00"
               target="_blank"
               rel="noopener noreferrer"
-              >Subscribe on YouTube</a
+              >Watch the Exhaust Video</a
             >
             <a class="btn btn-ghost" href="cfmoto-build-list.html"
               >CFMOTO 675SS Build</a
