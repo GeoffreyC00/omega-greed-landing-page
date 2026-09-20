@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Honda CBR650R Build List — OmegaGreed</title>
+    <meta
+      name="description"
+      content="Parts and accessories for Geoffrey Crawford's Honda CBR650R — exhaust, levers, frame sliders, and more. Affiliate build list from OmegaGreed."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #070707;
+        --surface: #0f0f0f;
+        --surface-2: #141414;
+        --text: #f7f7f5;
+        --muted: #a3a3a3;
+        --line: rgba(255, 255, 255, 0.1);
+        --red: #c41e1e;
+        --red-soft: rgba(196, 30, 30, 0.12);
+        --max: 1180px;
+        --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .wrap {
+        width: min(var(--max), calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        color: var(--red);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        line-height: 0.95;
+      }
+
+      h2 {
+        font-size: clamp(2.2rem, 5vw, 3.2rem);
+        margin: 0 0 16px;
+      }
+
+      .section-lead {
+        max-width: 720px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        border-bottom: 1px solid var(--line);
+        background: rgba(7, 7, 7, 0.92);
+        backdrop-filter: blur(14px);
+      }
+
+      .site-header .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0;
+        gap: 16px;
+      }
+
+      .logo img {
+        height: 48px;
+        width: auto;
+      }
+
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 14px;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .nav a:hover {
+        color: var(--text);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 14px 24px;
+        transition: transform 0.2s var(--ease), background 0.2s var(--ease);
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn-primary {
+        background: var(--red);
+        color: #fff;
+        border: 1px solid var(--red);
+      }
+
+      .btn-ghost {
+        background: transparent;
+        color: var(--text);
+        border: 1px solid var(--line);
+      }
+
+      .btn-card {
+        width: 100%;
+        margin-top: auto;
+        padding: 14px 18px;
+        font-size: 0.82rem;
+      }
+
+      .hero {
+        padding: clamp(40px, 6vw, 64px) 0 0;
+        background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+      }
+
+      .hero-body {
+        padding: clamp(28px, 5vw, 48px) 0 clamp(40px, 6vw, 56px);
+      }
+
+      .hero h1 {
+        font-size: clamp(2.8rem, 8vw, 4.8rem);
+        margin: 0 0 16px;
+        max-width: 16ch;
+      }
+
+      .hero-sub {
+        max-width: 640px;
+        margin: 0 0 28px;
+        color: var(--muted);
+        font-size: clamp(1rem, 2vw, 1.15rem);
+        line-height: 1.65;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .disclosure {
+        border: 1px solid var(--line);
+        border-left: 3px solid var(--red);
+        border-radius: 12px;
+        padding: 16px 18px;
+        background: var(--red-soft);
+        color: var(--muted);
+        font-size: 0.88rem;
+        line-height: 1.6;
+      }
+
+      .disclosure strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .disclosure-bottom {
+        margin-top: 32px;
+      }
+
+      .section {
+        padding: clamp(56px, 8vw, 80px) 0;
+      }
+
+      .section-tight-top {
+        padding-top: 0;
+      }
+
+      .intro-block {
+        max-width: 720px;
+        margin-bottom: 40px;
+      }
+
+      .intro-block p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      /* Interactive bike map */
+      .bike-map-section {
+        padding-bottom: clamp(40px, 6vw, 56px);
+      }
+
+      .bike-map {
+        position: relative;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        overflow: hidden;
+        background: var(--surface-2);
+        margin-bottom: 16px;
+      }
+
+      .bike-map img {
+        width: 100%;
+        height: auto;
+        min-height: min(42vh, 360px);
+        max-height: min(62vh, 560px);
+        object-fit: cover;
+        object-position: center 45%;
+      }
+
+      .hotspot {
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        margin: -18px 0 0 -18px;
+        border: 0;
+        border-radius: 50%;
+        background: var(--red);
+        color: #fff;
+        cursor: pointer;
+        box-shadow: 0 0 0 0 rgba(196, 30, 30, 0.45);
+        animation: pulse 2.2s ease-out infinite;
+        z-index: 2;
+        font: inherit;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s var(--ease), background 0.2s var(--ease);
+      }
+
+      .hotspot:hover,
+      .hotspot:focus-visible,
+      .hotspot.is-active {
+        transform: scale(1.12);
+        background: #e02828;
+        outline: none;
+        animation: none;
+        box-shadow: 0 0 0 4px rgba(196, 30, 30, 0.35);
+      }
+
+      .hotspot-label {
+        position: absolute;
+        left: 50%;
+        bottom: calc(100% + 10px);
+        transform: translateX(-50%);
+        white-space: nowrap;
+        padding: 6px 10px;
+        border-radius: 8px;
+        background: rgba(7, 7, 7, 0.92);
+        border: 1px solid var(--line);
+        color: var(--text);
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s var(--ease);
+      }
+
+      .hotspot:hover .hotspot-label,
+      .hotspot:focus-visible .hotspot-label,
+      .hotspot.is-active .hotspot-label {
+        opacity: 1;
+      }
+
+      /* Positions based on rear 3/4 garage shot */
+      .hotspot-exhaust {
+        left: 48%;
+        top: 72%;
+      }
+
+      .hotspot-sliders {
+        left: 42%;
+        top: 58%;
+      }
+
+      .hotspot-levers {
+        left: 68%;
+        top: 36%;
+      }
+
+      .hotspot-damper {
+        left: 62%;
+        top: 42%;
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(196, 30, 30, 0.5);
+        }
+        70% {
+          box-shadow: 0 0 0 14px rgba(196, 30, 30, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(196, 30, 30, 0);
+        }
+      }
+
+      .bike-map-hint {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 16px;
+      }
+
+      .product-card {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 22px;
+        background: var(--surface);
+        transition: border-color 0.25s var(--ease), transform 0.25s var(--ease),
+          box-shadow 0.25s var(--ease);
+        scroll-margin-top: 96px;
+      }
+
+      .product-card:hover {
+        border-color: rgba(196, 30, 30, 0.35);
+        transform: translateY(-2px);
+      }
+
+      .product-card.is-highlighted {
+        border-color: rgba(196, 30, 30, 0.65);
+        box-shadow: 0 0 0 1px rgba(196, 30, 30, 0.35);
+        transform: translateY(-2px);
+      }
+
+      .card-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+
+      .category {
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--red);
+      }
+
+      .badge {
+        font-size: 0.65rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 4px 10px;
+      }
+
+      .product-card h3 {
+        font-size: 1.55rem;
+        margin: 0 0 10px;
+      }
+
+      .product-card p {
+        margin: 0 0 20px;
+        color: var(--muted);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        flex: 1;
+      }
+
+      .why-panel {
+        max-width: 720px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 24px 26px;
+        background: var(--surface);
+      }
+
+      .why-panel p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      .cta-final {
+        text-align: center;
+        padding: clamp(40px, 6vw, 56px) 24px;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+      }
+
+      .cta-final h2 {
+        margin-bottom: 12px;
+      }
+
+      .cta-final p {
+        max-width: 520px;
+        margin: 0 auto 24px;
+        color: var(--muted);
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        padding: 28px 0 40px;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
+      .site-footer .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .footer-links a:hover {
+        color: var(--text);
+      }
+
+      @media (max-width: 720px) {
+        .nav {
+          display: none;
+        }
+
+        .hotspot {
+          width: 30px;
+          height: 30px;
+          margin: -15px 0 0 -15px;
+          font-size: 0.62rem;
+        }
+
+        .hotspot-label {
+          display: none;
+        }
+
+        .bike-map img {
+          min-height: 240px;
+          max-height: 340px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="logo" href="https://www.omegagreed.com/">
+          <img src="assets/logo.png" alt="OmegaGreed" />
+        </a>
+        <nav class="nav" aria-label="Site">
+          <a href="https://www.omegagreed.com/">Main Site</a>
+          <a href="index.html">Join List</a>
+          <a href="motorcycle-content-starter-kit/">Starter Kit</a>
+          <a href="cfmoto-build-list.html">CFMOTO Build</a>
+          <a href="filming-gear.html">Filming Gear</a>
+          <a href="media-kit/">Media Kit</a>
+          <a
+            href="https://www.youtube.com/@OmegaGreedAK47"
+            target="_blank"
+            rel="noopener noreferrer"
+            >YouTube</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-body">
+          <p class="eyebrow">OmegaGreed · Build resource</p>
+          <h1>Honda CBR650R Build List</h1>
+          <p class="hero-sub">
+            The parts and accessories I'm running on my Honda CBR650R — exhaust,
+            controls, protection, and mounts. Tap a spot on the bike or shop the
+            list below.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#build-list">Shop the Build</a>
+            <a class="btn btn-ghost" href="#bike-map">Explore the Bike</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight-top">
+      <div class="wrap">
+        <div class="disclosure" role="note">
+          <strong>Affiliate disclosure:</strong> This page contains affiliate
+          links. As an eBay Partner Network affiliate, I may earn a commission
+          from qualifying purchases at no extra cost to you. As an Amazon
+          Associate I may earn from qualifying purchases. Buying through these
+          links helps support the OmegaGreed channel.
+        </div>
+      </div>
+    </section>
+
+    <section class="section bike-map-section" id="bike-map">
+      <div class="wrap">
+        <p class="eyebrow">Interactive</p>
+        <h2>Tap a part on the bike</h2>
+        <p class="section-lead" style="margin-bottom: 24px">
+          Red markers highlight mods from this build. Click one to jump to that
+          product and open the shop link from there.
+        </p>
+
+        <div class="bike-map" aria-label="Honda CBR650R with clickable part markers">
+          <img
+            src="assets/honda-cbr650r-garage.png"
+            alt="Red Honda CBR650R in the garage — rear three-quarter view"
+            width="1600"
+            height="900"
+          />
+          <button
+            type="button"
+            class="hotspot hotspot-exhaust"
+            data-target="product-exhaust"
+            aria-label="Full system exhaust"
+          >
+            <span class="hotspot-label">Exhaust</span>
+            1
+          </button>
+          <button
+            type="button"
+            class="hotspot hotspot-damper"
+            data-target="product-damper"
+            aria-label="Damper bracket mount kit"
+          >
+            <span class="hotspot-label">Damper kit</span>
+            2
+          </button>
+          <button
+            type="button"
+            class="hotspot hotspot-levers"
+            data-target="product-levers"
+            aria-label="Short brake and clutch levers"
+          >
+            <span class="hotspot-label">Levers</span>
+            3
+          </button>
+          <button
+            type="button"
+            class="hotspot hotspot-sliders"
+            data-target="product-sliders"
+            aria-label="Frame sliders crash protectors"
+          >
+            <span class="hotspot-label">Frame sliders</span>
+            4
+          </button>
+        </div>
+        <p class="bike-map-hint">
+          Prefer a list? Scroll down — same parts, big Buy on eBay buttons.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="build-list" style="padding-top: 0">
+      <div class="wrap">
+        <p class="eyebrow">The build</p>
+        <h2>Parts &amp; accessories</h2>
+        <div class="intro-block">
+          <p>
+            Quick links to the Honda CBR650R parts featured in my content. These
+            are the exact eBay affiliate links from my list — click through to
+            check fitment for your year before you buy.
+          </p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card" id="product-exhaust">
+            <div class="card-meta">
+              <span class="category">Exhaust</span>
+              <span class="badge">Featured</span>
+            </div>
+            <h3>Full System Exhaust</h3>
+            <p>
+              Full system exhaust tips / header pipe for Honda CBR650R, CBR650F,
+              and CB650R (2014–2026 fitment — verify your year on the listing).
+            </p>
+            <a
+              class="btn btn-primary btn-card"
+              href="https://ebay.us/keGmXj"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              >Buy on eBay</a
+            >
+          </article>
+
+          <article class="product-card" id="product-damper">
+            <div class="card-meta">
+              <span class="category">Mounts / Accessories</span>
+              <span class="badge">Featured</span>
+            </div>
+            <h3>Damper Bracket Mount Kit</h3>
+            <p>
+              CRR 650R damper bracket mount kit for Honda CBR650R (2019–2025).
+              Cleaner steering-damper install when you're ready to add one.
+            </p>
+            <a
+              class="btn btn-primary btn-card"
+              href="https://ebay.us/WkliRj"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              >Buy on eBay</a
+            >
+          </article>
+
+          <article class="product-card" id="product-levers">
+            <div class="card-meta">
+              <span class="category">Controls</span>
+              <span class="badge">Featured</span>
+            </div>
+            <h3>CNC Short Brake &amp; Clutch Levers</h3>
+            <p>
+              Short brake and clutch levers for Honda CBR650R 2019–2025 / 2026.
+              Adjustable CNC handles for a tighter cockpit feel.
+            </p>
+            <a
+              class="btn btn-primary btn-card"
+              href="https://ebay.us/AHqWgN"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              >Buy on eBay</a
+            >
+          </article>
+
+          <article class="product-card" id="product-sliders">
+            <div class="card-meta">
+              <span class="category">Protection</span>
+              <span class="badge">Featured</span>
+            </div>
+            <h3>Frame Sliders / Crash Protectors</h3>
+            <p>
+              CB/CBR 650R frame sliders and crash protectors for Honda CB650R /
+              CBR650R 2019–2023. Peace of mind for street and track-day miles.
+            </p>
+            <a
+              class="btn btn-primary btn-card"
+              href="https://ebay.us/lBdURv"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              >Buy on eBay</a
+            >
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0">
+      <div class="wrap">
+        <p class="eyebrow">Why this exists</p>
+        <h2>Why I made this list</h2>
+        <div class="why-panel">
+          <p>
+            Same idea as the CFMOTO page — when a video goes live, people ask
+            where the parts came from. This is the single link I can drop in the
+            description: real CBR650R parts from my garage, with affiliate links
+            that help keep OmegaGreed running. I'll add more as the build grows.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-final">
+          <h2>More builds &amp; road stories</h2>
+          <p>
+            Watch the CBR650R installs and rides on YouTube — and grab the
+            CFMOTO build list if you're on that bike too.
+          </p>
+          <div class="hero-actions" style="justify-content: center">
+            <a
+              class="btn btn-primary"
+              href="https://www.youtube.com/@OmegaGreedAK47?sub_confirmation=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Subscribe on YouTube</a
+            >
+            <a class="btn btn-ghost" href="cfmoto-build-list.html"
+              >CFMOTO 675SS Build</a
+            >
+          </div>
+        </div>
+        <div class="disclosure disclosure-bottom" role="note">
+          <strong>Affiliate disclosure:</strong> Some links on this page are
+          affiliate links. As an eBay Partner Network affiliate, I may earn a
+          commission from qualifying purchases at no extra cost to you. As an
+          Amazon Associate I may earn from qualifying purchases. Prices and
+          availability are set by the seller and may change.
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>© OmegaGreed · Created by Geoffrey Crawford</span>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="https://www.omegagreed.com/">Main Site</a>
+          <a href="media-kit/">Media Kit</a>
+          <a href="index.html">Join List</a>
+          <a href="cfmoto-build-list.html">CFMOTO Build</a>
+          <a
+            href="https://www.youtube.com/@OmegaGreedAK47"
+            target="_blank"
+            rel="noopener noreferrer"
+            >YouTube</a
+          >
+          <a
+            href="https://www.instagram.com/omegagreed"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram</a
+          >
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var hotspots = document.querySelectorAll(".hotspot");
+        var cards = document.querySelectorAll(".product-card");
+
+        function clearHighlights() {
+          hotspots.forEach(function (btn) {
+            btn.classList.remove("is-active");
+          });
+          cards.forEach(function (card) {
+            card.classList.remove("is-highlighted");
+          });
+        }
+
+        hotspots.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var id = btn.getAttribute("data-target");
+            var card = document.getElementById(id);
+            clearHighlights();
+            btn.classList.add("is-active");
+            if (card) {
+              card.classList.add("is-highlighted");
+              card.scrollIntoView({ behavior: "smooth", block: "center" });
+            }
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
