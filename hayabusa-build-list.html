@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hayabusa Touring Build List — OmegaGreed</title>
+    <meta
+      name="description"
+      content="Affiliate build page for Geoffrey Crawford's touring Suzuki Hayabusa. Shop the saddle bags, tail bag, lowering shifter, exhaust springs, and blind-spot mirror through Amazon Associates and eBay Partner Network links."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #070707;
+        --surface: #0f0f0f;
+        --surface-2: #141414;
+        --text: #f7f7f5;
+        --muted: #a3a3a3;
+        --line: rgba(255, 255, 255, 0.1);
+        --red: #c41e1e;
+        --red-soft: rgba(196, 30, 30, 0.12);
+        --max: 1180px;
+        --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .wrap {
+        width: min(var(--max), calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        color: var(--red);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        line-height: 0.95;
+      }
+
+      h1 {
+        margin: 0 0 16px;
+        font-size: clamp(3.2rem, 8vw, 5.4rem);
+      }
+
+      h2 {
+        font-size: clamp(2.2rem, 5vw, 3.2rem);
+        margin: 0 0 16px;
+      }
+
+      .section-lead {
+        max-width: 720px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        border-bottom: 1px solid var(--line);
+        background: rgba(7, 7, 7, 0.92);
+        backdrop-filter: blur(14px);
+      }
+
+      .site-header .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0;
+        gap: 16px;
+      }
+
+      .logo img {
+        height: 48px;
+        width: auto;
+      }
+
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 14px;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .nav a:hover,
+      .nav a[aria-current="page"] {
+        color: var(--text);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border-radius: 999px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 14px 24px;
+        transition: transform 0.2s var(--ease), background 0.2s var(--ease);
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn-primary {
+        background: var(--red);
+        color: #fff;
+        border: 1px solid var(--red);
+      }
+
+      .btn-ghost {
+        background: transparent;
+        color: var(--text);
+        border: 1px solid var(--line);
+      }
+
+      .btn-card {
+        width: 100%;
+        margin-top: auto;
+        padding: 12px 18px;
+        font-size: 0.78rem;
+      }
+
+      .hero {
+        padding: clamp(28px, 5vw, 48px) 0 0;
+        background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+      }
+
+      .hero-shot {
+        margin: 0 0 clamp(28px, 4vw, 40px);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        overflow: hidden;
+        background: var(--surface-2);
+      }
+
+      .hero-shot img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+
+      .hero-sub {
+        max-width: 680px;
+        margin: 0 0 22px;
+        color: var(--muted);
+        font-size: 1.08rem;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .disclosure {
+        border: 1px solid rgba(196, 30, 30, 0.35);
+        border-radius: 12px;
+        padding: 16px 18px;
+        background: var(--red-soft);
+        color: var(--muted);
+        font-size: 0.92rem;
+        line-height: 1.65;
+      }
+
+      .disclosure strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .disclosure-bottom {
+        margin-top: 32px;
+      }
+
+      .section {
+        padding: clamp(48px, 7vw, 72px) 0;
+      }
+
+      .section-tight-top {
+        padding-top: 28px;
+      }
+
+      .studio {
+        display: grid;
+        grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.7fr);
+        gap: 16px;
+        align-items: stretch;
+      }
+
+      .stage-wrap {
+        min-width: 0;
+      }
+
+      .stage {
+        position: relative;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        overflow: hidden;
+        background: #111;
+        touch-action: pan-y;
+        cursor: ew-resize;
+      }
+
+      .stage img {
+        width: 100%;
+        height: auto;
+        user-select: none;
+        -webkit-user-drag: none;
+      }
+
+      .pin {
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background: var(--red);
+        color: #fff;
+        cursor: pointer;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 0 0 rgba(196, 30, 30, 0.45);
+        animation: pulse 2.2s ease-out infinite;
+        z-index: 2;
+        font: inherit;
+        font-size: 0.75rem;
+        font-weight: 800;
+      }
+
+      .pin:hover,
+      .pin:focus-visible,
+      .pin.is-active {
+        background: #e02828;
+        outline: none;
+        animation: none;
+        box-shadow: 0 0 0 6px rgba(196, 30, 30, 0.35);
+        z-index: 3;
+      }
+
+      .pin-label {
+        position: absolute;
+        left: 50%;
+        bottom: calc(100% + 10px);
+        transform: translateX(-50%);
+        white-space: nowrap;
+        padding: 6px 10px;
+        border-radius: 8px;
+        background: rgba(7, 7, 7, 0.92);
+        border: 1px solid var(--line);
+        color: var(--text);
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .pin:hover .pin-label,
+      .pin:focus-visible .pin-label,
+      .pin.is-active .pin-label {
+        opacity: 1;
+      }
+
+      .pin-mirror {
+        left: 33%;
+        top: 40%;
+      }
+
+      .pin-shifter {
+        left: 51%;
+        top: 64%;
+      }
+
+      .pin-exhaust {
+        left: 66%;
+        top: 69%;
+      }
+
+      .pin-bags {
+        left: 68%;
+        top: 58%;
+      }
+
+      .pin-tail {
+        left: 73%;
+        top: 56%;
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(196, 30, 30, 0.5);
+        }
+        70% {
+          box-shadow: 0 0 0 14px rgba(196, 30, 30, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(196, 30, 30, 0);
+        }
+      }
+
+      .stage-hint {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 0.88rem;
+        text-align: center;
+      }
+
+      .inspector {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 22px;
+        background: var(--surface);
+        min-height: 100%;
+      }
+
+      .inspector-kicker {
+        margin: 0 0 8px;
+        color: var(--red);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .inspector h3 {
+        margin: 0 0 12px;
+        font-size: clamp(2rem, 3vw, 2.5rem);
+      }
+
+      .inspector-copy {
+        margin: 0 0 16px;
+        color: var(--muted);
+        font-size: 0.98rem;
+        line-height: 1.65;
+      }
+
+      .network-note {
+        margin: 0 0 16px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid var(--line);
+        background: var(--surface-2);
+        color: var(--text);
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .inspector-link {
+        width: 100%;
+      }
+
+      .affiliate-tag {
+        font-size: 0.62rem;
+        letter-spacing: 0.12em;
+        opacity: 0.85;
+      }
+
+      .walk {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .walk button {
+        border: 1px solid var(--line);
+        background: transparent;
+        color: var(--text);
+        border-radius: 999px;
+        padding: 10px 14px;
+        font: inherit;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .walk button:hover {
+        border-color: rgba(196, 30, 30, 0.55);
+      }
+
+      .walk-count {
+        color: var(--muted);
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .part-rail {
+        display: flex;
+        gap: 8px;
+        margin-top: 16px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+
+      .part-chip {
+        flex: 0 0 auto;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        color: var(--muted);
+        border-radius: 999px;
+        padding: 10px 14px;
+        font: inherit;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .part-chip.is-active,
+      .part-chip:hover {
+        color: var(--text);
+        border-color: rgba(196, 30, 30, 0.65);
+        background: var(--red-soft);
+      }
+
+      .intro-block {
+        max-width: 720px;
+        margin-bottom: 28px;
+      }
+
+      .intro-block p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 16px;
+      }
+
+      .product-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 22px;
+        background: var(--surface);
+        scroll-margin-top: 96px;
+        transition: border-color 0.25s var(--ease), transform 0.25s var(--ease);
+      }
+
+      .product-card:hover,
+      .product-card.is-highlighted {
+        border-color: rgba(196, 30, 30, 0.65);
+        transform: translateY(-2px);
+      }
+
+      .card-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+
+      .category {
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--red);
+      }
+
+      .badge {
+        font-size: 0.65rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 4px 10px;
+      }
+
+      .product-card h3 {
+        font-size: 1.55rem;
+        margin: 0 0 10px;
+      }
+
+      .product-card p {
+        margin: 0 0 8px;
+        color: var(--muted);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        flex: 1;
+      }
+
+      .card-affiliate {
+        margin: 0 0 16px;
+        color: var(--text);
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .epn-pixel {
+        width: 1px;
+        height: 1px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+
+      .why-panel {
+        max-width: 720px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 24px 26px;
+        background: var(--surface);
+      }
+
+      .why-panel p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      .why-panel p + p {
+        margin-top: 14px;
+      }
+
+      .cta-final {
+        text-align: center;
+        padding: clamp(40px, 6vw, 56px) 24px;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+      }
+
+      .cta-final h2 {
+        margin-bottom: 12px;
+      }
+
+      .cta-final p {
+        max-width: 560px;
+        margin: 0 auto 24px;
+        color: var(--muted);
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        padding: 28px 0 40px;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
+      .site-footer .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .footer-links a:hover {
+        color: var(--text);
+      }
+
+      @media (max-width: 860px) {
+        .studio {
+          grid-template-columns: 1fr;
+        }
+
+        .nav {
+          display: none;
+        }
+
+        .pin {
+          width: 30px;
+          height: 30px;
+          font-size: 0.68rem;
+        }
+
+        .pin-label {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="logo" href="https://www.omegagreed.com/">
+          <img src="assets/logo.png" alt="OmegaGreed" />
+        </a>
+        <nav class="nav" aria-label="Site">
+          <a href="https://www.omegagreed.com/">Main Site</a>
+          <a href="index.html">Join List</a>
+          <a href="motorcycle-content-starter-kit/">Starter Kit</a>
+          <a href="cfmoto-build-list.html">CFMOTO Build</a>
+          <a href="honda-cbr650r-build-list.html">CBR650R Build</a>
+          <a href="hayabusa-build-list.html" aria-current="page">Hayabusa</a>
+          <a href="filming-gear.html">Filming Gear</a>
+          <a href="media-kit/">Media Kit</a>
+          <a
+            href="https://www.youtube.com/@OmegaGreedAK47"
+            target="_blank"
+            rel="noopener noreferrer"
+            >YouTube</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="wrap">
+        <figure class="hero-shot">
+          <img
+            src="assets/hayabusa-touring-thumbnail.jpg"
+            alt="Before and after thumbnail: a stock black Hayabusa next to the same bike set up for touring"
+            width="1024"
+            height="576"
+          />
+        </figure>
+        <p class="eyebrow">OmegaGreed · Affiliate build page</p>
+        <h1>Hayabusa Touring Build</h1>
+        <p class="hero-sub">
+          A parts map for the touring Suzuki Hayabusa. Tap a marker on the
+          bike, or walk front to rear. Every shop button on this page is an
+          affiliate link to Amazon or eBay.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#build-map">Point at the parts</a>
+          <a class="btn btn-ghost" href="#build-list">Shop the list</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight-top">
+      <div class="wrap">
+        <div class="disclosure" role="note">
+          <strong>Affiliate disclosure:</strong> This is an affiliate page.
+          Some links are paid affiliate links, which means I may earn a
+          commission if you buy through them. The price you pay does not go up.
+          As an Amazon Associate I earn from qualifying purchases. As an eBay
+          Partner Network affiliate, I may earn a commission from qualifying
+          purchases. Buying through these links helps support the OmegaGreed
+          channel. Prices, sellers, and fitment are set on Amazon and eBay and
+          can change — confirm the listing fits your Hayabusa year before you
+          order.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="build-map" style="padding-top: 12px">
+      <div class="wrap">
+        <p class="eyebrow">Interactive</p>
+        <h2>Walk the bike</h2>
+        <p class="section-lead" style="margin-bottom: 22px">
+          Red markers sit on the road photo of my Hayabusa. Select one and the
+          card tells you the part and which affiliate store it comes from.
+          Drag sideways across the photo to move to the next part.
+        </p>
+
+        <div class="studio">
+          <div class="stage-wrap">
+            <div
+              class="stage"
+              id="stage"
+              aria-label="Hayabusa photo with clickable part markers"
+            >
+              <img
+                src="assets/hayabusa-on-the-road.jpg"
+                alt="Black Suzuki Hayabusa parked in the desert, side view, with soft luggage on the rear"
+                width="1024"
+                height="576"
+              />
+              <button
+                type="button"
+                class="pin pin-mirror is-active"
+                data-part="mirror"
+                aria-pressed="true"
+                aria-label="Blind spot mirror, part 1"
+              >
+                <span class="pin-label">Mirror</span>
+                1
+              </button>
+              <button
+                type="button"
+                class="pin pin-shifter"
+                data-part="shifter"
+                aria-pressed="false"
+                aria-label="Lowering shifter, part 2"
+              >
+                <span class="pin-label">Shifter</span>
+                2
+              </button>
+              <button
+                type="button"
+                class="pin pin-exhaust"
+                data-part="exhaust"
+                aria-pressed="false"
+                aria-label="Exhaust springs, part 3"
+              >
+                <span class="pin-label">Exhaust</span>
+                3
+              </button>
+              <button
+                type="button"
+                class="pin pin-bags"
+                data-part="bags"
+                aria-pressed="false"
+                aria-label="OGIO saddle bags, part 4"
+              >
+                <span class="pin-label">Saddle bags</span>
+                4
+              </button>
+              <button
+                type="button"
+                class="pin pin-tail"
+                data-part="tail"
+                aria-pressed="false"
+                aria-label="Tail bag, part 5"
+              >
+                <span class="pin-label">Tail bag</span>
+                5
+              </button>
+            </div>
+            <p class="stage-hint">
+              Drag left or right on the photo, tap a number, or use the arrows.
+            </p>
+          </div>
+
+          <aside class="inspector" id="inspector" aria-live="polite">
+            <p class="inspector-kicker" id="inspector-kicker">Mirrors · 1 of 5</p>
+            <h3 id="inspector-title">Blind Spot Mirror</h3>
+            <p class="inspector-copy" id="inspector-copy">
+              LivTee 2-inch round convex mirror, sold as a stick-on mirror for
+              cars, SUVs, and trucks. I linked it here as a blind-spot option
+              for the Hayabusa mirrors. Check that the adhesive mount works on
+              your mirror glass before you buy.
+            </p>
+            <p class="network-note" id="inspector-network">
+              Amazon Associates affiliate link
+            </p>
+            <a
+              class="btn btn-primary inspector-link"
+              id="inspector-link"
+              href="https://www.amazon.com/dp/B07ZFHF14Q?th=1&amp;linkCode=sl2&amp;tag=eeksithars-20&amp;linkId=159b69bfc04344e8e45790297d9969db&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+            >
+              Shop on Amazon
+              <span class="affiliate-tag">Affiliate link</span>
+            </a>
+            <div class="walk">
+              <button type="button" id="walk-prev">Previous</button>
+              <span class="walk-count" id="walk-count">Front of the bike</span>
+              <button type="button" id="walk-next">Next</button>
+            </div>
+          </aside>
+        </div>
+
+        <div class="part-rail" role="tablist" aria-label="Hayabusa parts">
+          <button type="button" class="part-chip is-active" data-part="mirror">
+            1 · Mirror
+          </button>
+          <button type="button" class="part-chip" data-part="shifter">
+            2 · Shifter
+          </button>
+          <button type="button" class="part-chip" data-part="exhaust">
+            3 · Exhaust
+          </button>
+          <button type="button" class="part-chip" data-part="bags">
+            4 · Saddle bags
+          </button>
+          <button type="button" class="part-chip" data-part="tail">
+            5 · Tail bag
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="build-list" style="padding-top: 10px">
+      <div class="wrap">
+        <p class="eyebrow">The build</p>
+        <h2>Parts &amp; affiliate links</h2>
+        <div class="intro-block">
+          <p>
+            Same five parts as the map above, in a list. Each button leaves
+            this site for Amazon or eBay. These are affiliate links. I earn a
+            commission from qualifying purchases, and it does not change your
+            price.
+          </p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card is-highlighted" id="product-mirror" data-part="mirror">
+            <div class="card-meta">
+              <span class="category">Mirrors</span>
+              <span class="badge">Amazon</span>
+            </div>
+            <h3>Blind Spot Mirror</h3>
+            <p>
+              LivTee 2-inch round convex mirror, sold as a stick-on mirror for
+              cars, SUVs, and trucks. I linked it here as a blind-spot option
+              for the Hayabusa mirrors. Check that the adhesive mount works on
+              your mirror glass before you buy.
+            </p>
+            <p class="card-affiliate">Amazon Associates affiliate link</p>
+            <a
+              class="btn btn-primary btn-card"
+              href="https://www.amazon.com/dp/B07ZFHF14Q?th=1&amp;linkCode=sl2&amp;tag=eeksithars-20&amp;linkId=159b69bfc04344e8e45790297d9969db&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              >Shop on Amazon</a
+            >
+          </article>
+
+          <article class="product-card" id="product-shifter" data-part="shifter">
+            <div class="card-meta">
+              <span class="category">Controls</span>
+              <span class="badge">eBay</span>
+            </div>
+            <h3>Lowering Shifter</h3>
+            <p>
+              eBay partner link for the lowering shifter on this list. The
+              tracking on the link is labeled LoweringShifter. Open the listing
+              and confirm the exact part and the year range for your Hayabusa
+              before you order.
+            </p>
+            <p class="card-affiliate">eBay Partner Network affiliate link</p>
+            <a
+              class="btn btn-primary btn-card"
+              href="https://ebay.us/UYKwpc"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              >Shop on eBay</a
+            >
+            <img
+              class="epn-pixel"
+              alt=""
+              width="1"
+              height="1"
+              src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=47079333&amp;mkcid=1&amp;mkrid=711-53200-19255-0&amp;mkevt=2&amp;siteid=0&amp;campid=5339222743&amp;ad_type=0&amp;toolid=20012&amp;customid=LoweringShifter"
+            />
+          </article>
+
+          <article class="product-card" id="product-exhaust" data-part="exhaust">
+            <div class="card-meta">
+              <span class="category">Exhaust</span>
+              <span class="badge">Amazon</span>
+            </div>
+            <h3>Exhaust Muffler Springs</h3>
+            <p>
+              AUTUT stainless exhaust muffler springs, pack of four, about 58mm
+              long. A small hardware piece if a spring on the mid-pipe or
+              slip-on is stretched. Match the length to your exhaust before you
+              order.
+            </p>
+            <p class="card-affiliate">Amazon Associates affiliate link</p>
+            <a
+              class="btn btn-primary btn-card"
+              href="https://www.amazon.com/dp/B07MZL7FXB?&amp;linkCode=ll2&amp;tag=eeksithars-20&amp;linkId=fb89ee05cb6baff2730010b3ae6e3d3b&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              >Shop on Amazon</a
+            >
+          </article>
+
+          <article class="product-card" id="product-bags" data-part="bags">
+            <div class="card-meta">
+              <span class="category">Luggage</span>
+              <span class="badge">Amazon</span>
+            </div>
+            <h3>OGIO Saddle Bag Stealth 2.0</h3>
+            <p>
+              Soft saddlebags with heat-resistant bottoms and a webbing mount.
+              This is the luggage pair for the touring setup — the kind of bags
+              hanging off the rear of the Hayabusa in the photo above.
+            </p>
+            <p class="card-affiliate">Amazon Associates affiliate link</p>
+            <a
+              class="btn btn-primary btn-card"
+              href="https://www.amazon.com/dp/B09S8RJ318?&amp;linkCode=ll2&amp;tag=eeksithars-20&amp;linkId=0537c70d63939d387d949f564b4869d9&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              >Shop on Amazon</a
+            >
+          </article>
+
+          <article class="product-card" id="product-tail" data-part="tail">
+            <div class="card-meta">
+              <span class="category">Luggage</span>
+              <span class="badge">Amazon</span>
+            </div>
+            <h3>Rhinowalk Tail Bag</h3>
+            <p>
+              Foldable hard-shell tail bag, about 23–35 liters, with straps for
+              a seat or luggage rack. A back-of-the-seat bag for longer rides.
+              Confirm the mount fits your Hayabusa before you buy.
+            </p>
+            <p class="card-affiliate">Amazon Associates affiliate link</p>
+            <a
+              class="btn btn-primary btn-card"
+              href="https://link.amazon/B04F5GJfH"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              >Shop on Amazon</a
+            >
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0">
+      <div class="wrap">
+        <p class="eyebrow">Why this exists</p>
+        <h2>Why I made this page</h2>
+        <div class="why-panel">
+          <p>
+            People keep asking what is on the touring Hayabusa. This is the
+            single page I can send them. It points at the parts, then hands
+            you the affiliate listing so you can check fitment yourself.
+          </p>
+          <p>
+            It is an affiliate page on purpose. Amazon and eBay can see the
+            disclosure, and so can you. If a part changes on the bike, I will
+            update the map so the list stays honest.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0">
+      <div class="wrap">
+        <div class="cta-final">
+          <h2>More builds &amp; road stories</h2>
+          <p>
+            Hayabusa rides live on the OmegaGreed YouTube channel. The CFMOTO
+            and CBR650R build lists are affiliate pages too.
+          </p>
+          <div class="hero-actions" style="justify-content: center">
+            <a
+              class="btn btn-primary"
+              href="https://www.youtube.com/@OmegaGreedAK47/videos"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Watch on YouTube</a
+            >
+            <a class="btn btn-ghost" href="cfmoto-build-list.html">CFMOTO Build</a>
+            <a class="btn btn-ghost" href="honda-cbr650r-build-list.html"
+              >CBR650R Build</a
+            >
+          </div>
+        </div>
+        <div class="disclosure disclosure-bottom" role="note">
+          <strong>Affiliate disclosure:</strong> This page contains affiliate
+          links. As an Amazon Associate I earn from qualifying purchases. As an
+          eBay Partner Network affiliate, I may earn a commission from
+          qualifying purchases at no extra cost to you. Prices and availability
+          are set by the seller and may change.
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>© OmegaGreed · Created by Geoffrey Crawford</span>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="https://www.omegagreed.com/">Main Site</a>
+          <a href="media-kit/">Media Kit</a>
+          <a href="index.html">Join List</a>
+          <a href="cfmoto-build-list.html">CFMOTO Build</a>
+          <a href="honda-cbr650r-build-list.html">CBR650R Build</a>
+          <a
+            href="https://www.youtube.com/@OmegaGreedAK47"
+            target="_blank"
+            rel="noopener noreferrer"
+            >YouTube</a
+          >
+          <a
+            href="https://www.instagram.com/omegagreed"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram</a
+          >
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var order = ["mirror", "shifter", "exhaust", "bags", "tail"];
+        var places = [
+          "Front of the bike",
+          "Rider controls",
+          "Low on the exhaust",
+          "Rear luggage",
+          "Tail of the bike",
+        ];
+        var current = "mirror";
+        var pins = document.querySelectorAll(".pin");
+        var chips = document.querySelectorAll(".part-chip");
+        var cards = document.querySelectorAll(".product-card");
+        var kicker = document.getElementById("inspector-kicker");
+        var title = document.getElementById("inspector-title");
+        var copy = document.getElementById("inspector-copy");
+        var network = document.getElementById("inspector-network");
+        var link = document.getElementById("inspector-link");
+        var count = document.getElementById("walk-count");
+        var stage = document.getElementById("stage");
+
+        function selectPart(id, scrollCard) {
+          var card = document.getElementById("product-" + id);
+          if (!card) return;
+          current = id;
+          var index = order.indexOf(id);
+          var cardLink = card.querySelector("a");
+          var cardTitle = card.querySelector("h3");
+          var cardCopy = card.querySelector("p");
+          var cardNetwork = card.querySelector(".card-affiliate");
+          var category = card.querySelector(".category");
+
+          pins.forEach(function (pin) {
+            var on = pin.getAttribute("data-part") === id;
+            pin.classList.toggle("is-active", on);
+            pin.setAttribute("aria-pressed", on ? "true" : "false");
+          });
+          chips.forEach(function (chip) {
+            chip.classList.toggle("is-active", chip.getAttribute("data-part") === id);
+          });
+          cards.forEach(function (item) {
+            item.classList.toggle("is-highlighted", item === card);
+          });
+
+          kicker.textContent =
+            category.textContent + " · " + (index + 1) + " of " + order.length;
+          title.textContent = cardTitle.textContent;
+          copy.textContent = cardCopy.textContent;
+          network.textContent = cardNetwork.textContent;
+          link.href = cardLink.href;
+          link.childNodes[0].textContent =
+            cardLink.textContent.indexOf("eBay") !== -1
+              ? "Shop on eBay "
+              : "Shop on Amazon ";
+          count.textContent = places[index] || "";
+
+          if (scrollCard) {
+            card.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+        }
+
+        function step(direction) {
+          var index = order.indexOf(current);
+          var next = (index + direction + order.length) % order.length;
+          selectPart(order[next], false);
+        }
+
+        pins.forEach(function (pin) {
+          pin.addEventListener("click", function (event) {
+            event.stopPropagation();
+            selectPart(pin.getAttribute("data-part"), false);
+          });
+        });
+
+        chips.forEach(function (chip) {
+          chip.addEventListener("click", function () {
+            selectPart(chip.getAttribute("data-part"), false);
+          });
+        });
+
+        cards.forEach(function (card) {
+          card.addEventListener("click", function (event) {
+            if (event.target.closest("a")) return;
+            selectPart(card.getAttribute("data-part"), false);
+            document.getElementById("build-map").scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          });
+        });
+
+        document.getElementById("walk-prev").addEventListener("click", function () {
+          step(-1);
+        });
+        document.getElementById("walk-next").addEventListener("click", function () {
+          step(1);
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+          var tag = document.activeElement && document.activeElement.tagName;
+          if (tag === "INPUT" || tag === "TEXTAREA") return;
+          step(event.key === "ArrowRight" ? 1 : -1);
+        });
+
+        var startX = null;
+        stage.addEventListener("pointerdown", function (event) {
+          if (event.target.closest(".pin")) return;
+          startX = event.clientX;
+        });
+        stage.addEventListener("pointerup", function (event) {
+          if (startX == null) return;
+          var delta = event.clientX - startX;
+          startX = null;
+          if (Math.abs(delta) < 48) return;
+          step(delta < 0 ? 1 : -1);
+        });
+        stage.addEventListener("pointercancel", function () {
+          startX = null;
+        });
+      })();
+    </script>
+  </body>
+</html>
