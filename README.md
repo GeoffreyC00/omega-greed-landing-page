@@ -71,7 +71,7 @@ GitHub Pages default (backup): https://geoffreyc00.github.io/omega-greed-landing
 
 - Dark premium aesthetic: black background, `#c41e1e` red accents
 - Fonts: **Bebas Neue** (headlines) + **Inter** (body)
-- Media kit also uses purple accent for **Villains of Horror** sub-brand
+- Media kit positioning: OmegaGreed is motorcycle, automotive, travel, gear, and enthusiast culture. Horror coverage is secondary creator work, not a co-brand.
 
 ## Squarespace (main site)
 
