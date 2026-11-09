@@ -194,6 +194,24 @@
         opacity: 0.72;
       }
 
+      .hero-layout {
+        display: grid;
+        gap: 22px;
+      }
+
+      .hero-photo {
+        margin: 0;
+      }
+
+      .hero-photo img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1672 / 941;
+        object-fit: contain;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+      }
+
       .hero-status {
         margin: 18px 0 0;
         color: var(--text);
@@ -461,8 +479,18 @@
           margin-top: 0;
         }
 
+        .hero-layout {
+          grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+          gap: 36px;
+          align-items: center;
+        }
+
         .hero-copy {
-          max-width: 760px;
+          max-width: none;
+        }
+
+        .hero-photo {
+          order: 2;
         }
 
         .examples {
@@ -493,7 +521,7 @@
 
     <main>
       <section class="hero">
-        <div class="wrap">
+        <div class="wrap hero-layout">
           <div class="hero-copy">
             <p class="eyebrow">Purpose Over Comfort</p>
             <h1>What would you do if you knew you couldn’t fail?</h1>
@@ -520,6 +548,14 @@
               >
             </div>
           </div>
+          <figure class="hero-photo">
+            <img
+              src="../assets/purpose-over-comfort-hero.webp"
+              alt="A figure steps through an open door onto a path marked Name your dream, Make a plan, and Take the first step."
+              width="1672"
+              height="941"
+            />
+          </figure>
         </div>
       </section>
 
