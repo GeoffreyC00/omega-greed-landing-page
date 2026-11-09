@@ -35,6 +35,21 @@ For **media kit** form (`xqejjdpv`):
 
 ---
 
+## Purpose Over Comfort (`/purpose-over-comfort/`)
+
+**Status:** Not connected. The page ships with “Applications opening soon.”
+
+Do not reuse `mjgzzjgz` or `xqejjdpv`. Those forms are the newsletter and partnership inbox.
+
+To open applications:
+
+1. Create a new Formspree form used only for this pilot.
+2. Send notifications to the inbox that should receive applications.
+3. Put that form URL in `APPLICATION_ENDPOINT` in `purpose-over-comfort/index.html`.
+4. Leave `PLAUSIBLE_DOMAIN` empty until a Plausible site exists. Then set it to the site domain Plausible is tracking.
+
+The page confirms success only when that endpoint returns a success response.
+
 ## Free plan limits
 
 - **50 submissions / month** per account (shared across forms on free tier — enough to start)

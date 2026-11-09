@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Purpose Over Comfort — OmegaGreed</title>
+    <meta
+      name="description"
+      content="Purpose Over Comfort is a four-week personal project planning and accountability pilot with Geoffrey R. Crawford. Two to three spots. $750. Apply first. No payment on this page."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="referrer" content="origin" />
+    <link rel="canonical" href="https://join.omegagreed.com/purpose-over-comfort/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #070707;
+        --surface: #101010;
+        --surface-2: #161616;
+        --text: #f7f7f5;
+        --muted: #a3a3a3;
+        --line: rgba(255, 255, 255, 0.1);
+        --red: #c41e1e;
+        --red-soft: rgba(196, 30, 30, 0.14);
+        --max: 1080px;
+        --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .wrap {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 1px solid var(--line);
+        background: rgba(7, 7, 7, 0.92);
+        backdrop-filter: blur(14px);
+      }
+
+      .site-header .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 72px;
+      }
+
+      .logo img {
+        height: 44px;
+        width: auto;
+      }
+
+      .header-mark {
+        color: var(--muted);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+
+      .hero {
+        padding: 28px 0 8px;
+      }
+
+      .hero-photo {
+        margin: 0;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        overflow: hidden;
+        background: #111;
+      }
+
+      .hero-photo img {
+        width: 100%;
+        height: 168px;
+        object-fit: cover;
+        object-position: center 45%;
+      }
+
+      .eyebrow {
+        margin: 22px 0 10px;
+        color: var(--red);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        line-height: 0.94;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.45rem, 10.5vw, 5.2rem);
+        max-width: 14ch;
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: clamp(2.1rem, 8vw, 3.3rem);
+      }
+
+      .lede {
+        margin: 16px 0 0;
+        max-width: 38rem;
+        color: var(--text);
+        font-size: 1.08rem;
+        line-height: 1.55;
+      }
+
+      .offer-line {
+        margin: 14px 0 0;
+        max-width: 38rem;
+        color: var(--muted);
+        font-size: 0.98rem;
+      }
+
+      .price-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 18px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .price-row li {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 7px 12px;
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .price-row strong {
+        color: var(--text);
+        font-weight: 700;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        border-radius: 999px;
+        padding: 12px 22px;
+        font: inherit;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .btn-primary {
+        border: 1px solid var(--red);
+        background: var(--red);
+        color: #fff;
+      }
+
+      .btn-primary:disabled {
+        cursor: not-allowed;
+        opacity: 0.72;
+      }
+
+      .hero-actions {
+        margin-top: 22px;
+      }
+
+      .section {
+        padding: 56px 0;
+      }
+
+      .section-lead,
+      .prose p {
+        margin: 0;
+        max-width: 40rem;
+        color: var(--muted);
+        font-size: 1.02rem;
+        line-height: 1.7;
+      }
+
+      .prose p + p {
+        margin-top: 14px;
+      }
+
+      .examples {
+        display: grid;
+        gap: 12px;
+        margin: 22px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .examples li,
+      .step {
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: var(--surface);
+        padding: 16px 16px 14px;
+      }
+
+      .examples strong,
+      .step h3 {
+        display: block;
+        margin: 0 0 6px;
+        font-family: Inter, system-ui, sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1.3;
+        text-transform: none;
+      }
+
+      .examples span,
+      .step p {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .step p {
+        margin: 0;
+      }
+
+      .steps {
+        display: grid;
+        gap: 12px;
+        margin-top: 22px;
+      }
+
+      .step-num {
+        color: var(--red);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .bio {
+        display: grid;
+        gap: 18px;
+      }
+
+      .bio img {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        object-fit: cover;
+        aspect-ratio: 4 / 5;
+        object-position: center top;
+      }
+
+      .form-card {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: var(--surface);
+        padding: 18px 16px 20px;
+      }
+
+      .status {
+        margin: 0 0 16px;
+        border-radius: 12px;
+        padding: 12px 14px;
+        background: var(--red-soft);
+        color: var(--text);
+        font-size: 0.95rem;
+      }
+
+      .fine {
+        margin: 0 0 18px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      label {
+        display: block;
+        margin: 14px 0 6px;
+        font-size: 0.92rem;
+        font-weight: 600;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #0b0b0b;
+        color: var(--text);
+        font: inherit;
+        font-size: 16px;
+        padding: 12px 12px;
+      }
+
+      textarea {
+        min-height: 108px;
+        resize: vertical;
+      }
+
+      .field-error {
+        min-height: 1.2em;
+        margin: 4px 0 0;
+        color: #ffb4b4;
+        font-size: 0.82rem;
+      }
+
+      .submit {
+        width: 100%;
+        margin-top: 18px;
+      }
+
+      .form-error,
+      .form-success {
+        margin-top: 14px;
+        border-radius: 12px;
+        padding: 12px 14px;
+        font-size: 0.95rem;
+      }
+
+      .form-error {
+        background: rgba(196, 30, 30, 0.18);
+        color: #ffd7d7;
+      }
+
+      .form-success {
+        background: var(--surface-2);
+        border: 1px solid var(--line);
+      }
+
+      .hp {
+        position: absolute;
+        left: -10000px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        padding: 28px 0 40px;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
+      .site-footer .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+        justify-content: space-between;
+      }
+
+      .site-footer a {
+        color: var(--muted);
+        text-decoration: none;
+      }
+
+      @media (min-width: 800px) {
+        .wrap {
+          width: min(var(--max), calc(100% - 48px));
+        }
+
+        .hero-layout {
+          display: grid;
+          grid-template-columns: 1.05fr 0.95fr;
+          gap: 36px;
+          align-items: end;
+        }
+
+        .hero-photo {
+          order: 2;
+        }
+
+        .hero-photo img {
+          height: 100%;
+          min-height: 560px;
+          max-height: 720px;
+          object-position: center 40%;
+        }
+
+        .eyebrow {
+          margin-top: 0;
+        }
+
+        .examples {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .bio {
+          grid-template-columns: 0.8fr 1.2fr;
+          gap: 36px;
+          align-items: start;
+        }
+
+        .form-card {
+          padding: 28px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="logo" href="https://www.omegagreed.com/">
+          <img src="../assets/logo.png" alt="OmegaGreed" />
+        </a>
+        <a class="header-mark" href="https://www.omegagreed.com/">OmegaGreed</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap hero-layout">
+          <figure class="hero-photo">
+            <img
+              src="../assets/hayabusa-on-the-road.jpg"
+              alt="Geoffrey Crawford’s Hayabusa parked in the desert on an OmegaGreed ride"
+              width="1024"
+              height="576"
+            />
+          </figure>
+          <div>
+            <p class="eyebrow">Purpose Over Comfort</p>
+            <h1>What would you do if you knew you couldn’t fail?</h1>
+            <p class="lede">
+              Pick one thing you’ve been putting off. Let’s spend four weeks
+              moving it forward.
+            </p>
+            <p class="offer-line">
+              A four-week mentorship pilot with Geoffrey R. Crawford, the
+              person behind OmegaGreed. Individual support. The first round is
+              2–3 people. $750, paid once, and only after you’re offered a spot.
+              No payment on this page.
+            </p>
+            <ul class="price-row">
+              <li><strong>$750</strong> one-time</li>
+              <li><strong>4 weeks</strong></li>
+              <li><strong>2–3</strong> spots</li>
+            </ul>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#apply" data-track="apply-click">
+                Apply for the pilot
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="who">
+        <div class="wrap">
+          <p class="eyebrow">Who this is for</p>
+          <h2>You already know the thing.</h2>
+          <p class="section-lead">
+            This is for someone who has a project or a goal they care about and
+            keeps putting it off. We’ll use the bigger dream to choose one
+            realistic milestone you can work toward in four weeks. This is
+            personal project planning and accountability.
+          </p>
+          <ul class="examples">
+            <li>
+              <strong>Finish a first draft</strong>
+              <span>A chapter, a page, or the version you’ve been avoiding.</span>
+            </li>
+            <li>
+              <strong>Make a prototype</strong>
+              <span>Something real enough that you can show it to someone.</span>
+            </li>
+            <li>
+              <strong>A career step</strong>
+              <span>One concrete move toward a change you keep postponing.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="included" style="padding-top: 0">
+        <div class="wrap">
+          <p class="eyebrow">Four weeks</p>
+          <h2>What we do together</h2>
+          <p class="section-lead">
+            The start date for this round isn’t set yet. There isn’t a public
+            schedule for a later round. The first round stays at 2–3 people so
+            the support can stay individual.
+          </p>
+          <div class="steps">
+            <article class="step">
+              <p class="step-num">Kickoff</p>
+              <h3>One private 60-minute call</h3>
+              <p>
+                We choose the milestone and make the plan. The bigger dream
+                stays in view. The work for these four weeks gets specific.
+              </p>
+            </article>
+            <article class="step">
+              <p class="step-num">Game plan</p>
+              <h3>A one-page plan, emailed after the kickoff</h3>
+              <p>
+                Your plan, not a template. Weekly actions and a concrete first
+                step, written down so the week has somewhere to start.
+              </p>
+            </article>
+            <article class="step">
+              <p class="step-num">Check-ins</p>
+              <h3>Three private 20-minute calls</h3>
+              <p>
+                Weeks 2, 3, and 4. We review what you committed to, work through
+                what got in the way, and decide what comes next. The last call
+                includes a progress review and next steps.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="geoffrey" style="padding-top: 0">
+        <div class="wrap">
+          <p class="eyebrow">Meet the person behind OmegaGreed</p>
+          <h2>Geoffrey R. Crawford</h2>
+          <div class="bio">
+            <img
+              src="../assets/hero-portrait.png"
+              alt="Geoffrey Crawford, creator of OmegaGreed"
+              width="600"
+              height="750"
+            />
+            <div class="prose">
+              <p>
+                I left Buffalo to pursue my own goals. The move was the decision.
+                The work after it was learning how to follow through when nobody
+                else was holding the plan.
+              </p>
+              <p>
+                Paid media is where that got practical. More than eight years of
+                building campaigns taught me to turn a loose idea into a plan:
+                name the outcome, pick the next action, and check whether it
+                actually happened. A campaign doesn’t move because the idea was
+                exciting. It moves because someone decided what this week is for.
+              </p>
+              <p>
+                OmegaGreed is that same habit on my own projects. A ride, a
+                build, a video — each one starts as a bigger idea and becomes a
+                short list of steps I can finish. The Hayabusa in the desert,
+                the builds, the videos that make it onto the channel: those are
+                projects I planned and followed through on.
+              </p>
+              <p>
+                That’s the work of this pilot. We pick one milestone you care
+                about, write the plan, and meet three more times so the four
+                weeks don’t disappear. I’m not offering paid creator coaching,
+                and I’m not promising an income or a result I can’t know yet.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="apply" style="padding-top: 0">
+        <div class="wrap">
+          <p class="eyebrow">Application</p>
+          <h2>Apply for the pilot</h2>
+          <div class="form-card">
+            <p class="fine">
+              <strong style="color: var(--text)">$750</strong> per person, paid
+              once, for the four weeks. The first round has 2–3 spots. This is
+              a paid pilot. If your application looks like a fit, I’ll email you
+              to schedule a short conversation. An offer to enroll comes after
+              that conversation, not before. No payment is taken on this page.
+              The start date is still open.
+            </p>
+            <p class="status" id="application-status" role="status">
+              Applications opening soon. The questions are here so you can see
+              what I’ll ask. Submissions are not open until a delivery address
+              is connected, and this page will not pretend an application was
+              received.
+            </p>
+            <form id="application-form" novalidate>
+              <div class="hp" aria-hidden="true">
+                <label for="gotcha">Company website</label>
+                <input
+                  id="gotcha"
+                  name="_gotcha"
+                  type="text"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
+              </div>
+              <input type="hidden" name="utm_source" id="utm_source" value="unknown" />
+              <input type="hidden" name="utm_medium" id="utm_medium" value="unknown" />
+              <input type="hidden" name="utm_campaign" id="utm_campaign" value="unknown" />
+              <input type="hidden" name="utm_content" id="utm_content" value="unknown" />
+              <input type="hidden" name="referrer_host" id="referrer_host" value="unknown" />
+
+              <label for="first_name">First name</label>
+              <input id="first_name" name="first_name" type="text" autocomplete="given-name" required disabled />
+              <p class="field-error" id="error-first_name"></p>
+
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required disabled />
+              <p class="field-error" id="error-email"></p>
+
+              <label for="year_vision">If you knew you couldn’t fail, what would you want your life to look like a year from now?</label>
+              <textarea id="year_vision" name="year_vision" required disabled></textarea>
+              <p class="field-error" id="error-year_vision"></p>
+
+              <label for="obstacle">What’s the biggest thing getting in the way right now?</label>
+              <textarea id="obstacle" name="obstacle" required disabled></textarea>
+              <p class="field-error" id="error-obstacle"></p>
+
+              <label for="four_weeks">What’s one thing you’d like to move forward in the next four weeks?</label>
+              <textarea id="four_weeks" name="four_weeks" required disabled></textarea>
+              <p class="field-error" id="error-four_weeks"></p>
+
+              <button class="btn btn-primary submit" id="submit-button" type="submit" data-track="apply-click" disabled>
+                Applications opening soon
+              </button>
+              <div class="form-error" id="form-error" hidden></div>
+              <div class="form-success" id="form-success" hidden>
+                <strong>Application received.</strong>
+                This is a paid pilot. I’ll email you if it looks like a fit so
+                we can schedule a short conversation. No payment is due now.
+                An offer to enroll only comes after that conversation.
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>© OmegaGreed · Geoffrey R. Crawford</span>
+        <span>
+          <a href="https://www.omegagreed.com/">omegagreed.com</a>
+          ·
+          <a href="https://www.youtube.com/@OmegaGreedAK47">YouTube</a>
+        </span>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        // Leave both empty in production until Geoffrey provides them.
+        // Do not point this at the newsletter or media-kit Formspree forms.
+        var APPLICATION_ENDPOINT = "";
+        var PLAUSIBLE_DOMAIN = "";
+
+        var isLocal =
+          location.hostname === "localhost" || location.hostname === "127.0.0.1";
+        var params = new URLSearchParams(location.search);
+        if (isLocal && params.get("poc_test") === "1") {
+          APPLICATION_ENDPOINT = "http://127.0.0.1:8899/apply";
+        }
+
+        var form = document.getElementById("application-form");
+        var status = document.getElementById("application-status");
+        var submitButton = document.getElementById("submit-button");
+        var formError = document.getElementById("form-error");
+        var formSuccess = document.getElementById("form-success");
+        var fields = ["first_name", "email", "year_vision", "obstacle", "four_weeks"];
+        var applicationCounted = false;
+
+        function track(name) {
+          if (!PLAUSIBLE_DOMAIN || typeof window.plausible !== "function") return;
+          window.plausible(name);
+        }
+
+        function loadPlausible() {
+          if (!PLAUSIBLE_DOMAIN) return;
+          window.plausible =
+            window.plausible ||
+            function () {
+              (window.plausible.q = window.plausible.q || []).push(arguments);
+            };
+          var script = document.createElement("script");
+          script.defer = true;
+          script.dataset.domain = PLAUSIBLE_DOMAIN;
+          script.src = "https://plausible.io/js/script.manual.js";
+          script.onload = function () {
+            window.plausible("pageview", {
+              u: location.origin + location.pathname,
+            });
+          };
+          document.head.appendChild(script);
+        }
+
+        function attribution() {
+          var key = "poc_attribution";
+          var stored = null;
+          try {
+            stored = JSON.parse(sessionStorage.getItem(key) || "null");
+          } catch (error) {
+            stored = null;
+          }
+          var hasUtm = ["utm_source", "utm_medium", "utm_campaign", "utm_content"].some(
+            function (name) {
+              return params.get(name);
+            }
+          );
+          if (stored && !hasUtm) return stored;
+          var referrerHost = "unknown";
+          if (document.referrer) {
+            try {
+              var host = new URL(document.referrer).hostname;
+              if (host && host !== location.hostname) referrerHost = host;
+            } catch (error) {
+              referrerHost = "unknown";
+            }
+          }
+          var data = {
+            utm_source: params.get("utm_source") || "unknown",
+            utm_medium: params.get("utm_medium") || "unknown",
+            utm_campaign: params.get("utm_campaign") || "unknown",
+            utm_content: params.get("utm_content") || "unknown",
+            referrer_host: referrerHost,
+          };
+          try {
+            sessionStorage.setItem(key, JSON.stringify(data));
+          } catch (error) {
+            /* storage can be blocked; hidden fields still hold this visit */
+          }
+          return data;
+        }
+
+        function writeAttribution(data) {
+          Object.keys(data).forEach(function (name) {
+            var input = document.getElementById(name);
+            if (input) input.value = data[name] || "unknown";
+          });
+        }
+
+        function setFieldError(name, message) {
+          var slot = document.getElementById("error-" + name);
+          if (slot) slot.textContent = message || "";
+        }
+
+        function validate(payload) {
+          var ok = true;
+          fields.forEach(function (name) {
+            setFieldError(name, "");
+          });
+          if (!payload.first_name || payload.first_name.trim().length < 2) {
+            setFieldError("first_name", "Add your first name.");
+            ok = false;
+          }
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email || "")) {
+            setFieldError("email", "Add an email address.");
+            ok = false;
+          }
+          [
+            ["year_vision", "Say a little about the life you want a year from now."],
+            ["obstacle", "Say what’s getting in the way."],
+            ["four_weeks", "Name one thing for the next four weeks."],
+          ].forEach(function (item) {
+            if (!payload[item[0]] || payload[item[0]].trim().length < 8) {
+              setFieldError(item[0], item[1]);
+              ok = false;
+            }
+          });
+          return ok;
+        }
+
+        function openApplications() {
+          status.hidden = true;
+          fields.forEach(function (name) {
+            document.getElementById(name).disabled = false;
+          });
+          submitButton.disabled = false;
+          submitButton.textContent = "Apply for the pilot";
+        }
+
+        document.querySelectorAll("[data-track='apply-click']").forEach(function (el) {
+          el.addEventListener("click", function () {
+            track("Apply Click");
+          });
+        });
+
+        writeAttribution(attribution());
+        loadPlausible();
+        if (APPLICATION_ENDPOINT) openApplications();
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          formError.hidden = true;
+          formSuccess.hidden = true;
+          if (!APPLICATION_ENDPOINT) return;
+
+          var payload = {
+            first_name: document.getElementById("first_name").value,
+            email: document.getElementById("email").value,
+            year_vision: document.getElementById("year_vision").value,
+            obstacle: document.getElementById("obstacle").value,
+            four_weeks: document.getElementById("four_weeks").value,
+            _gotcha: document.getElementById("gotcha").value,
+            utm_source: document.getElementById("utm_source").value || "unknown",
+            utm_medium: document.getElementById("utm_medium").value || "unknown",
+            utm_campaign: document.getElementById("utm_campaign").value || "unknown",
+            utm_content: document.getElementById("utm_content").value || "unknown",
+            referrer_host: document.getElementById("referrer_host").value || "unknown",
+          };
+
+          if (!validate(payload)) return;
+          submitButton.disabled = true;
+          fetch(APPLICATION_ENDPOINT, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify(payload),
+          })
+            .then(function (response) {
+              if (!response.ok) throw new Error("rejected");
+              return response.json().catch(function () {
+                return { ok: true };
+              });
+            })
+            .then(function () {
+              fields.forEach(function (name) {
+                document.getElementById(name).hidden = true;
+                var label = document.querySelector("label[for='" + name + "']");
+                if (label) label.hidden = true;
+                setFieldError(name, "");
+              });
+              submitButton.hidden = true;
+              formSuccess.hidden = false;
+              if (!applicationCounted) {
+                applicationCounted = true;
+                var alreadyCounted = false;
+                try {
+                  alreadyCounted = sessionStorage.getItem("poc_application_counted") === "1";
+                  if (!alreadyCounted) sessionStorage.setItem("poc_application_counted", "1");
+                } catch (error) {
+                  alreadyCounted = false;
+                }
+                if (!alreadyCounted) track("Application");
+              }
+            })
+            .catch(function () {
+              submitButton.disabled = false;
+              formError.hidden = false;
+              formError.textContent =
+                "The application didn’t go through. Nothing was saved. Check the answers and try again.";
+            });
+        });
+      })();
+    </script>
+  </body>
+</html>
