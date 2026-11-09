@@ -97,21 +97,6 @@
         padding: 28px 0 8px;
       }
 
-      .hero-photo {
-        margin: 0;
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        overflow: hidden;
-        background: #111;
-      }
-
-      .hero-photo img {
-        width: 100%;
-        height: 168px;
-        object-fit: cover;
-        object-position: center 45%;
-      }
-
       .eyebrow {
         margin: 22px 0 10px;
         color: var(--red);
@@ -209,8 +194,43 @@
         opacity: 0.72;
       }
 
+      .hero-status {
+        margin: 18px 0 0;
+        color: var(--text);
+        font-size: 0.95rem;
+        font-weight: 600;
+      }
+
       .hero-actions {
+        margin-top: 12px;
+      }
+
+      .example-plan {
         margin-top: 22px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: var(--surface);
+        padding: 16px 16px 18px;
+      }
+
+      .example-plan h3 {
+        margin: 8px 0 0;
+        font-family: Inter, system-ui, sans-serif;
+        font-size: 1.05rem;
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1.35;
+        text-transform: none;
+      }
+
+      .example-plan p {
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 0.98rem;
+      }
+
+      .example-plan strong {
+        color: var(--text);
       }
 
       .section {
@@ -287,13 +307,46 @@
         gap: 18px;
       }
 
+      .bio-photos {
+        display: grid;
+        gap: 12px;
+      }
+
       .bio img {
         width: 100%;
         border: 1px solid var(--line);
         border-radius: 18px;
         object-fit: cover;
+      }
+
+      .bio img.portrait {
         aspect-ratio: 4 / 5;
         object-position: center top;
+      }
+
+      .bio img.ride {
+        aspect-ratio: 16 / 10;
+        object-position: center 42%;
+      }
+
+      .question-preview {
+        display: grid;
+        gap: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+
+      .question-preview li {
+        border-top: 1px solid var(--line);
+        padding: 14px 0;
+        color: var(--text);
+        font-size: 1.02rem;
+        line-height: 1.5;
       }
 
       .form-card {
@@ -404,26 +457,12 @@
           width: min(var(--max), calc(100% - 48px));
         }
 
-        .hero-layout {
-          display: grid;
-          grid-template-columns: 1.05fr 0.95fr;
-          gap: 36px;
-          align-items: end;
-        }
-
-        .hero-photo {
-          order: 2;
-        }
-
-        .hero-photo img {
-          height: 100%;
-          min-height: 560px;
-          max-height: 720px;
-          object-position: center 40%;
-        }
-
         .eyebrow {
           margin-top: 0;
+        }
+
+        .hero-copy {
+          max-width: 760px;
         }
 
         .examples {
@@ -454,37 +493,31 @@
 
     <main>
       <section class="hero">
-        <div class="wrap hero-layout">
-          <figure class="hero-photo">
-            <img
-              src="../assets/hayabusa-on-the-road.jpg"
-              alt="Geoffrey Crawford’s Hayabusa parked in the desert on an OmegaGreed ride"
-              width="1024"
-              height="576"
-            />
-          </figure>
-          <div>
+        <div class="wrap">
+          <div class="hero-copy">
             <p class="eyebrow">Purpose Over Comfort</p>
             <h1>What would you do if you knew you couldn’t fail?</h1>
             <p class="lede">
-              Pick one thing you’ve been putting off. Let’s spend four weeks
-              moving it forward.
+              Bring one project you’ve been putting off. We’ll pick a milestone,
+              make a four-week plan, and check in every week.
             </p>
             <p class="offer-line">
-              A four-week mentorship pilot with Geoffrey R. Crawford, the
-              person behind OmegaGreed. Individual support. The first round is
-              2–3 people. $750, paid once, and only after you’re offered a spot.
-              No payment on this page.
+              Private mentorship with Geoffrey R. Crawford.
             </p>
             <ul class="price-row">
-              <li><strong>$750</strong> one-time</li>
-              <li><strong>4 weeks</strong></li>
+              <li><strong>$750</strong> one time</li>
+              <li><strong>Four weeks</strong></li>
               <li><strong>2–3</strong> spots</li>
             </ul>
+            <p class="hero-status" id="hero-status">Applications opening soon</p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#apply" data-track="apply-click">
-                Apply for the pilot
-              </a>
+              <a
+                class="btn btn-primary"
+                id="hero-cta"
+                href="#apply"
+                data-track="apply-click"
+                >See the application questions</a
+              >
             </div>
           </div>
         </div>
@@ -553,6 +586,22 @@
               </p>
             </article>
           </div>
+          <aside class="example-plan" aria-label="Example game plan">
+            <p class="step-num">Example game plan</p>
+            <h3>An illustration, not your assignment.</h3>
+            <p>
+              <strong>The bigger goal:</strong> “I’ve been talking about writing
+              a book.”
+            </p>
+            <p>
+              <strong>The four-week milestone:</strong> “Finish a rough draft of
+              chapter one.”
+            </p>
+            <p>
+              <strong>The first move:</strong> “Outline the chapter and schedule
+              two writing sessions this week.”
+            </p>
+          </aside>
         </div>
       </section>
 
@@ -561,37 +610,40 @@
           <p class="eyebrow">Meet the person behind OmegaGreed</p>
           <h2>Geoffrey R. Crawford</h2>
           <div class="bio">
-            <img
-              src="../assets/hero-portrait.png"
-              alt="Geoffrey Crawford, creator of OmegaGreed"
-              width="600"
-              height="750"
-            />
+            <div class="bio-photos">
+              <img
+                class="portrait"
+                src="../assets/hero-portrait.png"
+                alt="Geoffrey Crawford, creator of OmegaGreed"
+                width="600"
+                height="750"
+              />
+              <img
+                class="ride"
+                src="../assets/hayabusa-on-the-road.jpg"
+                alt="Geoffrey Crawford’s Hayabusa parked in the desert on an OmegaGreed ride"
+                width="1024"
+                height="576"
+              />
+            </div>
             <div class="prose">
               <p>
                 I left Buffalo to pursue my own goals. The move was the decision.
-                The work after it was learning how to follow through when nobody
+                What came after was learning how to follow through when nobody
                 else was holding the plan.
               </p>
               <p>
-                Paid media is where that got practical. More than eight years of
-                building campaigns taught me to turn a loose idea into a plan:
-                name the outcome, pick the next action, and check whether it
-                actually happened. A campaign doesn’t move because the idea was
-                exciting. It moves because someone decided what this week is for.
+                Paid media made that practical. More than eight years of building
+                campaigns taught me to turn a loose idea into a plan: name the
+                outcome, pick the next action, and check whether it happened.
+                That is how I’ll work with you. We use the bigger goal to choose
+                one milestone, write the next steps, and keep the week honest.
+                This is personal project planning and accountability.
               </p>
               <p>
-                OmegaGreed is that same habit on my own projects. A ride, a
-                build, a video — each one starts as a bigger idea and becomes a
-                short list of steps I can finish. The Hayabusa in the desert,
-                the builds, the videos that make it onto the channel: those are
-                projects I planned and followed through on.
-              </p>
-              <p>
-                That’s the work of this pilot. We pick one milestone you care
-                about, write the plan, and meet three more times so the four
-                weeks don’t disappear. I’m not offering paid creator coaching,
-                and I’m not promising an income or a result I can’t know yet.
+                OmegaGreed is where I practice that on my own projects. A ride, a
+                build, a video — each one starts bigger than a week and becomes
+                a short list I can finish.
               </p>
             </div>
           </div>
@@ -601,22 +653,32 @@
       <section class="section" id="apply" style="padding-top: 0">
         <div class="wrap">
           <p class="eyebrow">Application</p>
-          <h2>Apply for the pilot</h2>
+          <h2 id="apply-title">The application</h2>
           <div class="form-card">
             <p class="fine">
               <strong style="color: var(--text)">$750</strong> per person, paid
-              once, for the four weeks. The first round has 2–3 spots. This is
-              a paid pilot. If your application looks like a fit, I’ll email you
-              to schedule a short conversation. An offer to enroll comes after
-              that conversation, not before. No payment is taken on this page.
-              The start date is still open.
+              once, for the four weeks. The first round has 2–3 spots. No
+              payment on this page.
             </p>
             <p class="status" id="application-status" role="status">
-              Applications opening soon. The questions are here so you can see
-              what I’ll ask. Submissions are not open until a delivery address
-              is connected, and this page will not pretend an application was
-              received.
+              Applications opening soon. These are the questions. There’s
+              nothing to send yet.
             </p>
+            <p class="fine" id="apply-next" hidden>
+              If you look like a fit, I’ll email you to arrange a short
+              conversation. Payment comes after an offer to enroll.
+            </p>
+            <ol class="question-preview" id="question-preview">
+              <li>
+                If you knew you couldn’t fail, what would you want your life to
+                look like a year from now?
+              </li>
+              <li>What’s the biggest thing getting in the way right now?</li>
+              <li>
+                What’s one thing you’d like to move forward in the next four
+                weeks?
+              </li>
+            </ol>
             <form id="application-form" novalidate>
               <div class="hp" aria-hidden="true">
                 <label for="gotcha">Company website</label>
@@ -634,6 +696,7 @@
               <input type="hidden" name="utm_content" id="utm_content" value="unknown" />
               <input type="hidden" name="referrer_host" id="referrer_host" value="unknown" />
 
+              <div id="application-fields" hidden>
               <label for="first_name">First name</label>
               <input id="first_name" name="first_name" type="text" autocomplete="given-name" required disabled />
               <p class="field-error" id="error-first_name"></p>
@@ -655,8 +718,9 @@
               <p class="field-error" id="error-four_weeks"></p>
 
               <button class="btn btn-primary submit" id="submit-button" type="submit" data-track="apply-click" disabled>
-                Applications opening soon
+                Apply for the pilot
               </button>
+              </div>
               <div class="form-error" id="form-error" hidden></div>
               <div class="form-success" id="form-success" hidden>
                 <strong>Application received.</strong>
@@ -805,6 +869,12 @@
 
         function openApplications() {
           status.hidden = true;
+          document.getElementById("hero-status").hidden = true;
+          document.getElementById("hero-cta").textContent = "Apply for the pilot";
+          document.getElementById("apply-title").textContent = "Apply for the pilot";
+          document.getElementById("apply-next").hidden = false;
+          document.getElementById("question-preview").hidden = true;
+          document.getElementById("application-fields").hidden = false;
           fields.forEach(function (name) {
             document.getElementById(name).disabled = false;
           });
