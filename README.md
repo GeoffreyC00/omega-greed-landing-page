@@ -13,7 +13,7 @@ Static landing pages for **OmegaGreed** (creator brand by Geoffrey Crawford). Ho
 | Hayabusa touring build list | https://join.omegagreed.com/hayabusa-build-list.html |
 | Filming gear (affiliate) | https://join.omegagreed.com/filming-gear.html |
 | Motorcycle Content Starter Kit ($27) | https://join.omegagreed.com/motorcycle-content-starter-kit/ |
-| Purpose Over Comfort pilot (noindex, applications closed) | https://join.omegagreed.com/purpose-over-comfort/ |
+| Purpose Over Comfort pilot (noindex, not in nav) | https://join.omegagreed.com/purpose-over-comfort/ |
 
 GitHub Pages default (backup): https://geoffreyc00.github.io/omega-greed-landing-page/
 
@@ -41,7 +41,7 @@ GitHub Pages default (backup): https://geoffreyc00.github.io/omega-greed-landing
 | `honda-cbr650r-build-list.html` | Honda CBR650R affiliate build list |
 | `hayabusa-build-list.html` | Hayabusa touring affiliate build list |
 | `filming-gear.html` | Motorcycle filming gear (Amazon affiliate) |
-| `purpose-over-comfort/index.html` | Purpose Over Comfort pilot. Not in site nav. `noindex`. Applications closed until a dedicated form endpoint is set. |
+| `purpose-over-comfort/index.html` | Purpose Over Comfort pilot. Not in site nav. `noindex`. Applications go to Formspree `xgakwvvo`. |
 | `motorcycle-content-starter-kit/index.html` | Digital product sales page ($27 starter kit) |
 | `products/motorcycle-content-starter-kit/` | Canva PDF copy + launch checklist |
 | `landing-page.html` | Legacy prototype (ignore) |
@@ -54,6 +54,7 @@ GitHub Pages default (backup): https://geoffreyc00.github.io/omega-greed-landing
 |------|---------|-----|
 | Newsletter (`index.html`) | `mjgzzjgz` | https://formspree.io/f/mjgzzjgz |
 | Media kit contact | `xqejjdpv` | https://formspree.io/f/xqejjdpv |
+| Purpose Over Comfort | `xgakwvvo` | https://formspree.io/f/xgakwvvo |
 
 - Integration: **HTML POST** (no backend; works on static Pages)
 - Newsletter: optional — disable per-submission email in Formspree; export CSV for campaigns

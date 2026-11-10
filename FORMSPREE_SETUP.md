@@ -18,6 +18,7 @@ Both forms use **Basic HTML POST** (correct for static GitHub Pages at join.omeg
 |------|--------------|---------|
 | `/media-kit/` | `xqejjdpv` | Brand partnerships |
 | `/` (join) | `mjgzzjgz` | Newsletter email signups |
+| `/purpose-over-comfort/` | `xgakwvvo` | Private mentorship applications |
 
 ---
 
@@ -37,18 +38,11 @@ For **media kit** form (`xqejjdpv`):
 
 ## Purpose Over Comfort (`/purpose-over-comfort/`)
 
-**Status:** Not connected. The page ships with “Applications opening soon.”
+**Status:** Connected — `https://formspree.io/f/xgakwvvo` (“Private mentorship”) in `APPLICATION_ENDPOINT`.
 
 Do not reuse `mjgzzjgz` or `xqejjdpv`. Those forms are the newsletter and partnership inbox.
 
-To open applications:
-
-1. Create a new Formspree form used only for this pilot.
-2. Send notifications to the inbox that should receive applications.
-3. Put that form URL in `APPLICATION_ENDPOINT` in `purpose-over-comfort/index.html`.
-4. Leave `PLAUSIBLE_DOMAIN` empty until a Plausible site exists. Then set it to the site domain Plausible is tracking.
-
-The page confirms success only when that endpoint returns a success response.
+The page confirms success only when that endpoint returns a success response. `PLAUSIBLE_DOMAIN` stays empty until a Plausible site exists. The notification inbox is set in the Formspree dashboard for this form.
 
 ## Free plan limits
 
