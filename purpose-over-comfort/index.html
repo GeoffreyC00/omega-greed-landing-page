@@ -224,31 +224,52 @@
       }
 
       .example-plan {
-        margin-top: 22px;
+        margin-top: 28px;
         border: 1px solid var(--line);
-        border-radius: 16px;
+        border-radius: 18px;
         background: var(--surface);
-        padding: 16px 16px 18px;
+        padding: 20px 18px 22px;
       }
 
       .example-plan h3 {
         margin: 8px 0 0;
         font-family: Inter, system-ui, sans-serif;
-        font-size: 1.05rem;
+        font-size: clamp(1.35rem, 3vw, 1.7rem);
         font-weight: 700;
         letter-spacing: 0;
-        line-height: 1.35;
+        line-height: 1.25;
         text-transform: none;
       }
 
-      .example-plan p {
-        margin: 10px 0 0;
+      .example-note {
+        margin: 8px 0 0;
         color: var(--muted);
-        font-size: 0.98rem;
+        font-size: 0.95rem;
       }
 
-      .example-plan strong {
+      .example-grid {
+        display: grid;
+        gap: 12px;
+        margin-top: 16px;
+      }
+
+      .example-grid p {
+        margin: 0;
+        border-top: 1px solid var(--line);
+        padding-top: 12px;
         color: var(--text);
+        font-size: 1.05rem;
+        line-height: 1.45;
+      }
+
+      .example-grid strong {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--muted);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
       }
 
       .section {
@@ -325,26 +346,47 @@
         gap: 18px;
       }
 
-      .bio-photos {
-        display: grid;
-        gap: 12px;
+      .bio-figure {
+        margin: 0;
       }
 
-      .bio img {
+      .bio-figure img {
         width: 100%;
         border: 1px solid var(--line);
         border-radius: 18px;
         object-fit: cover;
       }
 
-      .bio img.portrait {
-        aspect-ratio: 4 / 5;
-        object-position: center top;
+      .bio-figure img.lead {
+        aspect-ratio: 3 / 2;
+        object-position: center 40%;
       }
 
-      .bio img.ride {
-        aspect-ratio: 16 / 10;
-        object-position: center 42%;
+      .bio-figure img.support {
+        aspect-ratio: 3 / 4;
+        object-position: center 22%;
+      }
+
+      .bio-figure figcaption {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 0.85rem;
+        line-height: 1.45;
+      }
+
+      .offer-price {
+        margin: 0 0 8px;
+        color: var(--text);
+        font-size: 1.08rem;
+        font-weight: 700;
+        line-height: 1.4;
+      }
+
+      .helper {
+        margin: 0 0 8px;
+        color: var(--muted);
+        font-size: 0.92rem;
+        line-height: 1.5;
       }
 
       .question-preview {
@@ -493,14 +535,34 @@
           order: 2;
         }
 
-        .examples {
+        .examples,
+        .example-grid {
           grid-template-columns: repeat(3, 1fr);
         }
 
+        .example-grid {
+          gap: 18px;
+        }
+
         .bio {
-          grid-template-columns: 0.8fr 1.2fr;
-          gap: 36px;
+          grid-template-columns: 1.15fr 0.85fr;
+          grid-template-areas:
+            "lead copy"
+            "lead support";
+          gap: 28px 36px;
           align-items: start;
+        }
+
+        .lead-figure {
+          grid-area: lead;
+        }
+
+        .bio .prose {
+          grid-area: copy;
+        }
+
+        .support-figure {
+          grid-area: support;
         }
 
         .form-card {
@@ -533,7 +595,6 @@
               Private mentorship with Geoffrey R. Crawford.
             </p>
             <ul class="price-row">
-              <li><strong>$750</strong> one time</li>
               <li><strong>Four weeks</strong></li>
               <li><strong>2–3</strong> spots</li>
             </ul>
@@ -562,12 +623,12 @@
       <section class="section" id="who">
         <div class="wrap">
           <p class="eyebrow">Who this is for</p>
-          <h2>You already know the thing.</h2>
+          <h2>You have a dream you keep putting off.</h2>
           <p class="section-lead">
-            This is for someone who has a project or a goal they care about and
-            keeps putting it off. We’ll use the bigger dream to choose one
-            realistic milestone you can work toward in four weeks. This is
-            personal project planning and accountability.
+            You don’t need the first step figured out. If there’s something
+            you’ve wanted to do, build, or become, and it keeps waiting, you’re
+            in the right place. We’ll use that bigger idea to choose one
+            milestone you can work toward in four weeks.
           </p>
           <ul class="examples">
             <li>
@@ -591,6 +652,11 @@
           <p class="eyebrow">Four weeks</p>
           <h2>What we do together</h2>
           <p class="section-lead">
+            Here’s what we’ll do together. We’ll choose one milestone in a
+            private 60-minute kickoff, turn it into a personalized one-page
+            plan, and work through it with three private check-ins.
+          </p>
+          <p class="section-lead" style="margin-top: 12px">
             The start date for this round isn’t set yet. There isn’t a public
             schedule for a later round. The first round stays at 2–3 people so
             the support can stay individual.
@@ -623,20 +689,23 @@
             </article>
           </div>
           <aside class="example-plan" aria-label="Example game plan">
-            <p class="step-num">Example game plan</p>
-            <h3>An illustration, not your assignment.</h3>
-            <p>
-              <strong>The bigger goal:</strong> “I’ve been talking about writing
-              a book.”
-            </p>
-            <p>
-              <strong>The four-week milestone:</strong> “Finish a rough draft of
-              chapter one.”
-            </p>
-            <p>
-              <strong>The first move:</strong> “Outline the chapter and schedule
-              two writing sessions this week.”
-            </p>
+            <p class="step-num">Example</p>
+            <h3>Example game plan</h3>
+            <p class="example-note">An illustration, not your assignment.</p>
+            <div class="example-grid">
+              <p>
+                <strong>The bigger goal</strong>
+                “I’ve been talking about writing a book.”
+              </p>
+              <p>
+                <strong>The four-week milestone</strong>
+                “Finish a rough draft of chapter one.”
+              </p>
+              <p>
+                <strong>The first move</strong>
+                “Outline the chapter and schedule two writing sessions this week.”
+              </p>
+            </div>
           </aside>
         </div>
       </section>
@@ -646,42 +715,35 @@
           <p class="eyebrow">Meet the person behind OmegaGreed</p>
           <h2>Geoffrey R. Crawford</h2>
           <div class="bio">
-            <div class="bio-photos">
+            <figure class="bio-figure lead-figure">
               <img
-                class="portrait"
-                src="../assets/hero-portrait.png"
-                alt="Geoffrey Crawford, creator of OmegaGreed"
-                width="600"
-                height="750"
+                class="lead"
+                src="../assets/purpose-over-comfort-listening.webp"
+                alt="Geoffrey Crawford listening to a man in a red jacket during a conversation at a table."
+                width="1600"
+                height="1067"
               />
-              <img
-                class="ride"
-                src="../assets/hayabusa-on-the-road.jpg"
-                alt="Geoffrey Crawford’s Hayabusa parked in the desert on an OmegaGreed ride"
-                width="1024"
-                height="576"
-              />
-            </div>
+              <figcaption>Listening during a one-to-one conversation.</figcaption>
+            </figure>
             <div class="prose">
               <p>
-                I left Buffalo to pursue my own goals. The move was the decision.
-                What came after was learning how to follow through when nobody
-                else was holding the plan.
-              </p>
-              <p>
-                Paid media made that practical. More than eight years of building
-                campaigns taught me to turn a loose idea into a plan: name the
-                outcome, pick the next action, and check whether it happened.
-                That is how I’ll work with you. We use the bigger goal to choose
-                one milestone, write the next steps, and keep the week honest.
-                This is personal project planning and accountability.
-              </p>
-              <p>
-                OmegaGreed is where I practice that on my own projects. A ride, a
-                build, a video — each one starts bigger than a week and becomes
-                a short list I can finish.
+                I’m Geoffrey Crawford. I’ve spent more than eight years turning
+                ideas into plans people can act on. With Purpose Over Comfort, I
+                bring that same approach to the thing you’ve been putting off.
+                We’ll talk through what you want, pick one milestone that matters
+                to you, and make a plan you can start this week.
               </p>
             </div>
+            <figure class="bio-figure support-figure">
+              <img
+                class="support"
+                src="../assets/purpose-over-comfort-whiteboard.webp"
+                alt="Geoffrey Crawford speaking in front of a Think Media whiteboard."
+                width="1100"
+                height="1647"
+              />
+              <figcaption>Explaining an idea at a Think Media whiteboard.</figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -691,28 +753,23 @@
           <p class="eyebrow">Application</p>
           <h2 id="apply-title">The application</h2>
           <div class="form-card">
-            <p class="fine">
-              <strong style="color: var(--text)">$750</strong> per person, paid
-              once, for the four weeks. The first round has 2–3 spots. No
-              payment on this page.
+            <p class="offer-price">Four weeks of private mentorship · $750 one time</p>
+            <p class="fine" id="apply-next">
+              Applying is free. If it looks like a fit, I’ll email you to set up
+              a short conversation.
             </p>
             <p class="status" id="application-status" role="status">
               Applications opening soon. These are the questions. There’s
               nothing to send yet.
             </p>
-            <p class="fine" id="apply-next" hidden>
-              If you look like a fit, I’ll email you to arrange a short
-              conversation. Payment comes after an offer to enroll.
-            </p>
             <ol class="question-preview" id="question-preview">
               <li>
-                If you knew you couldn’t fail, what would you want your life to
-                look like a year from now?
+                What’s something you’ve always wanted to do, build, or become?
               </li>
-              <li>What’s the biggest thing getting in the way right now?</li>
+              <li>What’s been getting in the way of going after it?</li>
               <li>
-                What’s one thing you’d like to move forward in the next four
-                weeks?
+                What would make you proud of the progress you made in our four
+                weeks together?
               </li>
             </ol>
             <form id="application-form" novalidate>
@@ -741,15 +798,16 @@
               <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required disabled />
               <p class="field-error" id="error-email"></p>
 
-              <label for="year_vision">If you knew you couldn’t fail, what would you want your life to look like a year from now?</label>
+              <label for="year_vision">What’s something you’ve always wanted to do, build, or become?</label>
+              <p class="helper">Give yourself a minute to dream big. What would you go after if you gave yourself permission to take it seriously?</p>
               <textarea id="year_vision" name="year_vision" required disabled></textarea>
               <p class="field-error" id="error-year_vision"></p>
 
-              <label for="obstacle">What’s the biggest thing getting in the way right now?</label>
+              <label for="obstacle">What’s been getting in the way of going after it?</label>
               <textarea id="obstacle" name="obstacle" required disabled></textarea>
               <p class="field-error" id="error-obstacle"></p>
 
-              <label for="four_weeks">What’s one thing you’d like to move forward in the next four weeks?</label>
+              <label for="four_weeks">What would make you proud of the progress you made in our four weeks together?</label>
               <textarea id="four_weeks" name="four_weeks" required disabled></textarea>
               <p class="field-error" id="error-four_weeks"></p>
 
@@ -891,9 +949,9 @@
             ok = false;
           }
           [
-            ["year_vision", "Say a little about the life you want a year from now."],
-            ["obstacle", "Say what’s getting in the way."],
-            ["four_weeks", "Name one thing for the next four weeks."],
+            ["year_vision", "Say a little about what you’ve always wanted to do, build, or become."],
+            ["obstacle", "Say what’s been getting in the way."],
+            ["four_weeks", "Say what would make you proud of the next four weeks."],
           ].forEach(function (item) {
             if (!payload[item[0]] || payload[item[0]].trim().length < 8) {
               setFieldError(item[0], item[1]);
