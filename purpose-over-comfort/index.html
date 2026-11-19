@@ -23,8 +23,10 @@
         --surface: #101010;
         --surface-2: #161616;
         --text: #f7f7f5;
-        --muted: #a3a3a3;
-        --line: rgba(255, 255, 255, 0.1);
+        --muted: #c9c9c4;
+        --label: #f07171;
+        --line: rgba(255, 255, 255, 0.16);
+        --line-strong: rgba(255, 255, 255, 0.42);
         --red: #c41e1e;
         --red-soft: rgba(196, 30, 30, 0.14);
         --max: 1080px;
@@ -38,6 +40,12 @@
       html {
         scroll-behavior: smooth;
         scroll-padding-top: 88px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
       }
 
       body {
@@ -100,7 +108,7 @@
 
       .eyebrow {
         margin: 22px 0 10px;
-        color: var(--red);
+        color: var(--label);
         font-size: 0.75rem;
         font-weight: 700;
         letter-spacing: 0.18em;
@@ -119,13 +127,13 @@
 
       h1 {
         margin: 0;
-        font-size: clamp(2.35rem, 8.4vw, 4.6rem);
-        max-width: 13ch;
+        font-size: clamp(2.05rem, 10vw, 4.4rem);
+        max-width: 12ch;
       }
 
       h2 {
         margin: 0 0 12px;
-        font-size: clamp(2.1rem, 8vw, 3.3rem);
+        font-size: clamp(1.85rem, 8vw, 3.2rem);
       }
 
       .lede {
@@ -136,11 +144,17 @@
         line-height: 1.55;
       }
 
-      .offer-line {
+      .offer-line,
+      .offer-note {
         margin: 14px 0 0;
         max-width: 38rem;
-        color: var(--muted);
+        color: var(--text);
         font-size: 0.98rem;
+      }
+
+      .offer-note {
+        color: #eeeae4;
+        font-weight: 600;
       }
 
       .price-row {
@@ -190,9 +204,20 @@
         color: #fff;
       }
 
+      .btn-primary:hover {
+        background: #a31818;
+        border-color: #a31818;
+      }
+
       .btn-primary:disabled {
         cursor: not-allowed;
         opacity: 0.72;
+      }
+
+      .btn:focus,
+      a:focus-visible {
+        outline: 2px solid #fff;
+        outline-offset: 3px;
       }
 
       .hero-layout {
@@ -283,12 +308,18 @@
       }
 
       .section-lead,
-      .prose p {
+      .prose p,
+      .section-note {
         margin: 0;
         max-width: 40rem;
         color: var(--muted);
-        font-size: 1.02rem;
+        font-size: 1.05rem;
         line-height: 1.7;
+      }
+
+      .section-lead + .section-lead,
+      .section-note {
+        margin-top: 14px;
       }
 
       .prose p + p {
@@ -365,7 +396,7 @@
       }
 
       .step-num {
-        color: var(--red);
+        color: var(--label);
         font-size: 0.72rem;
         font-weight: 700;
         letter-spacing: 0.14em;
@@ -472,13 +503,20 @@
       input,
       textarea {
         width: 100%;
-        border: 1px solid var(--line);
+        border: 1px solid var(--line-strong);
         border-radius: 12px;
         background: #0b0b0b;
         color: var(--text);
         font: inherit;
         font-size: 16px;
         padding: 12px 12px;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: 2px solid var(--label);
+        outline-offset: 2px;
+        border-color: var(--label);
       }
 
       textarea {
@@ -539,8 +577,36 @@
       }
 
       .site-footer a {
-        color: var(--muted);
-        text-decoration: none;
+        color: var(--text);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .site-footer a:hover {
+        color: #fff;
+      }
+
+      .sticky-apply {
+        position: fixed;
+        z-index: 30;
+        left: 12px;
+        right: 12px;
+        bottom: calc(10px + env(safe-area-inset-bottom));
+        width: auto;
+        min-height: 48px;
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+      }
+
+      @media (max-width: 799px) {
+        body {
+          padding-bottom: calc(72px + env(safe-area-inset-bottom));
+        }
+      }
+
+      @media (min-width: 800px) {
+        .sticky-apply {
+          display: none !important;
+        }
       }
 
       @media (min-width: 800px) {
@@ -637,22 +703,14 @@
             <p class="eyebrow">Purpose Over Comfort</p>
             <h1>What’s the thing you keep saying you’ll do someday?</h1>
             <p class="lede">
-              Maybe it’s a project you want to start, a change you want to make,
-              or a goal you keep putting off. I’m opening a few spots to work
-              with me one-on-one through Purpose Over Comfort. Together, we’ll
-              choose a meaningful milestone, build a plan, and check in each week
-              as you work toward it.
+              Work with me one-on-one to turn a goal you keep putting off into
+              an actionable plan. Over four weeks, we’ll choose your next
+              milestone, map out the steps, and check in as you move forward.
             </p>
-            <p class="offer-line">
-              Four weeks of private, paid mentorship with Geoffrey R. Crawford.
+            <p class="offer-note">
+              Paid, private mentorship. Applying is free. Pricing is discussed
+              before enrollment.
             </p>
-            <p class="offer-line">
-              Pricing is discussed personally before enrollment.
-            </p>
-            <ul class="price-row">
-              <li><strong>Four weeks</strong></li>
-              <li><strong>A few people</strong> at a time</li>
-            </ul>
             <p class="hero-status" id="hero-status">Applications opening soon</p>
             <div class="hero-actions">
               <a
@@ -660,7 +718,7 @@
                 id="hero-cta"
                 href="#apply"
                 data-track="apply-click"
-                >See the application questions</a
+                >Apply for private mentorship</a
               >
             </div>
           </div>
@@ -687,18 +745,23 @@
           </p>
           <ul class="examples">
             <li>
-              <strong>Finish a first draft</strong>
-              <span>A chapter, a page, or the version you’ve been avoiding.</span>
+              <strong>Create something</strong>
+              <span>Start the book, launch a project, or develop a business idea.</span>
             </li>
             <li>
-              <strong>Make a prototype</strong>
-              <span>Something real enough that you can show it to someone.</span>
+              <strong>Take a career step</strong>
+              <span>Pursue a job, explore a new direction, or prepare for a move.</span>
             </li>
             <li>
-              <strong>A career step</strong>
-              <span>One concrete move toward a change you keep postponing.</span>
+              <strong>Make a personal change</strong>
+              <span>Build confidence, learn a skill, or work toward a goal you’ve kept postponing.</span>
             </li>
           </ul>
+          <p class="section-note">
+            Learning to ride a motorcycle is one everyday example. If a goal
+            involves a relationship, the work is about clarifying your own
+            priorities and decisions.
+          </p>
         </div>
       </section>
 
@@ -708,10 +771,14 @@
             <p class="eyebrow">Four weeks</p>
             <h2>What we do together</h2>
             <p class="section-lead">
-              For four weeks, we work on one thing you care about. Progress looks
-              like a milestone you chose, a plan you can start, and weekly
-              check-ins that keep the work moving. I don’t promise a finished life
-              change. I help you make the next four weeks specific and honest.
+              Bring the goal you keep coming back to—even if you don’t know where
+              to start. Together, we’ll talk through what you want, what’s getting
+              in the way, and what moving forward could look like.
+            </p>
+            <p class="section-lead">
+              Then we’ll choose a meaningful milestone for your next four weeks,
+              build an actionable plan around your real life, and check in each
+              week as you put it into practice.
             </p>
           </div>
           <figure class="work-photo">
@@ -726,7 +793,7 @@
           <div class="steps">
             <article class="step">
               <p class="step-num">Kickoff</p>
-              <h3>One private 60-minute call</h3>
+              <h3>One private 60-minute kickoff call</h3>
               <p>
                 We talk through the bigger goal and choose one milestone for
                 these four weeks.
@@ -734,26 +801,26 @@
             </article>
             <article class="step">
               <p class="step-num">Game plan</p>
-              <h3>A personalized one-page plan</h3>
+              <h3>A personalized one-page action plan</h3>
               <p>
-                After the kickoff, you get a plan with weekly actions, written
-                for your goal rather than copied from a template.
+                After the kickoff, you get weekly actions built around your real
+                schedule.
               </p>
             </article>
             <article class="step">
               <p class="step-num">Check-ins</p>
-              <h3>Three private 20-minute calls</h3>
+              <h3>Three private 20-minute check-ins</h3>
               <p>
                 In weeks 2, 3, and 4 we look at what you did, what got in the
-                way, and what to do next.
+                way, and the next action.
               </p>
             </article>
             <article class="step">
-              <p class="step-num">Review</p>
-              <h3>A final look at progress and next steps</h3>
+              <p class="step-num">Final check-in</p>
+              <h3>A progress review and next steps</h3>
               <p>
-                The last check-in includes a review of what moved and a clear
-                next step after the four weeks.
+                The last check-in looks at what moved and what you want to do
+                next.
               </p>
             </article>
           </div>
@@ -786,11 +853,21 @@
           <div class="bio">
             <div class="prose">
               <p>
-                I’m Geoffrey Crawford. I’ve spent more than eight years turning
-                ideas into plans people can act on. With Purpose Over Comfort, I
-                bring that same approach to the thing you’ve been putting off.
-                We’ll talk through what you want, pick one milestone that matters
-                to you, and make a plan you can start this week.
+                For over eight years, I’ve worked directly with marketing clients
+                to turn ideas into campaigns, projects, and practical next steps.
+                That work has taught me how to ask useful questions, break a big
+                goal into manageable actions, and adjust when something gets in
+                the way.
+              </p>
+              <p>
+                Outside of work, friends and family often come to me to talk
+                through decisions and what they want to do next. Purpose Over
+                Comfort brings those two parts of my life together: practical
+                planning and personal encouragement.
+              </p>
+              <p>
+                I want to help you take the thing you keep talking about and
+                start making room for it in your life.
               </p>
             </div>
             <figure class="bio-figure">
@@ -889,7 +966,7 @@
 
     <footer class="site-footer">
       <div class="wrap">
-        <span>© OmegaGreed · Geoffrey R. Crawford</span>
+        <span>© 2026 Crawford Creative Ventures</span>
         <span>
           <a href="https://www.omegagreed.com/">omegagreed.com</a>
           ·
@@ -897,6 +974,10 @@
         </span>
       </div>
     </footer>
+
+    <a class="btn btn-primary sticky-apply" id="sticky-apply" href="#apply" data-track="apply-click" hidden>
+      Apply for private mentorship
+    </a>
 
     <script>
       (function () {
@@ -1023,7 +1104,7 @@
         function openApplications() {
           status.hidden = true;
           document.getElementById("hero-status").hidden = true;
-          document.getElementById("hero-cta").textContent = "Tell me what you want to do";
+          document.getElementById("hero-cta").textContent = "Apply for private mentorship";
           document.getElementById("apply-title").textContent = "Tell me what you want to pursue.";
           document.getElementById("apply-next").hidden = false;
           document.getElementById("question-preview").hidden = true;
@@ -1044,6 +1125,33 @@
         writeAttribution(attribution());
         loadPlausible();
         if (APPLICATION_ENDPOINT) openApplications();
+
+        var stickyApply = document.getElementById("sticky-apply");
+        var heroCta = document.getElementById("hero-cta");
+        var applySection = document.getElementById("apply");
+        var siteFooter = document.querySelector(".site-footer");
+
+        function syncStickyApply() {
+          var mobile = window.innerWidth < 800;
+          var heroRect = heroCta.getBoundingClientRect();
+          var applyRect = applySection.getBoundingClientRect();
+          var footerRect = siteFooter.getBoundingClientRect();
+          var heroGone = heroRect.bottom <= 8;
+          var applyVisible =
+            applyRect.top < window.innerHeight - 8 && applyRect.bottom > 80;
+          var footerVisible = footerRect.top < window.innerHeight - 4;
+          stickyApply.hidden = !(
+            mobile &&
+            APPLICATION_ENDPOINT &&
+            heroGone &&
+            !applyVisible &&
+            !footerVisible
+          );
+        }
+
+        syncStickyApply();
+        window.addEventListener("scroll", syncStickyApply, { passive: true });
+        window.addEventListener("resize", syncStickyApply);
 
         form.addEventListener("submit", function (event) {
           event.preventDefault();
