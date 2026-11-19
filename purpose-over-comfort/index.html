@@ -6,7 +6,7 @@
     <title>Purpose Over Comfort — OmegaGreed</title>
     <meta
       name="description"
-      content="Purpose Over Comfort is a four-week personal project planning and accountability pilot with Geoffrey R. Crawford. Two to three spots. $750. Apply first. No payment on this page."
+      content="Purpose Over Comfort is four weeks of private, paid mentorship with Geoffrey R. Crawford. Apply to talk through the thing you keep putting off. Pricing is discussed personally before enrollment."
     />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="referrer" content="origin" />
@@ -37,6 +37,7 @@
 
       html {
         scroll-behavior: smooth;
+        scroll-padding-top: 88px;
       }
 
       body {
@@ -118,8 +119,8 @@
 
       h1 {
         margin: 0;
-        font-size: clamp(2.45rem, 10.5vw, 5.2rem);
-        max-width: 14ch;
+        font-size: clamp(2.35rem, 8.4vw, 4.6rem);
+        max-width: 13ch;
       }
 
       h2 {
@@ -206,10 +207,15 @@
       .hero-photo img {
         width: 100%;
         height: auto;
-        aspect-ratio: 1672 / 941;
-        object-fit: contain;
+        aspect-ratio: 1600 / 1067;
+        object-fit: cover;
+        object-position: center 42%;
         border: 1px solid var(--line);
         border-radius: 18px;
+      }
+
+      #apply {
+        scroll-margin-top: 88px;
       }
 
       .hero-status {
@@ -540,29 +546,22 @@
           grid-template-columns: repeat(3, 1fr);
         }
 
+        .steps {
+          grid-template-columns: 1fr 1fr;
+        }
+
         .example-grid {
           gap: 18px;
         }
 
         .bio {
           grid-template-columns: 1.15fr 0.85fr;
-          grid-template-areas:
-            "lead copy"
-            "lead support";
-          gap: 28px 36px;
+          gap: 36px;
           align-items: start;
         }
 
-        .lead-figure {
-          grid-area: lead;
-        }
-
-        .bio .prose {
-          grid-area: copy;
-        }
-
-        .support-figure {
-          grid-area: support;
+        .bio-figure {
+          order: 2;
         }
 
         .form-card {
@@ -586,17 +585,23 @@
         <div class="wrap hero-layout">
           <div class="hero-copy">
             <p class="eyebrow">Purpose Over Comfort</p>
-            <h1>What would you do if you knew you couldn’t fail?</h1>
+            <h1>What’s the thing you keep saying you’ll do someday?</h1>
             <p class="lede">
-              Bring one project you’ve been putting off. We’ll pick a milestone,
-              make a four-week plan, and check in every week.
+              Maybe it’s a project you want to start, a change you want to make,
+              or a goal you keep putting off. I’m opening a few spots to work
+              with me one-on-one through Purpose Over Comfort. Together, we’ll
+              choose a meaningful milestone, build a plan, and check in each week
+              as you work toward it.
             </p>
             <p class="offer-line">
-              Private mentorship with Geoffrey R. Crawford.
+              Four weeks of private, paid mentorship with Geoffrey R. Crawford.
+            </p>
+            <p class="offer-line">
+              Pricing is discussed personally before enrollment.
             </p>
             <ul class="price-row">
               <li><strong>Four weeks</strong></li>
-              <li><strong>2–3</strong> spots</li>
+              <li><strong>A few people</strong> at a time</li>
             </ul>
             <p class="hero-status" id="hero-status">Applications opening soon</p>
             <div class="hero-actions">
@@ -611,10 +616,10 @@
           </div>
           <figure class="hero-photo">
             <img
-              src="../assets/purpose-over-comfort-hero.webp"
-              alt="A figure steps through an open door onto a path marked Name your dream, Make a plan, and Take the first step."
-              width="1672"
-              height="941"
+              src="../assets/purpose-over-comfort-hero-conversation.webp"
+              alt="Geoffrey Crawford listening to a man in a red jacket during a conversation at a table."
+              width="1600"
+              height="1067"
             />
           </figure>
         </div>
@@ -625,10 +630,10 @@
           <p class="eyebrow">Who this is for</p>
           <h2>You have a dream you keep putting off.</h2>
           <p class="section-lead">
-            You don’t need the first step figured out. If there’s something
-            you’ve wanted to do, build, or become, and it keeps waiting, you’re
-            in the right place. We’ll use that bigger idea to choose one
-            milestone you can work toward in four weeks.
+            You don’t need every step figured out. Bring the thing you want to
+            do, build, or become. I’m looking for people who are ready to make
+            time for it and take action. I’m taking on a few people at a time so
+            I can work closely with each person.
           </p>
           <ul class="examples">
             <li>
@@ -652,39 +657,42 @@
           <p class="eyebrow">Four weeks</p>
           <h2>What we do together</h2>
           <p class="section-lead">
-            Here’s what we’ll do together. We’ll choose one milestone in a
-            private 60-minute kickoff, turn it into a personalized one-page
-            plan, and work through it with three private check-ins.
-          </p>
-          <p class="section-lead" style="margin-top: 12px">
-            The start date for this round isn’t set yet. There isn’t a public
-            schedule for a later round. The first round stays at 2–3 people so
-            the support can stay individual.
+            For four weeks, we work on one thing you care about. Progress looks
+            like a milestone you chose, a plan you can start, and weekly
+            check-ins that keep the work moving. I don’t promise a finished life
+            change. I help you make the next four weeks specific and honest.
           </p>
           <div class="steps">
             <article class="step">
               <p class="step-num">Kickoff</p>
               <h3>One private 60-minute call</h3>
               <p>
-                We choose the milestone and make the plan. The bigger dream
-                stays in view. The work for these four weeks gets specific.
+                We talk through the bigger goal and choose one milestone for
+                these four weeks.
               </p>
             </article>
             <article class="step">
               <p class="step-num">Game plan</p>
-              <h3>A one-page plan, emailed after the kickoff</h3>
+              <h3>A personalized one-page plan</h3>
               <p>
-                Your plan, not a template. Weekly actions and a concrete first
-                step, written down so the week has somewhere to start.
+                After the kickoff, you get a plan with weekly actions, written
+                for your goal rather than copied from a template.
               </p>
             </article>
             <article class="step">
               <p class="step-num">Check-ins</p>
               <h3>Three private 20-minute calls</h3>
               <p>
-                Weeks 2, 3, and 4. We review what you committed to, work through
-                what got in the way, and decide what comes next. The last call
-                includes a progress review and next steps.
+                In weeks 2, 3, and 4 we look at what you did, what got in the
+                way, and what to do next.
+              </p>
+            </article>
+            <article class="step">
+              <p class="step-num">Review</p>
+              <h3>A final look at progress and next steps</h3>
+              <p>
+                The last check-in includes a review of what moved and a clear
+                next step after the four weeks.
               </p>
             </article>
           </div>
@@ -715,16 +723,6 @@
           <p class="eyebrow">Meet the person behind OmegaGreed</p>
           <h2>Geoffrey R. Crawford</h2>
           <div class="bio">
-            <figure class="bio-figure lead-figure">
-              <img
-                class="lead"
-                src="../assets/purpose-over-comfort-listening.webp"
-                alt="Geoffrey Crawford listening to a man in a red jacket during a conversation at a table."
-                width="1600"
-                height="1067"
-              />
-              <figcaption>Listening during a one-to-one conversation.</figcaption>
-            </figure>
             <div class="prose">
               <p>
                 I’m Geoffrey Crawford. I’ve spent more than eight years turning
@@ -734,7 +732,7 @@
                 to you, and make a plan you can start this week.
               </p>
             </div>
-            <figure class="bio-figure support-figure">
+            <figure class="bio-figure">
               <img
                 class="support"
                 src="../assets/purpose-over-comfort-whiteboard.webp"
@@ -742,6 +740,7 @@
                 width="1100"
                 height="1647"
               />
+              <figcaption>Speaking in front of a Think Media whiteboard.</figcaption>
             </figure>
           </div>
         </div>
@@ -750,12 +749,14 @@
       <section class="section" id="apply" style="padding-top: 0">
         <div class="wrap">
           <p class="eyebrow">Application</p>
-          <h2 id="apply-title">The application</h2>
+          <h2 id="apply-title">Tell me what you want to pursue.</h2>
           <div class="form-card">
-            <p class="offer-price">Four weeks of private mentorship · $750 one time</p>
             <p class="fine" id="apply-next">
-              Applying is free. If it looks like a fit, I’ll email you to set up
-              a short conversation.
+              I’d love to hear about the goal you keep coming back to and what’s
+              been getting in the way. This is an application for paid,
+              four-week private mentorship. Applying is free. I’ll review your
+              answers and email you about whether we’re a fit, including pricing
+              and next steps.
             </p>
             <p class="status" id="application-status" role="status">
               Applications opening soon. These are the questions. There’s
@@ -798,7 +799,7 @@
               <p class="field-error" id="error-email"></p>
 
               <label for="year_vision">What’s something you’ve always wanted to do, build, or become?</label>
-              <p class="helper">Give yourself a minute to dream big. What would you go after if you gave yourself permission to take it seriously?</p>
+              <p class="helper">Give yourself a minute to dream big. What would you go after if you gave yourself permission to take it seriously? Tell me why it matters to you.</p>
               <textarea id="year_vision" name="year_vision" required disabled></textarea>
               <p class="field-error" id="error-year_vision"></p>
 
@@ -811,15 +812,14 @@
               <p class="field-error" id="error-four_weeks"></p>
 
               <button class="btn btn-primary submit" id="submit-button" type="submit" data-track="apply-click" disabled>
-                Apply for the pilot
+                Apply for private mentorship
               </button>
               </div>
               <div class="form-error" id="form-error" hidden></div>
               <div class="form-success" id="form-success" hidden>
                 <strong>Application received.</strong>
-                This is a paid pilot. I’ll email you if it looks like a fit so
-                we can schedule a short conversation. No payment is due now.
-                An offer to enroll only comes after that conversation.
+                Thank you for sharing what you want to pursue. I’ll review your
+                answers and follow up by email about next steps.
               </div>
             </form>
           </div>
@@ -948,9 +948,9 @@
             ok = false;
           }
           [
-            ["year_vision", "Say a little about what you’ve always wanted to do, build, or become."],
+            ["year_vision", "Tell me what you’ve always wanted to do, and why it matters."],
             ["obstacle", "Say what’s been getting in the way."],
-            ["four_weeks", "Say what would make you proud of the next four weeks."],
+            ["four_weeks", "Say what would make you proud of these four weeks."],
           ].forEach(function (item) {
             if (!payload[item[0]] || payload[item[0]].trim().length < 8) {
               setFieldError(item[0], item[1]);
@@ -963,8 +963,8 @@
         function openApplications() {
           status.hidden = true;
           document.getElementById("hero-status").hidden = true;
-          document.getElementById("hero-cta").textContent = "Apply for the pilot";
-          document.getElementById("apply-title").textContent = "Apply for the pilot";
+          document.getElementById("hero-cta").textContent = "Tell me what you want to do";
+          document.getElementById("apply-title").textContent = "Tell me what you want to pursue.";
           document.getElementById("apply-next").hidden = false;
           document.getElementById("question-preview").hidden = true;
           document.getElementById("application-fields").hidden = false;
@@ -972,7 +972,7 @@
             document.getElementById(name).disabled = false;
           });
           submitButton.disabled = false;
-          submitButton.textContent = "Apply for the pilot";
+          submitButton.textContent = "Apply for private mentorship";
         }
 
         document.querySelectorAll("[data-track='apply-click']").forEach(function (el) {
