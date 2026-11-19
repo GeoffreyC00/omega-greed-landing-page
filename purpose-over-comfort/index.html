@@ -333,10 +333,35 @@
         margin: 0;
       }
 
+      .together-layout {
+        display: grid;
+        gap: 18px;
+      }
+
+      .work-photo {
+        margin: 0;
+      }
+
+      .work-photo img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1600 / 902;
+        object-fit: cover;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+      }
+
+      .work-photo figcaption {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 0.85rem;
+        line-height: 1.45;
+      }
+
       .steps {
         display: grid;
         gap: 12px;
-        margin-top: 22px;
+        margin-top: 4px;
       }
 
       .step-num {
@@ -368,9 +393,9 @@
         object-position: center 40%;
       }
 
-      .bio-figure img.support {
-        aspect-ratio: 3 / 4;
-        object-position: center 22%;
+      .bio-figure img.portrait {
+        aspect-ratio: 1100 / 1045;
+        object-position: center 28%;
       }
 
       .bio-figure figcaption {
@@ -546,8 +571,33 @@
           grid-template-columns: repeat(3, 1fr);
         }
 
-        .steps {
+        .together-layout {
+          grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+          grid-template-areas:
+            "copy photo"
+            "steps steps"
+            "example example";
+          column-gap: 36px;
+          row-gap: 22px;
+          align-items: center;
+        }
+
+        .together-copy {
+          grid-area: copy;
+        }
+
+        .work-photo {
+          grid-area: photo;
+        }
+
+        .together-layout .steps {
+          grid-area: steps;
           grid-template-columns: 1fr 1fr;
+          margin-top: 8px;
+        }
+
+        .together-layout .example-plan {
+          grid-area: example;
         }
 
         .example-grid {
@@ -653,15 +703,26 @@
       </section>
 
       <section class="section" id="included" style="padding-top: 0">
-        <div class="wrap">
-          <p class="eyebrow">Four weeks</p>
-          <h2>What we do together</h2>
-          <p class="section-lead">
-            For four weeks, we work on one thing you care about. Progress looks
-            like a milestone you chose, a plan you can start, and weekly
-            check-ins that keep the work moving. I don’t promise a finished life
-            change. I help you make the next four weeks specific and honest.
-          </p>
+        <div class="wrap together-layout">
+          <div class="together-copy">
+            <p class="eyebrow">Four weeks</p>
+            <h2>What we do together</h2>
+            <p class="section-lead">
+              For four weeks, we work on one thing you care about. Progress looks
+              like a milestone you chose, a plan you can start, and weekly
+              check-ins that keep the work moving. I don’t promise a finished life
+              change. I help you make the next four weeks specific and honest.
+            </p>
+          </div>
+          <figure class="work-photo">
+            <img
+              src="../assets/purpose-over-comfort-ideas.webp"
+              alt="Geoffrey Crawford gesturing as he talks through an idea with a woman across the table."
+              width="1600"
+              height="902"
+            />
+            <figcaption>Working through ideas together.</figcaption>
+          </figure>
           <div class="steps">
             <article class="step">
               <p class="step-num">Kickoff</p>
@@ -734,13 +795,12 @@
             </div>
             <figure class="bio-figure">
               <img
-                class="support"
-                src="../assets/purpose-over-comfort-whiteboard.webp"
-                alt="Geoffrey Crawford speaking in front of a Think Media whiteboard."
+                class="portrait"
+                src="../assets/purpose-over-comfort-portrait.webp"
+                alt="Geoffrey Crawford smiling, in a black shirt and red-tinted sunglasses."
                 width="1100"
-                height="1647"
+                height="1045"
               />
-              <figcaption>Speaking in front of a Think Media whiteboard.</figcaption>
             </figure>
           </div>
         </div>
