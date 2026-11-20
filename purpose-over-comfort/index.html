@@ -429,6 +429,20 @@
         object-position: center 28%;
       }
 
+      h3.bio-subhead {
+        margin: 22px 0 10px;
+        font-family: Inter, system-ui, sans-serif;
+        font-size: 1.15rem;
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1.35;
+        text-transform: none;
+      }
+
+      .bio-cta {
+        margin-top: 22px;
+      }
+
       .bio-figure figcaption {
         margin-top: 8px;
         color: var(--muted);
@@ -848,28 +862,9 @@
 
       <section class="section" id="geoffrey" style="padding-top: 0">
         <div class="wrap">
-          <p class="eyebrow">Meet the person behind OmegaGreed</p>
-          <h2>Geoffrey R. Crawford</h2>
+          <p class="eyebrow">Meet Geoffrey R. Crawford</p>
+          <h2>I’ve had to take my own first steps, too.</h2>
           <div class="bio">
-            <div class="prose">
-              <p>
-                For over eight years, I’ve worked directly with marketing clients
-                to turn ideas into campaigns, projects, and practical next steps.
-                That work has taught me how to ask useful questions, break a big
-                goal into manageable actions, and adjust when something gets in
-                the way.
-              </p>
-              <p>
-                Outside of work, friends and family often come to me to talk
-                through decisions and what they want to do next. Purpose Over
-                Comfort brings those two parts of my life together: practical
-                planning and personal encouragement.
-              </p>
-              <p>
-                I want to help you take the thing you keep talking about and
-                start making room for it in your life.
-              </p>
-            </div>
             <figure class="bio-figure">
               <img
                 class="portrait"
@@ -879,6 +874,41 @@
                 height="1045"
               />
             </figure>
+            <div class="prose">
+              <p>
+                I moved from Buffalo to Los Angeles to pursue the life I wanted
+                to build. I started a business and spent over eight years working
+                directly with marketing clients to turn ideas into action.
+              </p>
+              <p>
+                Those experiences are part of why Purpose Over Comfort matters to
+                me. Moving toward something you want means making decisions,
+                working through uncertainty, and following through after the
+                initial excitement wears off.
+              </p>
+              <h3 class="bio-subhead">What I bring to our work together</h3>
+              <p>
+                My marketing work has taught me to ask useful questions, break
+                big goals into practical steps, and adjust a plan when something
+                gets in the way.
+              </p>
+              <p>
+                Friends and family also come to me to talk through decisions and
+                what they want to do next.
+              </p>
+              <p>
+                Purpose Over Comfort brings that practical experience and personal
+                encouragement together. Your dream will look different from mine.
+              </p>
+              <p>
+                I want to help you clarify what matters to you, choose a
+                meaningful next step, and build a plan you can act on—with
+                someone checking in as you follow through.
+              </p>
+              <a class="btn btn-primary bio-cta" id="bio-cta" href="#apply" data-track="apply-click">
+                Apply for private mentorship
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -1128,22 +1158,25 @@
 
         var stickyApply = document.getElementById("sticky-apply");
         var heroCta = document.getElementById("hero-cta");
+        var bioCta = document.getElementById("bio-cta");
         var applySection = document.getElementById("apply");
         var siteFooter = document.querySelector(".site-footer");
 
+        function onScreen(rect) {
+          return rect.top < window.innerHeight - 8 && rect.bottom > 72;
+        }
+
         function syncStickyApply() {
           var mobile = window.innerWidth < 800;
-          var heroRect = heroCta.getBoundingClientRect();
-          var applyRect = applySection.getBoundingClientRect();
-          var footerRect = siteFooter.getBoundingClientRect();
-          var heroGone = heroRect.bottom <= 8;
-          var applyVisible =
-            applyRect.top < window.innerHeight - 8 && applyRect.bottom > 80;
-          var footerVisible = footerRect.top < window.innerHeight - 4;
+          var heroGone = heroCta.getBoundingClientRect().bottom <= 8;
+          var bioVisible = onScreen(bioCta.getBoundingClientRect());
+          var applyVisible = onScreen(applySection.getBoundingClientRect());
+          var footerVisible = siteFooter.getBoundingClientRect().top < window.innerHeight - 4;
           stickyApply.hidden = !(
             mobile &&
             APPLICATION_ENDPOINT &&
             heroGone &&
+            !bioVisible &&
             !applyVisible &&
             !footerVisible
           );
